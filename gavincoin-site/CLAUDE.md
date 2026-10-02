@@ -18,6 +18,13 @@ manual upload needed).
 - Preserve any content Gavin has approved as-is — don't rewrite it to fit a
   template without being asked.
 
+## Layout is locked (agreed 2 Oct 2026)
+
+Gavin has signed off the current layout of every page. Don't restructure,
+reorder sections or restyle anything. The only planned visual change is a
+small tweak to the For Parents page (`players.html`), which Gavin will
+describe. Content updates and real images are still to come.
+
 ## Brand style guide
 
 - Colors: navy `#14304A`, blue `#2E6BB0`, yellow `#F2C200` (the ONLY accent —
