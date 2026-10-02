@@ -211,13 +211,20 @@
       <h3>Find Your Child's Hidden Strengths</h3>
       <div class="gold-rule"><span class="diamond"></span></div>
       <p class="lede">Take the free 90-second survey and see exactly where their focus is strongest — and where a little more of it unlocks what they can already do.</p>
-
-      <!--
-        AWEBER SETUP:
-        Replace the form action below with your AWeber form's post URL,
-        and add AWeber's required hidden fields (Sign Up Forms → your form → Publish → Raw HTML).
-      -->
-      <form action="#REPLACE-WITH-AWEBER-FORM-ACTION-URL" method="post">
+      <!-- AWeber form 769902414 (list awlist6281530). After signing up, people are sent straight to the 90-second survey. -->
+      <form method="post" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl">
+        <div style="display: none;">
+          <input type="hidden" name="meta_web_form_id" value="769902414">
+          <input type="hidden" name="meta_split_id" value="">
+          <input type="hidden" name="listname" value="awlist6281530">
+          <input type="hidden" name="redirect" value="https://docs.google.com/forms/d/e/1FAIpQLSdwUH6vLt5X4NFMd2jQKOoG9qWr3KC9mS3N-29lddrbDZjfyQ/viewform?usp=header">
+          <input type="hidden" name="meta_redirect_onlist" value="https://docs.google.com/forms/d/e/1FAIpQLSdwUH6vLt5X4NFMd2jQKOoG9qWr3KC9mS3N-29lddrbDZjfyQ/viewform?usp=header">
+          <input type="hidden" name="meta_adtracking" value="My_Web_Form">
+          <input type="hidden" name="meta_message" value="1">
+          <input type="hidden" name="meta_required" value="name,email">
+          <input type="hidden" name="meta_tooltip" value="">
+          <img src="https://forms.aweber.com/form/displays.htm?id=7GycnAxMLIws" alt="">
+        </div>
         <div class="field">
           <label for="name">First name</label>
           <input type="text" id="name" name="name" required>

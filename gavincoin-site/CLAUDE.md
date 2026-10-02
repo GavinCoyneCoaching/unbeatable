@@ -25,6 +25,13 @@ reorder sections or restyle anything. The only planned visual change is a
 small tweak to the For Parents page (`players.html`), which Gavin will
 describe. Content updates and real images are still to come.
 
+## AWeber signup (done)
+
+All three signup boxes (index, committees, players) post to AWeber form
+769902414, list `awlist6281530`. After signing up, people are redirected to
+the 90-second survey. The site's own form styling is kept; AWeber's default
+styles were deliberately not used.
+
 ## Brand style guide
 
 - Colors: navy `#14304A`, blue `#2E6BB0`, yellow `#F2C200` (the ONLY accent —
@@ -50,7 +57,6 @@ describe. Content updates and real images are still to come.
 
 ## Known placeholders still needed from Gavin (don't invent these)
 
-- Real AWeber form action URL + hidden fields (currently `#REPLACE-WITH-AWEBER-FORM-ACTION-URL` in index.html, committees.html, players.html)
 - Real discovery-call booking link (currently `#REPLACE-WITH-BOOKING-LINK`)
 - players.html: intro video + 2 testimonial videos, founder photo, second star testimonial quote, pricing/timeframe/age-range FAQ answers
 - Footer contact email / social link (every page)
