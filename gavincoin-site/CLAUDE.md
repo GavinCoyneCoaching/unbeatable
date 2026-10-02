@@ -7,7 +7,7 @@ manual upload needed).
 ## Do not change without asking Gavin first
 
 - **Brand name:** "Gavin Coyne" (NOT "Gavin Coin" — a past speech-to-text error).
-- **Google Form link (locked, use everywhere):**
+- **Google Form link — the 90-second survey (locked, use everywhere):**
   `https://docs.google.com/forms/d/e/1FAIpQLSdwUH6vLt5X4NFMd2jQKOoG9qWr3KC9mS3N-29lddrbDZjfyQ/viewform?usp=header`
 - **"Unbeatable" headline rule:** only append "by Gavin Coyne Coaching" to the
   word "Unbeatable" when it appears as a headline (`<h1>`/`<h2>`) or in a
