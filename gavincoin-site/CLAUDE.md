@@ -51,6 +51,7 @@ styles were deliberately not used.
 - `committees.html` — "For Clubs" page
 - `players.html` — "For Parents" page (direct-response style, sticky CTA, FAQ accordion)
 - `articles.html` — index of all 123 articles, grouped by category
+- `trial.html` — "5-Day Trial" landing page, laid out like the RevFit Killiney sales page (hero offer, what's included, day-by-day, method, next steps, FAQ, price + guarantee, reviews, two ways in). Placeholder copy drawn from the articles; styles are the `.tr-` block at the end of `styles.css`. Signups tagged `5_Day_Trial` in AWeber.
 - `articles/*.html` — the 123 individual article pages (repurposed from email content)
 - `styles.css` — single shared stylesheet, everything inherits from this
 - `images/` — logos + the Distraction Loop SVG diagram
@@ -60,6 +61,7 @@ styles were deliberately not used.
 - Real discovery-call booking link (currently `#REPLACE-WITH-BOOKING-LINK`)
 - players.html: intro video + 2 testimonial videos, founder photo, second star testimonial quote, pricing/timeframe/age-range FAQ answers
 - Footer contact email / social link (every page)
+- trial.html: trial price/free line, how each day is delivered, what comes after day 5, follow-on pricing, guarantee, age range, testimonials
 - Taglines for 7 of 9 article categories (only "Mirrors & Windows" and "The Jar" are done)
 - New bio copy for the homepage bio section (Gavin said he'd supply this)
 
