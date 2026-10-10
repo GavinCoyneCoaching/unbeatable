@@ -1,8 +1,13 @@
 # Gavin Coyne Coaching / Unbeatable — Site Notes
 
-This is a static HTML/CSS site for gavincoynecoaching.com, hosted on Cloudflare
-Pages and deployed via GitHub (push to the connected branch = auto-deploy, no
-manual upload needed).
+This is a static HTML/CSS site, hosted free on GitHub Pages. The workflow in
+`.github/workflows/pages.yml` publishes this folder on every push to `main` (or
+the `claude/code-landing-pages-43vda4` branch), no manual upload needed. This
+CLAUDE.md file is left out of what gets published.
+
+- Live now: https://gavincoynecoaching.github.io/unbeatable/
+- 5-Day Trial page: https://gavincoynecoaching.github.io/unbeatable/trial
+- Planned custom domain: gavincoynecoaching.com (not bought yet as of 10 Oct 2026)
 
 ## Do not change without asking Gavin first
 

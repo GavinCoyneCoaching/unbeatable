@@ -10,3 +10,8 @@ This is the "90 second survey" link. Article pages use it as their call to actio
 
 The website lives in `gavincoin-site/`. See `gavincoin-site/CLAUDE.md` for the
 brand style guide, page map, and rules.
+
+## Live links
+
+- Site: https://gavincoynecoaching.github.io/unbeatable/
+- 5-Day Trial landing page: https://gavincoynecoaching.github.io/unbeatable/trial
