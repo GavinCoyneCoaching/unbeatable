@@ -67,6 +67,7 @@ styles were deliberately not used.
 - Real discovery-call booking link (currently `#REPLACE-WITH-BOOKING-LINK`)
 - players.html: intro video + 2 testimonial videos, founder photo, second star testimonial quote, pricing/timeframe/age-range FAQ answers
 - Footer contact email / social link (every page)
+- WhatsApp for trial.html enquiries: +353 85 868 2933 (wa.me/353858682933) — done
 - trial.html: trial price/free line, how each day is delivered, what comes after day 5, follow-on pricing, guarantee, age range, testimonials
 - Taglines for 7 of 9 article categories (only "Mirrors & Windows" and "The Jar" are done)
 - New bio copy for the homepage bio section (Gavin said he'd supply this)

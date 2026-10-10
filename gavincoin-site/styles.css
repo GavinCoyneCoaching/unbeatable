@@ -1243,5 +1243,3 @@ body.has-sticky-cta { padding-bottom: 76px; }
 }
 .tr-wa-float .tr-wa-icon { width: 28px; height: 28px; margin: 0; vertical-align: 0; }
 .tr-wa-float:hover { background: var(--navy-2); }
-/* Hidden until the real WhatsApp number is added (remove the attribute then). */
-[data-wa-pending] { display: none !important; }
