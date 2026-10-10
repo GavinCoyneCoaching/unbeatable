@@ -1210,3 +1210,36 @@ body.has-sticky-cta { padding-bottom: 76px; }
   .tr-or { display: none; }
   .tr-price-main { font-size: 44px; }
 }
+
+/* WhatsApp contact (trial page). Kept in brand navy rather than WhatsApp green;
+   the icon makes it recognisable. */
+.tr-wa-icon { width: 1.15em; height: 1.15em; vertical-align: -0.2em; margin-right: 8px; }
+.tr-wa-line { color: #B9C6D6; font-size: 14.5px; margin: 14px 0 0; }
+.tr-wa-line a { color: var(--cream); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.tr-split-card .tr-btn-wa {
+  margin-top: 10px;
+  background: var(--panel);
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  width: 100%;
+}
+.tr-split-card .tr-btn-navy + .tr-btn-wa { margin-top: 10px; }
+.tr-btn-wa:hover { background: var(--cream); }
+.tr-wa-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 22px rgba(15,38,57,0.35);
+  border: 2px solid var(--cream);
+}
+.tr-wa-float .tr-wa-icon { width: 28px; height: 28px; margin: 0; vertical-align: 0; }
+.tr-wa-float:hover { background: var(--navy-2); }
