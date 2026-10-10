@@ -4,7 +4,7 @@ name: Publish site
 
 on:
   push:
-    branches: [main, claude/code-landing-pages-43vda4]
+    branches: [claude/code-landing-pages-43vda4]  # the repo's default branch; GitHub Pages only deploys from it
   workflow_dispatch:
 
 permissions:
