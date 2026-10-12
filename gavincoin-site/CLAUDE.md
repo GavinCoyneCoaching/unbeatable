@@ -64,7 +64,7 @@ styles were deliberately not used.
 
 ## Known placeholders still needed from Gavin (don't invent these)
 
-- Real discovery-call booking link (currently `#REPLACE-WITH-BOOKING-LINK`)
+- Real discovery-call booking link (currently `#REPLACE-WITH-BOOKING-LINK` on index/committees; on trial.html the "Book a call" buttons temporarily open WhatsApp — swap the ones marked data-booking when a booking link exists)
 - players.html: intro video + 2 testimonial videos, founder photo, second star testimonial quote, pricing/timeframe/age-range FAQ answers
 - Footer contact email / social link (every page)
 - WhatsApp for trial.html enquiries: +353 85 868 2933 (wa.me/353858682933) — done

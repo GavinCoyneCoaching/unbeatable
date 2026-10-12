@@ -1245,3 +1245,4 @@ body.has-sticky-cta { padding-bottom: 76px; }
 .tr-wa-float:hover { background: var(--navy-2); }
 .tr-plan-note { font-size: 13px; color: #B9C6D6; margin: 6px 0 0; }
 .tr-plan-pop .tr-plan-note { color: var(--cream); font-weight: 600; }
+.tr-facts li:last-child:nth-child(odd) { grid-column: 1 / -1; }
