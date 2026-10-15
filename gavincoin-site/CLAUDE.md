@@ -31,6 +31,13 @@ reorder sections or restyle anything. The only planned visual change is a
 small tweak to the For Parents page (`players.html`), which Gavin will
 describe. Content updates and real images are still to come.
 
+## Hidden tabs (15 Oct 2026)
+
+"For Parents" (players.html) and "Articles" (articles.html) are hidden from the
+menu on every page while Gavin updates them. The links are commented out with
+`<!-- hidden from menu for now: ... -->`; remove those comment wrappers to
+bring them back. The pages still exist at their direct URLs.
+
 ## AWeber signup (done)
 
 All three signup boxes (index, committees, players) post to AWeber form
