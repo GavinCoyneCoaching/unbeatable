@@ -31,6 +31,14 @@ reorder sections or restyle anything. The only planned visual change is a
 small tweak to the For Parents page (`players.html`), which Gavin will
 describe. Content updates and real images are still to come.
 
+## Trial page payments (20 Oct 2026)
+
+The "Start the Trial" (€35) and "Choose the Month" (€79) buttons in the
+"Ready to Get Started?" block (`#pricing` in trial.html) carry `data-pay` and
+open WhatsApp with a prefilled message until Gavin supplies Stripe/PayPal links.
+Swap their hrefs when the links exist. The bottom "Still on the fence?" block is
+the free email list (AWeber tag `Trial_Page_Email_List`) plus book-a-chat.
+
 ## Hidden tabs (15 Oct 2026)
 
 "For Parents" (players.html) and "Articles" (articles.html) are hidden from the
