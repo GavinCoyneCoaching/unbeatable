@@ -39,6 +39,7 @@ live root is unchanged until Gavin approves. Pages: index (Home), coaches,
 players, parents, media, snapshot (the club snapshot, copied from his private
 artifact so the public can open it), plus copies of trial/articles/committees
 with the new menu. New styles are in `preview/site.css` (classes prefixed `u-`).
+Snapshot (preview/snapshot.html) now asks for email (+ optional phone), shows tailored feedback (band meaning, strengths, quick win per weakest area, next-step buttons) and emails a copy to Gavin via FormSubmit (formsubmit.co/ajax/gavincoynecoaching@gmail.com). FormSubmit's first submission sends Gavin an activation email that must be clicked once.
 To go live: copy preview/* over the root files (except CLAUDE.md) and delete preview/.
 
 ## Trial page payments (20 Oct 2026)

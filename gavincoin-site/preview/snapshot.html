@@ -142,6 +142,26 @@
   .resfoot .c{margin-top:4px;font-size:12px}
   .resfoot a{color:var(--navy);font-weight:600}
 
+  .contact{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:22px;box-shadow:var(--shadow)}
+  .contact .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:520px){.contact .fields{grid-template-columns:1fr}}
+  .contact .consent{font-size:12.5px;color:var(--muted);margin:12px 2px 0}
+  .err{color:var(--low);font-size:13px;font-weight:600;margin:10px 2px 0;display:none}
+  .sent{font-size:13px;margin:10px 0 0;color:var(--muted)}
+  .fb{padding:6px 22px 18px}
+  .fb h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:18px 0 8px;font-weight:800;color:var(--navy)}
+  .fb p{font-size:14.5px;margin:0 0 10px}
+  .fb .tip{background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+  .fb .tip b{display:block;font-size:14.5px;margin-bottom:3px}
+  .fb .tip span{font-size:14px;color:var(--ink)}
+  .fb .tool{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-top:6px}
+  .next{padding:20px 22px;background:var(--navy);color:#fff}
+  .next h4{margin:0 0 6px;font-size:18px;font-family:var(--serif);font-weight:600}
+  .next p{margin:0 0 14px;font-size:14px;color:rgba(255,255,255,.82)}
+  .next .nb{display:flex;gap:10px;flex-wrap:wrap}
+  .next a{flex:1;min-width:160px;text-align:center;text-decoration:none;font-weight:700;font-size:14.5px;padding:12px 16px;border-radius:11px}
+  .next a.y{background:var(--yellow);color:var(--navy)}
+  .next a.o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
   .footnote{text-align:center;font-size:12px;color:var(--muted);margin-top:26px;line-height:1.5}
   .footnote a{color:var(--muted)}
   @media print{
@@ -199,6 +219,17 @@
     <label class="rl" for="gap">Close the gap — the 5%</label>
     <p class="rh">If every coach and player got <b>5% better</b> at just one of these areas this season, which one — and what would that look like on a Tuesday night?</p>
     <textarea id="gap" placeholder="The one area, and what 5% better looks like…"></textarea>
+  </div>
+
+  <h2 class="sec">Where should your results go?</h2>
+  <p class="sec-sub">Gavin reads every snapshot personally and can talk you through it.</p>
+  <div class="contact">
+    <div class="fields">
+      <div class="fld"><label for="em">Your email</label><input id="em" type="email" autocomplete="email" placeholder="you@club.ie" required></div>
+      <div class="fld"><label for="ph">Phone (optional)</label><input id="ph" type="tel" autocomplete="tel" placeholder="For a quick chat about your results"></div>
+    </div>
+    <p class="consent">By showing your snapshot you agree that Gavin Coyne Coaching receives a copy and may contact you about your results. Nothing else, no spam.</p>
+    <p class="err" id="err">Please add a valid email address so we can send your results.</p>
   </div>
 
   <div class="actions">
@@ -279,7 +310,45 @@
 
   function esc(s){ return (s||'').replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
 
+  // Practical quick win for each area (claim-safe; linked to the kit bag where it fits).
+  var TIPS = {
+    "Communication":["Run the 'one extra call' challenge: every player adds one helpful word per drill — \"man on\", \"time\", \"go again\".","Communication"],
+    "Confidence Under Pressure":["Before the next match, have each player rehearse two \"if this happens, I do that\" responses for the moments they dread most.","Frustration vs Fascination"],
+    "Response to Mistakes":["Agree a 10-second reset after mistakes — notice, return, respond — and one sideline cue that triggers it.","Frustration vs Fascination"],
+    "Accountability":["Swap \"why did that happen?\" for \"what can I do next?\" in every post-match chat. Mirror first, window second.","Mirrors & Windows"],
+    "Team Culture":["Ask coaches to catch someone doing something right, out loud, before they correct anyone. Energy spreads both ways.","Communication"],
+    "Player Retention":["Ask your 14–16s what they get from the club beyond the result — then protect it. Players who feel useful tend to stay.","5·5·5"],
+    "Effort & Commitment":["Name one controllable to win at every session — effort, attitude, communication — and review that, not just the scoreline.","Beyond the Scoreboard"],
+    "Coach Alignment":["Pick three shared phrases every coach uses the same way across age groups, so players hear one language.","The Call"],
+    "Leadership":["Give every player one 'how can I help?' job each game — not just the captain. Leaders grow from small responsibilities.","5·5·5"],
+    "Resilience":["After every result, run 'feel it, learn from it, move forward': one feeling, one lesson, one next action.","Beyond the Scoreboard"]
+  };
+  var BAND_NEXT = {
+    "Strong Foundation":"You've built something worth protecting. The clubs that stay strong are the ones that keep asking how to stretch their best areas — a 30-day pilot is a simple way to test that with your players.",
+    "Good Progress":"You're closer than most. Two or three focused areas, worked on in real training and matches, is usually what lifts a club from good to genuinely strong.",
+    "Significant Opportunities":"The gaps you've named are exactly the kind that move fastest with a simple, shared approach — no extra facilities, no extra pitch time.",
+    "Immediate Attention":"An honest score is the hardest and most valuable first step. You don't have to fix everything at once — start with one area and build from there."
+  };
+  var CHAT_URL = "mailto:gavincoynecoaching@gmail.com?subject=Unbeatable%20%E2%80%94%20our%20club%20snapshot";
+  var PILOT_URL = "mailto:gavincoynecoaching@gmail.com?subject=Unbeatable%20%E2%80%94%20start%20a%2030-day%20pilot";
+  // FormSubmit forwards each snapshot to Gavin's inbox. The FIRST submission sends
+  // Gavin an activation email; click the link in it once and every later one arrives.
+  var SEND_TO = "https://formsubmit.co/ajax/gavincoynecoaching@gmail.com";
+
+  function sendCopy(data, statusEl){
+    try{
+      fetch(SEND_TO,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){ statusEl.textContent = r.ok ? 'A copy has been sent to Gavin — he\'ll be in touch personally.' : 'Your results are below. If you\'d like to talk them through, use the buttons at the bottom.'; })
+        .catch(function(){ statusEl.textContent = 'Your results are below. If you\'d like to talk them through, use the buttons at the bottom.'; });
+    }catch(e){}
+  }
+
   document.getElementById('build').addEventListener('click',function(){
+    var em=document.getElementById('em').value.trim();
+    var errEl=document.getElementById('err');
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ errEl.style.display='block'; document.getElementById('em').focus(); return; }
+    errEl.style.display='none';
+    var ph=document.getElementById('ph').value.trim();
     var t=total(), b=bandFor(t);
     var club=document.getElementById('club').value.trim()||'Your club';
     var who=document.getElementById('who').value.trim();
@@ -304,6 +373,14 @@
     if(oppTxt) reflBlocks+='<div class="rb"><div class="rbl">Top 3 opportunities</div><div class="rbt">'+esc(oppTxt)+'</div></div>';
     if(gapTxt) reflBlocks+='<div class="rb"><div class="rbl">The 5% — close the gap</div><div class="rbt">'+esc(gapTxt)+'</div></div>';
 
+    var lowest=low.slice(0,2);
+    var feedback='<div class="fb">'+
+      '<h4>What your score tells us</h4><p>'+BAND_NEXT[b[1]]+'</p>'+
+      '<h4>Your strengths</h4><p><b>'+top.map(function(a){return a.name;}).join(', ')+'</b> stand out. These are the things to protect — and they\'re often the foundation the rest of the club can be built on.</p>'+
+      '<h4>Where to start</h4>'+
+      lowest.map(function(a){ var t=TIPS[a.name]; return '<div class="tip"><b>'+a.name+' ('+a.val+'/10)</b><span>'+t[0]+'</span><br><span class="tool">Unbeatable tool: '+t[1]+'</span></div>'; }).join('')+
+      '</div>';
+
     var html=
       '<div class="rescard">'+
         '<div class="resh"><div class="rlabel">Club Snapshot</div>'+
@@ -320,12 +397,30 @@
           '<div class="op"><h4>Biggest opportunity</h4><ul>'+low.map(function(a){return '<li>'+a.name+' <b>('+a.val+')</b></li>';}).join('')+'</ul></div>'+
         '</div>'+
         (reflBlocks?'<div class="reslist">'+reflBlocks+'</div>':'')+
+        feedback+
+        '<div class="next"><h4>Your next step</h4><p>Talk your snapshot through with Gavin — 20 minutes, free, no commitment. Or test the approach properly with a 30-day pilot.</p>'+
+          '<div class="nb"><a class="y" href="'+CHAT_URL+'">Book a free 20-minute chat</a><a class="o" href="'+PILOT_URL+'">Start a 30-day pilot</a></div>'+
+          '<p class="sent" id="sent" style="color:rgba(255,255,255,.7);margin:12px 0 0">Sending a copy to Gavin…</p></div>'+
         '<div class="resfoot"><b>This will help. It won’t be easy. It will be worth it.</b>'+
           '<div class="c">Talk it through with Gavin · <a href="tel:+353858682933">085 868 2933</a> · <a href="mailto:gavincoynecoaching@gmail.com?subject=Unbeatable%20%E2%80%94%20our%20club%20snapshot">gavincoynecoaching@gmail.com</a></div></div>'+
       '</div>';
 
     var res=document.getElementById('result');
     res.innerHTML=html; res.hidden=false;
+
+    var data={
+      _subject:'New club snapshot: '+club+' ('+t+'/100)',
+      _template:'table',
+      _captcha:'false',
+      _autoresponse:'Thanks for completing the Unbeatable club snapshot. Gavin reads every one personally and will be in touch about your results. — Gavin Coyne Coaching · 085 868 2933',
+      club:club, completed_by:who||'(not given)', email:em, phone:ph||'(not given)',
+      total_score:t+'/100', band:b[1]
+    };
+    ranked.forEach(function(a){ data[a.name]=a.val+'/10'; });
+    data['Top 3 strengths (their words)']=strTxt||'(blank)';
+    data['Top 3 opportunities (their words)']=oppTxt||'(blank)';
+    data['The 5% (their words)']=gapTxt||'(blank)';
+    sendCopy(data, document.getElementById('sent'));
     res.scrollIntoView({behavior:'smooth',block:'start'});
   });
 
@@ -335,7 +430,7 @@
       var r=document.getElementById('r'+i); r.value=5;
       r.dispatchEvent(new Event('input'));
     });
-    ['club','who','str','opp','gap'].forEach(function(id){document.getElementById(id).value='';});
+    ['club','who','str','opp','gap','em','ph'].forEach(function(id){document.getElementById(id).value='';});
     var res=document.getElementById('result'); res.hidden=true; res.innerHTML='';
     window.scrollTo({top:0,behavior:'smooth'});
   });
