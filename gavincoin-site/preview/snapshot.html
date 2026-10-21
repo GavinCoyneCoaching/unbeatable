@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Club Snapshot | Unbeatable by Gavin Coyne Coaching</title>
+<meta name="description" content="A free 90-second club snapshot: ten honest ratings and one clear picture of where your club stands right now.">
+<!-- Copied from Gavin's "Club Culture Review" Claude artifact (21 Oct 2026) so the
+     public can open it. Results show on screen only; nothing is sent anywhere. -->
+<style>
+  :root{
+    color-scheme: light;
+    --navy:#14304A; --blue:#2E6BB0; --yellow:#F2C200;
+    --ink:#1c2b39; --muted:#63748a; --line:#e4e8ee;
+    --paper:#ffffff; --ground:#f4f6f9; --band-bg:#eef3f8;
+    --soft:#f8fafc;
+    --strong:#1f7a45; --good:#2E6BB0; --mid:#c9860a; --low:#b3261e;
+    --shadow:0 6px 24px rgba(20,48,74,.10);
+    --serif:'Fraunces',Georgia,'Times New Roman',serif;
+    --sans:'Inter','Helvetica Neue',Arial,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding-left:16px;padding-right:16px;padding-block:0 60px}
+  .back{display:inline-block;margin:14px 2px 10px;font-size:14px;color:var(--navy);font-weight:600;text-decoration:none}
+  .back:hover{text-decoration:underline}
+
+  header.top{background:var(--navy);color:#fff;border-radius:18px;
+    padding:26px 22px 24px;margin:0 0 22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  header.top:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--yellow)}
+  .brandrow{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+  .brandrow img{width:38px;height:auto;flex:0 0 auto}
+  .brandrow .bn{font-weight:700;letter-spacing:.02em;font-size:15px}
+  .brandrow .bt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(25px,6vw,36px);line-height:1.08;
+    margin:0 0 8px;text-wrap:balance}
+  header.top p.lede{margin:0;color:rgba(255,255,255,.82);font-size:15px;max-width:56ch}
+  .eyebrow{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--yellow);font-weight:700;margin-bottom:12px}
+
+  .meta{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+    margin-bottom:22px;box-shadow:var(--shadow)}
+  .meta .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:520px){.meta .fields{grid-template-columns:1fr}}
+  .fld label{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;margin-bottom:5px}
+  .fld input{width:100%;font:inherit;font-size:15px;padding:9px 11px;border:1px solid var(--line);
+    border-radius:9px;background:var(--soft);color:var(--ink)}
+  .fld input:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+  .howto{font-size:13.5px;color:var(--muted);margin:14px 2px 0;line-height:1.5}
+  .howto b{color:var(--ink)}
+
+  h2.sec{font-family:var(--serif);font-weight:600;font-size:20px;margin:30px 2px 4px;color:var(--navy)}
+  .sec-sub{font-size:13.5px;color:var(--muted);margin:0 2px 14px}
+
+  .area{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px 18px;
+    margin-bottom:13px;box-shadow:var(--shadow)}
+  .area .ah{display:flex;align-items:baseline;gap:10px;margin-bottom:3px}
+  .area .num{font-family:var(--serif);font-weight:600;color:var(--blue);font-size:15px;
+    font-variant-numeric:tabular-nums;flex:0 0 auto}
+  .area .an{font-weight:700;font-size:16px;color:var(--ink)}
+  .area .ad{font-size:13px;color:var(--muted);margin:0 0 14px}
+  .rrow{display:flex;align-items:center;gap:14px}
+  .rrow input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:7px;border-radius:6px;
+    background:linear-gradient(90deg,var(--blue) 0%,var(--blue) var(--pct,50%),var(--line) var(--pct,50%),var(--line) 100%);
+    outline-offset:3px}
+  .rrow input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;
+    background:var(--navy);border:3px solid var(--yellow);cursor:pointer;box-shadow:0 2px 5px rgba(0,0,0,.25)}
+  .rrow input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;
+    background:var(--navy);border:3px solid var(--yellow);cursor:pointer}
+  .scorepill{flex:0 0 auto;min-width:52px;text-align:center;font-family:var(--serif);font-weight:600;
+    font-size:20px;color:var(--navy);background:var(--band-bg);border-radius:10px;padding:6px 4px;
+    font-variant-numeric:tabular-nums}
+  .scorepill small{display:block;font-family:var(--sans);font-weight:600;font-size:9px;
+    letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+  .scale{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);
+    margin-top:7px;padding:0 2px}
+
+  .reflect{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+    margin-bottom:13px;box-shadow:var(--shadow)}
+  .reflect label.rl{display:block;font-weight:700;font-size:15px;margin-bottom:4px;color:var(--ink)}
+  .reflect .rh{font-size:13px;color:var(--muted);margin:0 0 11px}
+  .reflect textarea{width:100%;font:inherit;font-size:14.5px;padding:10px 12px;border:1px solid var(--line);
+    border-radius:9px;background:var(--soft);color:var(--ink);resize:vertical;min-height:70px}
+  .reflect textarea:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+
+  .snap{position:sticky;bottom:0;background:var(--navy);color:#fff;border-radius:14px 14px 0 0;
+    padding:15px 20px calc(15px + env(safe-area-inset-bottom,0px));margin-top:26px;
+    box-shadow:0 -6px 24px rgba(20,48,74,.22);display:flex;align-items:center;gap:18px;z-index:5}
+  .snap .big{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+  .snap .big span{font-size:17px;color:rgba(255,255,255,.6)}
+  .snap .sinfo{flex:1;min-width:0}
+  .snap .band{font-weight:700;font-size:15.5px;line-height:1.2}
+  .snap .bandnote{font-size:12px;color:rgba(255,255,255,.72);margin-top:2px}
+  .snap .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto;background:var(--yellow)}
+
+  .actions{display:flex;gap:11px;margin-top:24px;flex-wrap:wrap}
+  button.btn{font:inherit;font-weight:700;font-size:15px;padding:13px 20px;border-radius:11px;
+    border:none;cursor:pointer;flex:1;min-width:150px}
+  .btn.primary{background:var(--yellow);color:var(--navy)}
+  .btn.primary:hover{filter:brightness(1.05)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--blue);color:var(--blue)}
+  button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+  .result{margin-top:24px}
+  .rescard{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:var(--shadow)}
+  .resh{background:var(--navy);color:#fff;padding:22px 22px 20px;position:relative}
+  .resh:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--yellow)}
+  .resh .rlabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);font-weight:700}
+  .resh .rclub{font-family:var(--serif);font-weight:600;font-size:24px;margin:5px 0 2px;text-wrap:balance}
+  .resh .rdate{font-size:12.5px;color:rgba(255,255,255,.65)}
+  .scoreband{display:flex;align-items:center;gap:20px;padding:22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .scoreband .score{font-family:var(--serif);font-weight:600;font-size:56px;line-height:.9;
+    font-variant-numeric:tabular-nums;color:var(--navy)}
+  .scoreband .score span{font-size:24px;color:var(--muted)}
+  .scoreband .bandwrap{flex:1;min-width:180px}
+  .scoreband .bname{font-weight:800;font-size:19px}
+  .scoreband .bdesc{font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.45}
+  .bars{padding:8px 22px 4px}
+  .barrow{display:flex;align-items:center;gap:12px;padding:7px 0;border-bottom:1px solid var(--line)}
+  .barrow:last-child{border-bottom:none}
+  .barrow .bl{flex:0 0 42%;font-size:13.5px;font-weight:600}
+  @media(max-width:480px){.barrow .bl{flex-basis:50%;font-size:12.5px}}
+  .barrow .track{flex:1;height:9px;border-radius:5px;background:var(--band-bg);overflow:hidden}
+  .barrow .fill{height:100%;border-radius:5px}
+  .barrow .bv{flex:0 0 auto;font-weight:700;font-variant-numeric:tabular-nums;font-size:13.5px;width:34px;text-align:right}
+  .lists{padding:16px 22px 6px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:520px){.lists{grid-template-columns:1fr}}
+  .lists h4{font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px;font-weight:800}
+  .lists .st h4{color:var(--strong)} .lists .op h4{color:var(--mid)}
+  .lists ul{margin:0;padding-left:18px} .lists li{font-size:14px;margin-bottom:5px}
+  .reslist{padding:4px 22px 20px}
+  .reslist .rb{margin-top:14px}
+  .reslist .rbl{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:3px}
+  .reslist .rbt{font-size:14.5px;white-space:pre-wrap}
+  .resfoot{background:var(--band-bg);padding:16px 22px;font-size:13px;color:var(--muted);text-align:center}
+  .resfoot b{color:var(--navy)}
+  .resfoot .c{margin-top:4px;font-size:12px}
+  .resfoot a{color:var(--navy);font-weight:600}
+
+  .footnote{text-align:center;font-size:12px;color:var(--muted);margin-top:26px;line-height:1.5}
+  .footnote a{color:var(--muted)}
+  @media print{
+    .snap,.actions,.howto,.back{display:none!important}
+    body{background:#fff}
+    .area,.reflect,.meta,.rescard{box-shadow:none;break-inside:avoid}
+    header.top{border-radius:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Back to Unbeatable</a>
+  <header class="top">
+    <div class="brandrow">
+      <img src="images/logo-white.png" alt="">
+      <div>
+        <div class="bn">Unbeatable</div>
+        <div class="bt">Gavin Coyne Coaching</div>
+      </div>
+    </div>
+    <span class="eyebrow">Club Snapshot &middot; 90 seconds</span>
+    <h1>Club Culture &amp; Player Development Review</h1>
+    <p class="lede">Ten honest ratings. One clear picture of where your club stands right now — and the smallest next step that would move it.</p>
+  </header>
+
+  <div class="meta">
+    <div class="fields">
+      <div class="fld"><label for="club">Club / team</label><input id="club" type="text" placeholder="e.g. St. Mary's GAA U16"></div>
+      <div class="fld"><label for="who">Completed by</label><input id="who" type="text" placeholder="Name &amp; role"></div>
+    </div>
+    <p class="howto">Rate each area from <b>1 (needs real attention)</b> to <b>10 (a genuine strength)</b>. Be honest, not hopeful — the value is in the true picture. Your score updates live at the bottom.</p>
+  </div>
+
+  <h2 class="sec">The ten areas</h2>
+  <p class="sec-sub">Slide each one to where your club honestly sits today.</p>
+
+  <div id="areas"></div>
+
+  <h2 class="sec">Three quick reflections</h2>
+  <p class="sec-sub">A few words each — this is where the snapshot becomes a plan.</p>
+
+  <div class="reflect">
+    <label class="rl" for="str">Top 3 strengths</label>
+    <p class="rh">What's genuinely working — the things you'd protect.</p>
+    <textarea id="str" placeholder="1.&#10;2.&#10;3."></textarea>
+  </div>
+  <div class="reflect">
+    <label class="rl" for="opp">Top 3 opportunities</label>
+    <p class="rh">The areas that, if they moved, would change the most.</p>
+    <textarea id="opp" placeholder="1.&#10;2.&#10;3."></textarea>
+  </div>
+  <div class="reflect">
+    <label class="rl" for="gap">Close the gap — the 5%</label>
+    <p class="rh">If every coach and player got <b>5% better</b> at just one of these areas this season, which one — and what would that look like on a Tuesday night?</p>
+    <textarea id="gap" placeholder="The one area, and what 5% better looks like…"></textarea>
+  </div>
+
+  <div class="actions">
+    <button class="btn primary" id="build">Show our snapshot</button>
+    <button class="btn ghost" id="reset">Start again</button>
+  </div>
+
+  <div class="result" id="result" hidden></div>
+
+  <p class="footnote">
+    A free snapshot from the Unbeatable programme — a sport-led player development &amp; retention approach for youth teams.<br>
+    <a href="tel:+353858682933">085 868 2933</a> · <a href="mailto:gavincoynecoaching@gmail.com">gavincoynecoaching@gmail.com</a> · @GavinCoyneCoaching
+  </p>
+</div>
+
+<div class="snap" id="snap" aria-live="polite">
+  <div class="big" id="snapNum">—<span>/100</span></div>
+  <div class="sinfo">
+    <div class="band" id="snapBand">Slide the ten areas to begin</div>
+    <div class="bandnote" id="snapNote">Your live club score builds as you go</div>
+  </div>
+  <div class="dot" id="snapDot"></div>
+</div>
+
+<script>
+  var AREAS = [
+    ["Communication","Do players, coaches and committee actually talk — and listen — well?"],
+    ["Confidence Under Pressure","Can players hold their game together when it matters most?"],
+    ["Response to Mistakes","What happens in the moments right after something goes wrong?"],
+    ["Accountability","Do people own their part — players, coaches and committee alike?"],
+    ["Team Culture","Is this a place young players want to belong to and show up for?"],
+    ["Player Retention","Are teenagers staying in the game, or quietly drifting out?"],
+    ["Effort & Commitment","Is the effort consistent — at training, not just on match day?"],
+    ["Coach Alignment","Are the coaches pulling in the same direction with the same message?"],
+    ["Leadership","Are leaders emerging on the pitch, not just wearing the armband?"],
+    ["Resilience","Does the group bounce back — from a bad result, a bad spell, a bad call?"]
+  ];
+  var BANDS = [
+    [80,"Strong Foundation","You're building something real. The work now is protecting it and stretching your best areas further.","var(--strong)"],
+    [60,"Good Progress","A solid base with clear room to grow. Two or three focused areas would lift the whole club.","var(--good)"],
+    [40,"Significant Opportunities","The potential is here and the gaps are nameable. This is where a structured approach pays off fastest.","var(--mid)"],
+    [0,"Immediate Attention","An honest starting point — and the most valuable kind. Naming it clearly is the first real step forward.","var(--low)"]
+  ];
+  function bandFor(score){ for(var i=0;i<BANDS.length;i++){ if(score>=BANDS[i][0]) return BANDS[i]; } return BANDS[BANDS.length-1]; }
+  function colorForVal(v){ if(v>=8)return"var(--strong)"; if(v>=6)return"var(--good)"; if(v>=4)return"var(--mid)"; return"var(--low)"; }
+
+  var vals = AREAS.map(function(){return 5;});
+  var container = document.getElementById('areas');
+  AREAS.forEach(function(a,i){
+    var card=document.createElement('div'); card.className='area';
+    card.innerHTML =
+      '<div class="ah"><span class="num">'+(i+1<10?'0':'')+(i+1)+'</span><span class="an">'+a[0]+'</span></div>'+
+      '<p class="ad">'+a[1]+'</p>'+
+      '<div class="rrow">'+
+        '<input type="range" min="1" max="10" value="5" id="r'+i+'" aria-label="'+a[0]+'">'+
+        '<div class="scorepill"><span id="v'+i+'">5</span><small>of 10</small></div>'+
+      '</div>'+
+      '<div class="scale"><span>1 · needs attention</span><span>10 · a strength</span></div>';
+    container.appendChild(card);
+    var r=card.querySelector('#r'+i), v=card.querySelector('#v'+i);
+    function paint(){
+      var val=parseInt(r.value,10); vals[i]=val; v.textContent=val;
+      r.style.setProperty('--pct',((val-1)/9*100)+'%');
+      updateSnap();
+    }
+    r.addEventListener('input',paint); paint();
+  });
+
+  function total(){ return vals.reduce(function(s,x){return s+x;},0); }
+  function updateSnap(){
+    var t=total(); var b=bandFor(t);
+    document.getElementById('snapNum').innerHTML=t+'<span>/100</span>';
+    document.getElementById('snapBand').textContent=b[1];
+    document.getElementById('snapNote').textContent=b[2].split('.')[0]+'.';
+    document.getElementById('snapDot').style.background=b[3];
+  }
+  updateSnap();
+
+  function esc(s){ return (s||'').replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
+
+  document.getElementById('build').addEventListener('click',function(){
+    var t=total(), b=bandFor(t);
+    var club=document.getElementById('club').value.trim()||'Your club';
+    var who=document.getElementById('who').value.trim();
+    var d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+
+    var ranked=AREAS.map(function(a,i){return{name:a[0],val:vals[i]};});
+    var top=ranked.slice().sort(function(x,y){return y.val-x.val;}).slice(0,3);
+    var low=ranked.slice().sort(function(x,y){return x.val-y.val;}).slice(0,3);
+
+    var bars=ranked.map(function(a){
+      return '<div class="barrow"><span class="bl">'+a.name+'</span>'+
+        '<span class="track"><span class="fill" style="width:'+(a.val*10)+'%;background:'+colorForVal(a.val)+'"></span></span>'+
+        '<span class="bv">'+a.val+'</span></div>';
+    }).join('');
+
+    var strTxt=document.getElementById('str').value.trim();
+    var oppTxt=document.getElementById('opp').value.trim();
+    var gapTxt=document.getElementById('gap').value.trim();
+
+    var reflBlocks='';
+    if(strTxt) reflBlocks+='<div class="rb"><div class="rbl">Top 3 strengths</div><div class="rbt">'+esc(strTxt)+'</div></div>';
+    if(oppTxt) reflBlocks+='<div class="rb"><div class="rbl">Top 3 opportunities</div><div class="rbt">'+esc(oppTxt)+'</div></div>';
+    if(gapTxt) reflBlocks+='<div class="rb"><div class="rbl">The 5% — close the gap</div><div class="rbt">'+esc(gapTxt)+'</div></div>';
+
+    var html=
+      '<div class="rescard">'+
+        '<div class="resh"><div class="rlabel">Club Snapshot</div>'+
+          '<div class="rclub">'+esc(club)+'</div>'+
+          '<div class="rdate">'+(who?esc(who)+' · ':'')+d+'</div></div>'+
+        '<div class="scoreband">'+
+          '<div class="score">'+t+'<span>/100</span></div>'+
+          '<div class="bandwrap"><div class="bname" style="color:'+b[3]+'">'+b[1]+'</div>'+
+          '<div class="bdesc">'+b[2]+'</div></div>'+
+        '</div>'+
+        '<div class="bars">'+bars+'</div>'+
+        '<div class="lists">'+
+          '<div class="st"><h4>Standing tallest</h4><ul>'+top.map(function(a){return '<li>'+a.name+' <b>('+a.val+')</b></li>';}).join('')+'</ul></div>'+
+          '<div class="op"><h4>Biggest opportunity</h4><ul>'+low.map(function(a){return '<li>'+a.name+' <b>('+a.val+')</b></li>';}).join('')+'</ul></div>'+
+        '</div>'+
+        (reflBlocks?'<div class="reslist">'+reflBlocks+'</div>':'')+
+        '<div class="resfoot"><b>This will help. It won’t be easy. It will be worth it.</b>'+
+          '<div class="c">Talk it through with Gavin · <a href="tel:+353858682933">085 868 2933</a> · <a href="mailto:gavincoynecoaching@gmail.com?subject=Unbeatable%20%E2%80%94%20our%20club%20snapshot">gavincoynecoaching@gmail.com</a></div></div>'+
+      '</div>';
+
+    var res=document.getElementById('result');
+    res.innerHTML=html; res.hidden=false;
+    res.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+
+  document.getElementById('reset').addEventListener('click',function(){
+    vals=AREAS.map(function(){return 5;});
+    AREAS.forEach(function(a,i){
+      var r=document.getElementById('r'+i); r.value=5;
+      r.dispatchEvent(new Event('input'));
+    });
+    ['club','who','str','opp','gap'].forEach(function(id){document.getElementById(id).value='';});
+    var res=document.getElementById('result'); res.hidden=true; res.innerHTML='';
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+</script>
+</body>
+</html>

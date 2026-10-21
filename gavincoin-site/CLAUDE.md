@@ -31,6 +31,16 @@ reorder sections or restyle anything. The only planned visual change is a
 small tweak to the For Parents page (`players.html`), which Gavin will
 describe. Content updates and real images are still to come.
 
+## New multi-page site — PREVIEW ONLY (21 Oct 2026)
+
+Built from Unbeatable_Website_Implementation_Spec.md and parked in `preview/`
+(live at https://gavincoynecoaching.github.io/unbeatable/preview/, noindex) so the
+live root is unchanged until Gavin approves. Pages: index (Home), coaches,
+players, parents, media, snapshot (the club snapshot, copied from his private
+artifact so the public can open it), plus copies of trial/articles/committees
+with the new menu. New styles are in `preview/site.css` (classes prefixed `u-`).
+To go live: copy preview/* over the root files (except CLAUDE.md) and delete preview/.
+
 ## Trial page payments (20 Oct 2026)
 
 The "Start the Trial" (€35) and "Choose the Month" (€79) buttons in the
