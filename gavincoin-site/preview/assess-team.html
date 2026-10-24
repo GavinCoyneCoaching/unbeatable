@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Assessment | Unbeatable by Gavin Coyne Coaching</title>
+<meta name="description" content="The Unbeatable Team Assessment: rate ten areas, get a score out of 100 and see where to build.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="assess.css">
+</head>
+<body>
+
+<div class="u-topbar">
+  <div class="wrap">
+    <span>Call or WhatsApp Gavin: <a href="tel:+353858682933">085 868 2933</a></span>
+    <a href="mailto:gavincoynecoaching@gmail.com">gavincoynecoaching@gmail.com</a>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/logo-navy.png" alt="Unbeatable by Gavin Coyne Coaching" class="brand-mark">Gavin Coyne Coaching</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="coaches.html">Coaches</a>
+      <a href="players.html">Players</a>
+      <a href="parents.html">Parents</a>
+      <a href="assessments.html" aria-current="page">Assessments</a>
+      <a href="media.html">Media</a>
+      <a href="trial.html" class="nav-cta">5-Day Trial</a>
+    </nav>
+  </div>
+</header>
+
+<section class="u-hero u-hero-small">
+  <div class="wrap">
+    <p class="u-eyebrow"><a href="assessments.html" style="color:inherit;text-decoration:none">Assessments</a> &middot; about 3 minutes</p>
+    <h1>Team Assessment</h1>
+    <p class="u-sub">Ten areas that shape how your group trains and plays. Best completed by the coach or management team.</p>
+  </div>
+</section>
+
+<section class="u-sec">
+  <div class="a-wrap">
+    <div class="a-card">
+      <div class="a-fields">
+        <div class="field"><label for="a-f-team">Team / panel</label><input id="a-f-team" type="text" placeholder="e.g. St. Mary's U16 Hurling"></div>
+        <div class="field"><label for="a-f-by">Completed by (name & role)</label><input id="a-f-by" type="text" autocomplete="name" placeholder="e.g. Aoife Byrne, head coach"></div>
+        <div class="field"><label for="a-f-sport">Sport</label><input id="a-f-sport" type="text" placeholder="e.g. Hurling"></div>
+        <div class="field"><label for="a-f-players">Number of players</label><input id="a-f-players" type="number" placeholder="e.g. 24"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">1. Rate the 10 areas</h2>
+      <p class="a-sec-sub">Tap one score for each area. &nbsp;1 = needs significant support &nbsp;|&nbsp; 5 = developing &nbsp;|&nbsp; 10 = a clear strength</p>
+      <div class="a-areas" id="a-areas"></div>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">2. What are we doing well?</h2>
+      <p class="a-sec-sub">Your three highest-rated areas fill in automatically. Add a few words on each — optional.</p>
+      <table class="a-tbl">
+          <tr><th>Current strength</th><th>Why it helps the team</th></tr>
+          <tr><td id="a-sarea0">—</td><td><input id="a-snote0" type="text" aria-label="Why it helps the team 1"></td></tr>
+          <tr><td id="a-sarea1">—</td><td><input id="a-snote1" type="text" aria-label="Why it helps the team 2"></td></tr>
+          <tr><td id="a-sarea2">—</td><td><input id="a-snote2" type="text" aria-label="Why it helps the team 3"></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">3. Where can we build?</h2>
+      <p class="a-sec-sub">Your three lowest-rated areas fill in automatically. Add a few words on each — optional.</p>
+      <table class="a-tbl">
+          <tr><th>Area we can build</th><th>Why it matters / what could improve</th></tr>
+          <tr><td id="a-barea0">—</td><td><input id="a-bnote0" type="text" aria-label="Why it matters / what could improve 1"></td></tr>
+          <tr><td id="a-barea1">—</td><td><input id="a-bnote1" type="text" aria-label="Why it matters / what could improve 2"></td></tr>
+          <tr><td id="a-barea2">—</td><td><input id="a-bnote2" type="text" aria-label="Why it matters / what could improve 3"></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">4. Get your result</h2>
+      <p class="a-sec-sub">We'll show your score straight away and email you a copy.</p>
+      <div class="a-card">
+        <div class="a-fields">
+          <div class="field"><label for="a-email">Email</label><input id="a-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+          <div class="field"><label for="a-phone">Phone (optional)</label><input id="a-phone" type="tel" autocomplete="tel" placeholder="For a quick chat about your results"></div>
+        </div>
+        <p class="a-consent">By getting your result you agree that Gavin Coyne Coaching receives a copy and may contact you about it. Nothing else, no spam.</p>
+      </div>
+      <p class="a-err" id="a-err"></p>
+      <div class="a-submit-row"><button type="button" class="btn btn-primary btn-large" id="a-submit">Show my result</button></div>
+    </div>
+
+    <div id="a-result" hidden style="margin-top:44px"></div>
+  </div>
+</section>
+
+<div class="a-live" aria-live="polite">
+  <div class="a-wrap">
+    <div class="a-live-num" id="a-live-num">—<span>/100</span></div>
+    <div><div class="a-live-band" id="a-live-band">0 of 10 areas rated</div><div class="a-live-note" id="a-live-note">Tap a score for each area</div></div>
+  </div>
+</div>
+
+<script>window.ASSESSMENT = {"title": "Team Assessment", "short": "Your team", "scoreLabel": "Our team score", "intro": "Ten areas that shape how your group trains and plays. Best completed by the coach or management team.", "fields": [{"id": "team", "label": "Team / panel", "ph": "e.g. St. Mary's U16 Hurling"}, {"id": "by", "label": "Completed by (name & role)", "ph": "e.g. Aoife Byrne, head coach", "ac": "name"}, {"id": "sport", "label": "Sport", "ph": "e.g. Hurling"}, {"id": "players", "label": "Number of players", "ph": "e.g. 24", "type": "number"}], "emailNote": "", "areas": [{"name": "Communication", "q": "How consistently do players communicate clearly and usefully with teammates and coaches?"}, {"name": "Focus & Attention", "q": "How well does the team maintain or regain attention during training, matches and difficult periods?"}, {"name": "Response to Mistakes", "q": "How quickly do players reset and become useful again after mistakes, setbacks or difficult decisions?"}, {"name": "Accountability", "q": "How consistently do players take responsibility for their effort, actions and response?"}, {"name": "Effort & Work Rate", "q": "How consistently does the group maintain useful effort, including when circumstances become difficult?"}, {"name": "Team Contribution", "q": "How consistently do players look for useful ways to help the team beyond their own role or recognition?"}, {"name": "Standards & Preparation", "q": "How consistently does the group meet expected standards in preparation, training and competition?"}, {"name": "Support & Trust", "q": "How well do players support, encourage and rely on one another?"}, {"name": "Leadership", "q": "How effectively do players take responsibility, communicate and positively influence others within the group?"}, {"name": "Coachability & Improvement", "q": "How receptive is the group to feedback, learning and making useful adjustments?"}], "bands": [{"min": 80, "range": "80-100", "name": "Strong Foundation", "text": "This group has a strong behavioural foundation. Protect what works and target the few gaps that could lift the panel further."}, {"min": 60, "range": "60-79", "name": "Building Well", "text": "A useful base is in place. Greater consistency in a small number of areas could make the team more reliable under pressure."}, {"min": 40, "range": "40-59", "name": "Clear Opportunities", "text": "There are clear strengths, but several development areas deserve deliberate attention over the next block."}, {"min": 0, "range": "10-39", "name": "Priority Areas Identified", "text": "Several areas would benefit from structured support to help the group become more focused, useful and consistent."}], "sec3": {"title": "What are we doing well?", "c1": "Current strength", "c2": "Why it helps the team"}, "sec4": {"title": "Where can we build?", "c1": "Area we can build", "c2": "Why it matters / what could improve"}, "nextText": "Talk your team's results through with Gavin — or test the approach properly with a 30-day pilot in your real training and matches.", "nextLink": {"href": "mailto:gavincoynecoaching@gmail.com?subject=Unbeatable%20%E2%80%94%20start%20a%2030-day%20pilot", "label": "Start a 30-day pilot"}};</script>
+<script src="assess.js"></script>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Unbeatable by Gavin Coyne Coaching</span>
+    <span class="u-foot-contact"><a href="mailto:gavincoynecoaching@gmail.com">gavincoynecoaching@gmail.com</a> &middot; <a href="tel:+353858682933">085 868 2933</a> &middot; @GavinCoyneCoaching</span>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

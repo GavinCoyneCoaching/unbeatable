@@ -41,6 +41,7 @@ artifact so the public can open it), plus copies of trial/articles/committees
 with the new menu. New styles are in `preview/site.css` (classes prefixed `u-`).
 Snapshot (preview/snapshot.html) now asks for email (+ optional phone), shows tailored feedback (band meaning, strengths, quick win per weakest area, next-step buttons) and emails a copy to Gavin via FormSubmit (formsubmit.co/ajax/gavincoynecoaching@gmail.com). FormSubmit's first submission sends Gavin an activation email that must be clicked once.
 Player snapshot (preview/player-snapshot.html, 24 Oct 2026): 10 sporting moments rated 1–10 (total /100), written to the player, coaching not therapy. Bands: Locked In / Solid Base / Room to Grow / Starting Point; tips + Unbeatable tool for the 2 lowest moments; next step = WhatsApp Gavin or 5-Day Trial. Under-16s asked to use a parent's email. Emails Gavin via the same FormSubmit endpoint. Linked from preview/players.html.
+Assessments (preview, 24 Oct 2026): assessments.html hub + assess-player/team/club.html, text verbatim from Gavin's printed Set A V4 Draft 2 sheets. Shared engine preview/assess.js (+ assess.css). Sends to Google Apps Script when APPS_SCRIPT_URL in assess.js is set (logs to the 'Unbeatable Assessments' Google Sheet, emails Gavin + the respondent); until then falls back to FormSubmit (Gavin only). Script + setup steps: /apps-script (not published). 'Assessments' tab added to the preview menu.
 To go live: copy preview/* over the root files (except CLAUDE.md) and delete preview/.
 
 ## Trial page payments (20 Oct 2026)

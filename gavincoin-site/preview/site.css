@@ -232,3 +232,19 @@
   .u-btns .btn { width: 100%; text-align: center; }
   .u-topbar .wrap { justify-content: center; font-size: 12.5px; }
 }
+
+/* Keep brand + trial pill on one line; tighten menu on laptop widths (7 tabs) */
+.brand { white-space: nowrap; }
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1240px) and (min-width: 721px) {
+  .brand { font-size: 19px; }
+  .brand .brand-mark { height: 34px; }
+  .nav-links { font-size: 13.5px; letter-spacing: 0.04em; }
+  .nav-links a { margin-left: 18px; }
+  .nav-links a.nav-cta { padding: 8px 12px; }
+}
+@media (max-width: 960px) and (min-width: 721px) {
+  .site-header .wrap { height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 4px; }
+  .nav-links { width: 100%; justify-content: space-between; }
+  .nav-links a, .nav-links a:first-child { margin-left: 0; }
+}
