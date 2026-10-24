@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Player Snapshot | Unbeatable by Gavin Coyne Coaching</title>
+<meta name="description" content="Ten moments every player meets. Rate how you handle each one and get a score out of 100 with practical tips to try next.">
+<style>
+  :root{
+    color-scheme: light;
+    --navy:#14304A; --blue:#2E6BB0; --yellow:#F2C200;
+    --ink:#1c2b39; --muted:#63748a; --line:#e4e8ee;
+    --paper:#ffffff; --ground:#f4f6f9; --band-bg:#eef3f8;
+    --soft:#f8fafc;
+    --strong:#1f7a45; --good:#2E6BB0; --mid:#c9860a; --low:#b3261e;
+    --shadow:0 6px 24px rgba(20,48,74,.10);
+    --serif:'Fraunces',Georgia,'Times New Roman',serif;
+    --sans:'Inter','Helvetica Neue',Arial,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding-left:16px;padding-right:16px;padding-block:0 60px}
+  .back{display:inline-block;margin:14px 2px 10px;font-size:14px;color:var(--navy);font-weight:600;text-decoration:none}
+  .back:hover{text-decoration:underline}
+
+  header.top{background:var(--navy);color:#fff;border-radius:18px;
+    padding:26px 22px 24px;margin:0 0 22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  header.top:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--yellow)}
+  .brandrow{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+  .brandrow img{width:38px;height:auto;flex:0 0 auto}
+  .brandrow .bn{font-weight:700;letter-spacing:.02em;font-size:15px}
+  .brandrow .bt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(25px,6vw,36px);line-height:1.08;
+    margin:0 0 8px;text-wrap:balance}
+  header.top p.lede{margin:0;color:rgba(255,255,255,.82);font-size:15px;max-width:56ch}
+  .eyebrow{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--yellow);font-weight:700;margin-bottom:12px}
+
+  .meta{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+    margin-bottom:22px;box-shadow:var(--shadow)}
+  .meta .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:520px){.meta .fields{grid-template-columns:1fr}}
+  .fld label{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;margin-bottom:5px}
+  .fld input{width:100%;font:inherit;font-size:15px;padding:9px 11px;border:1px solid var(--line);
+    border-radius:9px;background:var(--soft);color:var(--ink)}
+  .fld input:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+  .howto{font-size:13.5px;color:var(--muted);margin:14px 2px 0;line-height:1.5}
+  .howto b{color:var(--ink)}
+
+  h2.sec{font-family:var(--serif);font-weight:600;font-size:20px;margin:30px 2px 4px;color:var(--navy)}
+  .sec-sub{font-size:13.5px;color:var(--muted);margin:0 2px 14px}
+
+  .area{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px 18px;
+    margin-bottom:13px;box-shadow:var(--shadow)}
+  .area .ah{display:flex;align-items:baseline;gap:10px;margin-bottom:3px}
+  .area .num{font-family:var(--serif);font-weight:600;color:var(--blue);font-size:15px;
+    font-variant-numeric:tabular-nums;flex:0 0 auto}
+  .area .an{font-weight:700;font-size:16px;color:var(--ink)}
+  .area .ad{font-size:13px;color:var(--muted);margin:0 0 14px}
+  .rrow{display:flex;align-items:center;gap:14px}
+  .rrow input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:7px;border-radius:6px;
+    background:linear-gradient(90deg,var(--blue) 0%,var(--blue) var(--pct,50%),var(--line) var(--pct,50%),var(--line) 100%);
+    outline-offset:3px}
+  .rrow input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;
+    background:var(--navy);border:3px solid var(--yellow);cursor:pointer;box-shadow:0 2px 5px rgba(0,0,0,.25)}
+  .rrow input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;
+    background:var(--navy);border:3px solid var(--yellow);cursor:pointer}
+  .scorepill{flex:0 0 auto;min-width:52px;text-align:center;font-family:var(--serif);font-weight:600;
+    font-size:20px;color:var(--navy);background:var(--band-bg);border-radius:10px;padding:6px 4px;
+    font-variant-numeric:tabular-nums}
+  .scorepill small{display:block;font-family:var(--sans);font-weight:600;font-size:9px;
+    letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+  .scale{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);
+    margin-top:7px;padding:0 2px}
+
+  .reflect{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+    margin-bottom:13px;box-shadow:var(--shadow)}
+  .reflect label.rl{display:block;font-weight:700;font-size:15px;margin-bottom:4px;color:var(--ink)}
+  .reflect .rh{font-size:13px;color:var(--muted);margin:0 0 11px}
+  .reflect textarea{width:100%;font:inherit;font-size:14.5px;padding:10px 12px;border:1px solid var(--line);
+    border-radius:9px;background:var(--soft);color:var(--ink);resize:vertical;min-height:70px}
+  .reflect textarea:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+
+  .snap{position:sticky;bottom:0;background:var(--navy);color:#fff;border-radius:14px 14px 0 0;
+    padding:15px 20px calc(15px + env(safe-area-inset-bottom,0px));margin-top:26px;
+    box-shadow:0 -6px 24px rgba(20,48,74,.22);display:flex;align-items:center;gap:18px;z-index:5}
+  .snap .big{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+  .snap .big span{font-size:17px;color:rgba(255,255,255,.6)}
+  .snap .sinfo{flex:1;min-width:0}
+  .snap .band{font-weight:700;font-size:15.5px;line-height:1.2}
+  .snap .bandnote{font-size:12px;color:rgba(255,255,255,.72);margin-top:2px}
+  .snap .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto;background:var(--yellow)}
+
+  .actions{display:flex;gap:11px;margin-top:24px;flex-wrap:wrap}
+  button.btn{font:inherit;font-weight:700;font-size:15px;padding:13px 20px;border-radius:11px;
+    border:none;cursor:pointer;flex:1;min-width:150px}
+  .btn.primary{background:var(--yellow);color:var(--navy)}
+  .btn.primary:hover{filter:brightness(1.05)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--blue);color:var(--blue)}
+  button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+  .result{margin-top:24px}
+  .rescard{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:var(--shadow)}
+  .resh{background:var(--navy);color:#fff;padding:22px 22px 20px;position:relative}
+  .resh:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--yellow)}
+  .resh .rlabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);font-weight:700}
+  .resh .rclub{font-family:var(--serif);font-weight:600;font-size:24px;margin:5px 0 2px;text-wrap:balance}
+  .resh .rdate{font-size:12.5px;color:rgba(255,255,255,.65)}
+  .scoreband{display:flex;align-items:center;gap:20px;padding:22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .scoreband .score{font-family:var(--serif);font-weight:600;font-size:56px;line-height:.9;
+    font-variant-numeric:tabular-nums;color:var(--navy)}
+  .scoreband .score span{font-size:24px;color:var(--muted)}
+  .scoreband .bandwrap{flex:1;min-width:180px}
+  .scoreband .bname{font-weight:800;font-size:19px}
+  .scoreband .bdesc{font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.45}
+  .bars{padding:8px 22px 4px}
+  .barrow{display:flex;align-items:center;gap:12px;padding:7px 0;border-bottom:1px solid var(--line)}
+  .barrow:last-child{border-bottom:none}
+  .barrow .bl{flex:0 0 42%;font-size:13.5px;font-weight:600}
+  @media(max-width:480px){.barrow .bl{flex-basis:50%;font-size:12.5px}}
+  .barrow .track{flex:1;height:9px;border-radius:5px;background:var(--band-bg);overflow:hidden}
+  .barrow .fill{height:100%;border-radius:5px}
+  .barrow .bv{flex:0 0 auto;font-weight:700;font-variant-numeric:tabular-nums;font-size:13.5px;width:34px;text-align:right}
+  .lists{padding:16px 22px 6px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:520px){.lists{grid-template-columns:1fr}}
+  .lists h4{font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px;font-weight:800}
+  .lists .st h4{color:var(--strong)} .lists .op h4{color:var(--mid)}
+  .lists ul{margin:0;padding-left:18px} .lists li{font-size:14px;margin-bottom:5px}
+  .reslist{padding:4px 22px 20px}
+  .reslist .rb{margin-top:14px}
+  .reslist .rbl{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:3px}
+  .reslist .rbt{font-size:14.5px;white-space:pre-wrap}
+  .resfoot{background:var(--band-bg);padding:16px 22px;font-size:13px;color:var(--muted);text-align:center}
+  .resfoot b{color:var(--navy)}
+  .resfoot .c{margin-top:4px;font-size:12px}
+  .resfoot a{color:var(--navy);font-weight:600}
+
+  .contact{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:22px;box-shadow:var(--shadow)}
+  .contact .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:520px){.contact .fields{grid-template-columns:1fr}}
+  .contact .consent{font-size:12.5px;color:var(--muted);margin:12px 2px 0}
+  .err{color:var(--low);font-size:13px;font-weight:600;margin:10px 2px 0;display:none}
+  .sent{font-size:13px;margin:10px 0 0;color:var(--muted)}
+  .fb{padding:6px 22px 18px}
+  .fb h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:18px 0 8px;font-weight:800;color:var(--navy)}
+  .fb p{font-size:14.5px;margin:0 0 10px}
+  .fb .tip{background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+  .fb .tip b{display:block;font-size:14.5px;margin-bottom:3px}
+  .fb .tip span{font-size:14px;color:var(--ink)}
+  .fb .tool{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-top:6px}
+  .next{padding:20px 22px;background:var(--navy);color:#fff}
+  .next h4{margin:0 0 6px;font-size:18px;font-family:var(--serif);font-weight:600}
+  .next p{margin:0 0 14px;font-size:14px;color:rgba(255,255,255,.82)}
+  .next .nb{display:flex;gap:10px;flex-wrap:wrap}
+  .next a{flex:1;min-width:160px;text-align:center;text-decoration:none;font-weight:700;font-size:14.5px;padding:12px 16px;border-radius:11px}
+  .next a.y{background:var(--yellow);color:var(--navy)}
+  .next a.o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+  .footnote{text-align:center;font-size:12px;color:var(--muted);margin-top:26px;line-height:1.5}
+  .footnote a{color:var(--muted)}
+  @media print{
+    .snap,.actions,.howto,.back{display:none!important}
+    body{background:#fff}
+    .area,.reflect,.meta,.rescard{box-shadow:none;break-inside:avoid}
+    header.top{border-radius:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <a class="back" href="players.html">&larr; Back to Unbeatable</a>
+  <header class="top">
+    <div class="brandrow">
+      <img src="images/logo-white.png" alt="">
+      <div>
+        <div class="bn">Unbeatable</div>
+        <div class="bt">Gavin Coyne Coaching</div>
+      </div>
+    </div>
+    <span class="eyebrow">Player Snapshot &middot; about 3 minutes</span>
+    <h1>How do you handle the big moments?</h1>
+    <p class="lede">Ten moments every player meets. Rate how you usually handle each one. No right or wrong answers — it's a starting point, not a test.</p>
+  </header>
+
+  <div class="meta">
+    <div class="fields">
+      <div class="fld"><label for="pname">Your first name</label><input id="pname" type="text" autocomplete="given-name" placeholder="e.g. Jack"></div>
+      <div class="fld"><label for="sport">Sport &amp; position</label><input id="sport" type="text" placeholder="e.g. Hurling, half-back"></div>
+      <div class="fld"><label for="club">Club / team</label><input id="club" type="text" placeholder="e.g. St. Mary's U16"></div>
+      <div class="fld"><label for="age">Age</label><input id="age" type="number" min="8" max="99" inputmode="numeric" placeholder="e.g. 15"></div>
+    </div>
+    <p class="howto">For each moment, slide from <b>1 (it takes over my game)</b> to <b>10 (I deal with it and get straight back to my job)</b>. Be honest — think about what you actually do, not what you'd like to do. Your score builds live at the bottom.</p>
+  </div>
+
+  <h2 class="sec">The ten moments</h2>
+  <p class="sec-sub">Picture yourself in each one. How do you usually respond?</p>
+
+  <div id="areas"></div>
+
+  <h2 class="sec">One last thing</h2>
+  <p class="sec-sub">Optional — a few words is plenty.</p>
+  <div class="reflect">
+    <label class="rl" for="wish">Which moment would you most like to handle better?</label>
+    <p class="rh">And what would "better" look like on the pitch?</p>
+    <textarea id="wish" placeholder="e.g. After an early miss I want to get my head straight back in the game…"></textarea>
+  </div>
+
+  <h2 class="sec">Where should your results go?</h2>
+  <p class="sec-sub">Gavin reads every snapshot himself and can talk you through it.</p>
+  <div class="contact">
+    <div class="fields">
+      <div class="fld"><label for="em">Email</label><input id="em" type="email" autocomplete="email" placeholder="Yours, or a parent's if you're under 16"></div>
+      <div class="fld"><label for="ph">Phone (optional)</label><input id="ph" type="tel" autocomplete="tel" placeholder="For a quick chat about your results"></div>
+    </div>
+    <p class="consent">Under 16? Please use a parent or guardian's email and fill this in with them. By showing your results you agree that Gavin Coyne Coaching receives a copy and may contact you (or your parent) about them. Nothing else, no spam.</p>
+    <p class="err" id="err">Please add a valid email address so we can send your results.</p>
+  </div>
+
+  <div class="actions">
+    <button class="btn primary" id="build">Show my results</button>
+    <button class="btn ghost" id="reset">Start again</button>
+  </div>
+
+  <div class="result" id="result" hidden></div>
+
+  <p class="footnote">
+    A free coaching snapshot from Unbeatable — practical, on-the-pitch player development. Not therapy, not a diagnosis, just a starting point.<br>
+    <a href="tel:+353858682933">085 868 2933</a> · <a href="mailto:gavincoynecoaching@gmail.com">gavincoynecoaching@gmail.com</a> · @GavinCoyneCoaching
+  </p>
+</div>
+
+<div class="snap" id="snap" aria-live="polite">
+  <div class="big" id="snapNum">—<span>/100</span></div>
+  <div class="sinfo">
+    <div class="band" id="snapBand">Slide the ten moments to begin</div>
+    <div class="bandnote" id="snapNote">Your score builds as you go</div>
+  </div>
+  <div class="dot" id="snapDot"></div>
+</div>
+
+<script>
+  // [name, the moment, quick win written to the player, Unbeatable tool]
+  var AREAS = [
+    ["The early miss","You miss an easy chance in the first five minutes. How quickly do you get your head back in the game?",
+      "Glance. Learn. Return. Give the miss one look, take one lesson from it, then put your attention straight on your next job.","Frustration vs Fascination"],
+    ["The bad call","The ref gives a decision against you that you know is wrong. Do you let it go, or does it stay with you?",
+      "Don't hand them the extra man. The call is done — swap \"that's not fair\" for \"what do we do now?\"","Mirrors & Windows"],
+    ["The stronger opponent","You're marking someone quicker, stronger or more experienced than you. Do you back yourself, or shrink?",
+      "Notice it, respect it, then come back to the mirror: \"What's my first job, whoever's across from me?\"","Mirrors & Windows"],
+    ["The teammate's mistake","A teammate's mistake costs your team a score. How do you react to them?",
+      "Lend them your calm. One word — \"go again\" — does more than a sigh or a shrug. Energy spreads both ways.","Communication"],
+    ["When your go-to isn't working","The thing you're best at just isn't coming off today. Do you find another way to help?",
+      "Five, five, five: your first option is never your only option. Find another way to help — a run, a tackle, a call.","5·5·5"],
+    ["The big moment","Last minute, a free or a penalty to take, everyone watching. How do you handle the nerves?",
+      "Decide before the game: \"If this happens, I do that.\" Same routine every time, so the nerves have nowhere to go.","The Move"],
+    ["Making the call","You make a good run, or you see danger coming. Do you talk — call for it, warn a teammate?",
+      "One extra call per drill: \"man on\", \"time\", \"keeper\". The run only counts if someone knows you made it.","Communication"],
+    ["On the bench","You're named as a sub, or only get five minutes. How do you handle it?",
+      "Win your own scoreboard. Ask yourself: \"If I only get five minutes, what will I do with them?\"","Beyond the Scoreboard"],
+    ["Going behind","Your team goes a couple of scores down and heads start to drop. What do you do?",
+      "Mirror, mirror: \"What can I do next?\" Your effort, your voice and your next action are still all yours.","Mirrors & Windows"],
+    ["The drive home","After a bad game you're replaying it. \"I'm useless, I always mess this up.\" How fast do you move on?",
+      "Add one word: \"I can't do this… yet.\" Then pick one thing to work on this week instead of replaying the game.","Frustration vs Fascination"]
+  ];
+  var BANDS = [
+    [80,"Locked In","You handle most big moments well. The work now is staying sharp and stretching the few that still catch you out.","var(--strong)"],
+    [60,"Solid Base","You've got a lot going for you. A couple of moments still pull your head out of the game — and those are very trainable.","var(--good)"],
+    [40,"Room to Grow","The ability is there. Some moments are taking your attention away from it — that's exactly what these tools are built for.","var(--mid)"],
+    [0,"Starting Point","An honest score takes guts, and it's the best place to start. Every one of these moments can be trained, one at a time.","var(--low)"]
+  ];
+  var CHAT_URL = "https://wa.me/353858682933?text=Hi%20Gavin%2C%20I%20just%20did%20the%20player%20snapshot%20and%20I%27d%20like%20to%20chat%20about%20my%20results";
+  var TRIAL_URL = "trial.html";
+  // FormSubmit forwards each snapshot to Gavin's inbox (same activation as the club snapshot).
+  var SEND_TO = "https://formsubmit.co/ajax/gavincoynecoaching@gmail.com";
+
+  function bandFor(score){ for(var i=0;i<BANDS.length;i++){ if(score>=BANDS[i][0]) return BANDS[i]; } return BANDS[BANDS.length-1]; }
+  function colorForVal(v){ if(v>=8)return"var(--strong)"; if(v>=6)return"var(--good)"; if(v>=4)return"var(--mid)"; return"var(--low)"; }
+  function esc(s){ return (s||'').replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
+
+  var vals = AREAS.map(function(){return 5;});
+  var container = document.getElementById('areas');
+  AREAS.forEach(function(a,i){
+    var card=document.createElement('div'); card.className='area';
+    card.innerHTML =
+      '<div class="ah"><span class="num">'+(i+1<10?'0':'')+(i+1)+'</span><span class="an">'+a[0]+'</span></div>'+
+      '<p class="ad">'+a[1]+'</p>'+
+      '<div class="rrow">'+
+        '<input type="range" min="1" max="10" value="5" id="r'+i+'" aria-label="'+a[0]+'">'+
+        '<div class="scorepill"><span id="v'+i+'">5</span><small>of 10</small></div>'+
+      '</div>'+
+      '<div class="scale"><span>1 · it takes over</span><span>10 · straight back to my job</span></div>';
+    container.appendChild(card);
+    var r=card.querySelector('#r'+i), v=card.querySelector('#v'+i);
+    function paint(){
+      var val=parseInt(r.value,10); vals[i]=val; v.textContent=val;
+      r.style.setProperty('--pct',((val-1)/9*100)+'%');
+      updateSnap();
+    }
+    r.addEventListener('input',paint); paint();
+  });
+
+  function total(){ return vals.reduce(function(s,x){return s+x;},0); }
+  function updateSnap(){
+    var t=total(); var b=bandFor(t);
+    document.getElementById('snapNum').innerHTML=t+'<span>/100</span>';
+    document.getElementById('snapBand').textContent=b[1];
+    document.getElementById('snapNote').textContent=b[2].split('.')[0]+'.';
+    document.getElementById('snapDot').style.background=b[3];
+  }
+  updateSnap();
+
+  function sendCopy(data, statusEl){
+    var fallback='Your results are below. If you\'d like to talk them through, use the buttons at the bottom.';
+    try{
+      fetch(SEND_TO,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){ statusEl.textContent = r.ok ? 'A copy has been sent to Gavin — he\'ll be in touch.' : fallback; })
+        .catch(function(){ statusEl.textContent = fallback; });
+    }catch(e){ statusEl.textContent = fallback; }
+  }
+
+  document.getElementById('build').addEventListener('click',function(){
+    var em=document.getElementById('em').value.trim();
+    var errEl=document.getElementById('err');
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ errEl.style.display='block'; document.getElementById('em').focus(); return; }
+    errEl.style.display='none';
+
+    var t=total(), b=bandFor(t);
+    var name=document.getElementById('pname').value.trim()||'Your';
+    var who=name==='Your'?'Your results':name+"'s results";
+    var sport=document.getElementById('sport').value.trim();
+    var club=document.getElementById('club').value.trim();
+    var age=document.getElementById('age').value.trim();
+    var ph=document.getElementById('ph').value.trim();
+    var wish=document.getElementById('wish').value.trim();
+    var d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+
+    var ranked=AREAS.map(function(a,i){return{name:a[0],val:vals[i],tip:a[2],tool:a[3]};});
+    var top=ranked.slice().sort(function(x,y){return y.val-x.val;}).slice(0,3);
+    var low=ranked.slice().sort(function(x,y){return x.val-y.val;}).slice(0,3);
+
+    var bars=ranked.map(function(a){
+      return '<div class="barrow"><span class="bl">'+a.name+'</span>'+
+        '<span class="track"><span class="fill" style="width:'+(a.val*10)+'%;background:'+colorForVal(a.val)+'"></span></span>'+
+        '<span class="bv">'+a.val+'</span></div>';
+    }).join('');
+
+    var feedback='<div class="fb">'+
+      '<h4>What your score tells you</h4><p>'+b[2]+'</p>'+
+      '<h4>Your strengths</h4><p>You handle <b>'+top.map(function(a){return a.name.toLowerCase();}).join(', ')+'</b> best. That\'s something to be proud of — and proof you already know how to get your head back in the game.</p>'+
+      '<h4>Try this first</h4>'+
+      low.slice(0,2).map(function(a){ return '<div class="tip"><b>'+a.name+' ('+a.val+'/10)</b><span>'+a.tip+'</span><br><span class="tool">Unbeatable tool: '+a.tool+'</span></div>'; }).join('')+
+      '</div>';
+
+    var html=
+      '<div class="rescard">'+
+        '<div class="resh"><div class="rlabel">Player Snapshot</div>'+
+          '<div class="rclub">'+esc(who)+'</div>'+
+          '<div class="rdate">'+[sport,club].filter(Boolean).map(esc).join(' · ')+(sport||club?' · ':'')+d+'</div></div>'+
+        '<div class="scoreband">'+
+          '<div class="score">'+t+'<span>/100</span></div>'+
+          '<div class="bandwrap"><div class="bname" style="color:'+b[3]+'">'+b[1]+'</div>'+
+          '<div class="bdesc">'+b[2]+'</div></div>'+
+        '</div>'+
+        '<div class="bars">'+bars+'</div>'+
+        feedback+
+        '<div class="next"><h4>Your next step</h4><p>Want help with the moments that catch you out? Message Gavin for a quick chat, or start the 5-Day Trial — one tool a day, built for exactly this.</p>'+
+          '<div class="nb"><a class="y" href="'+CHAT_URL+'" target="_blank" rel="noopener">Message Gavin</a><a class="o" href="'+TRIAL_URL+'">See the 5-Day Trial</a></div>'+
+          '<p class="sent" id="sent" style="color:rgba(255,255,255,.7);margin:12px 0 0">Sending a copy to Gavin…</p></div>'+
+        '<div class="resfoot"><b>The skill is already in there. This is about reaching it when it matters.</b>'+
+          '<div class="c">Gavin Coyne Coaching · <a href="tel:+353858682933">085 868 2933</a></div></div>'+
+      '</div>';
+
+    var res=document.getElementById('result');
+    res.innerHTML=html; res.hidden=false;
+    res.scrollIntoView({behavior:'smooth',block:'start'});
+
+    var data={
+      _subject:'New player snapshot: '+(name==='Your'?'(no name)':name)+' ('+t+'/100)',
+      _template:'table',
+      _captcha:'false',
+      _autoresponse:'Thanks for completing the Unbeatable player snapshot. Gavin reads every one himself and will be in touch about your results. — Gavin Coyne Coaching · 085 868 2933',
+      type:'Player snapshot',
+      name:name==='Your'?'(not given)':name, age:age||'(not given)', sport_position:sport||'(not given)', club:club||'(not given)',
+      email:em, phone:ph||'(not given)', total_score:t+'/100', band:b[1]
+    };
+    ranked.forEach(function(a){ data[a.name]=a.val+'/10'; });
+    data['Moment they most want to handle better (their words)']=wish||'(blank)';
+    sendCopy(data, document.getElementById('sent'));
+  });
+
+  document.getElementById('reset').addEventListener('click',function(){
+    vals=AREAS.map(function(){return 5;});
+    AREAS.forEach(function(a,i){
+      var r=document.getElementById('r'+i); r.value=5;
+      r.dispatchEvent(new Event('input'));
+    });
+    ['pname','sport','club','age','wish','em','ph'].forEach(function(id){document.getElementById(id).value='';});
+    var res=document.getElementById('result'); res.hidden=true; res.innerHTML='';
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+</script>
+
+</body>
+</html>
