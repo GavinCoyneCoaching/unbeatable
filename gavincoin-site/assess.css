@@ -105,3 +105,12 @@
   .a-tbl th:last-child { display: none; }
   .a-bar-l { flex-basis: 50%; font-size: 13px; }
 }
+
+/* One-page layout: three assessment sections (25 Oct 2026) */
+.a-assess { scroll-margin-top: 90px; border-top: 1px solid var(--line); }
+#top { scroll-margin-top: 90px; }
+.a-sec-head { margin-bottom: 8px; }
+.a-sec-head h2 { font-size: clamp(30px, 4.5vw, 44px); margin: 6px 0 8px; }
+.a-sec-intro { color: var(--quote); font-size: 17px; margin: 0 0 28px; }
+.a-top { margin-top: 28px; margin-bottom: 0; font-size: 14.5px; }
+.a-top a { color: var(--navy-soft); font-weight: 600; text-decoration: none; }

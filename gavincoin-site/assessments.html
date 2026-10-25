@@ -23,7 +23,7 @@
     <nav class="nav-links">
       <a href="index.html">Coaching</a>
       <a href="committees.html">For Clubs</a>
-      <a href="assessments.html" aria-current="page">Assessments</a>
+      <span class="nav-drop"><a href="assessments.html" aria-current="page">Assessments</a><span class="nav-drop-menu"><a href="assessments.html#player">Player</a><a href="assessments.html#coach">Coach</a><a href="assessments.html#club">Club</a></span></span>
       <a href="trial.html">5-Day Trial</a>
       <a href="index.html#signup">Join the list</a>
     </nav>
@@ -38,7 +38,7 @@
   </div>
 </section>
 
-<section class="u-sec">
+<section class="u-sec" id="top">
   <div class="wrap">
     <div class="a-hub">
       <div class="a-hub-card">
@@ -46,24 +46,229 @@
         <h3>Player Assessment</h3>
         <p>For an individual player &mdash; on their own, or with a parent or coach.</p>
         <ul><li>Focus, response to mistakes, composure</li><li>Habits, discipline, commitment</li><li>Leadership and team contribution</li></ul>
-        <a class="btn btn-primary" href="assess-player.html">Start the player assessment</a>
+        <a class="btn btn-primary" href="#player">Start the player assessment &darr;</a>
       </div>
       <div class="a-hub-card">
         <p class="rk">For coaches</p>
         <h3>Team Assessment</h3>
         <p>For a coach or management team rating one group or panel.</p>
         <ul><li>Communication, focus, response</li><li>Effort, standards, support &amp; trust</li><li>Leadership and coachability</li></ul>
-        <a class="btn btn-navy" href="assess-team.html">Start the team assessment</a>
+        <a class="btn btn-navy" href="#coach">Start the team assessment &darr;</a>
       </div>
       <div class="a-hub-card">
         <p class="rk">For clubs</p>
         <h3>Club Assessment</h3>
         <p>For a committee member or coaching officer looking across several panels.</p>
         <ul><li>Communication and focus across panels</li><li>Player engagement and contribution</li><li>Shared language and follow-through</li></ul>
-        <a class="btn btn-navy" href="assess-club.html">Start the club assessment</a>
+        <a class="btn btn-navy" href="#club">Start the club assessment &darr;</a>
       </div>
     </div>
   </div>
+</section>
+
+<section class="u-sec a-assess" id="player">
+  <div class="a-wrap a-sec-head">
+      <p class="u-eyebrow">For players &middot; about 3 minutes</p>
+      <h2>Player Assessment</h2>
+      <p class="a-sec-intro">Ten areas that shape how you play. Rate yourself honestly — it's a starting point, not a test.</p>
+    </div>
+    <div class="a-wrap">
+    <div class="a-card">
+      <div class="a-fields">
+        <div class="field"><label for="player-a-f-name">Your name</label><input id="player-a-f-name" type="text" autocomplete="name" placeholder="e.g. Jack Murphy"></div>
+        <div class="field"><label for="player-a-f-age">Age</label><input id="player-a-f-age" type="number" placeholder="e.g. 15"></div>
+        <div class="field"><label for="player-a-f-sport">Sport & position</label><input id="player-a-f-sport" type="text" placeholder="e.g. Hurling, half-back"></div>
+        <div class="field"><label for="player-a-f-club">Club / team</label><input id="player-a-f-club" type="text" placeholder="e.g. St. Mary's U16"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">1. Rate the 10 areas</h2>
+      <p class="a-sec-sub">Tap one score for each area. &nbsp;1 = needs significant support &nbsp;|&nbsp; 5 = developing &nbsp;|&nbsp; 10 = a clear strength</p>
+      <div class="a-areas" id="player-a-areas"></div>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">2. What's working?</h2>
+      <p class="a-sec-sub">Your three highest-rated areas fill in automatically. Add a few words on each — optional.</p>
+      <table class="a-tbl">
+          <tr><th>Current strength</th><th>How it helps me</th></tr>
+          <tr><td id="player-a-sarea0">—</td><td><input id="player-a-snote0" type="text" aria-label="How it helps me 1"></td></tr>
+          <tr><td id="player-a-sarea1">—</td><td><input id="player-a-snote1" type="text" aria-label="How it helps me 2"></td></tr>
+          <tr><td id="player-a-sarea2">—</td><td><input id="player-a-snote2" type="text" aria-label="How it helps me 3"></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">3. Where can I build?</h2>
+      <p class="a-sec-sub">Your three lowest-rated areas fill in automatically. Add a few words on each — optional.</p>
+      <table class="a-tbl">
+          <tr><th>Area to build</th><th>Why it matters / what could change</th></tr>
+          <tr><td id="player-a-barea0">—</td><td><input id="player-a-bnote0" type="text" aria-label="Why it matters / what could change 1"></td></tr>
+          <tr><td id="player-a-barea1">—</td><td><input id="player-a-bnote1" type="text" aria-label="Why it matters / what could change 2"></td></tr>
+          <tr><td id="player-a-barea2">—</td><td><input id="player-a-bnote2" type="text" aria-label="Why it matters / what could change 3"></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">4. Get your result</h2>
+      <p class="a-sec-sub">We'll show your score straight away and email you a copy.</p>
+      <div class="a-card">
+        <div class="a-fields">
+          <div class="field"><label for="player-a-email">Email</label><input id="player-a-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+          <div class="field"><label for="player-a-phone">Phone (optional)</label><input id="player-a-phone" type="tel" autocomplete="tel" placeholder="For a quick chat about your results"></div>
+        </div>
+        <p class="a-consent"><b>Under 16? Please use a parent or guardian's email and fill this in with them.</b> By getting your result you agree that Gavin Coyne Coaching receives a copy and may contact you about it. Nothing else, no spam.</p>
+      </div>
+      <p class="a-err" id="player-a-err"></p>
+      <div class="a-submit-row"><button type="button" class="btn btn-primary btn-large" id="player-a-submit">Show my result</button></div>
+    </div>
+
+    <div id="player-a-result" hidden style="margin-top:44px"></div>
+  </div>
+  <p class="a-wrap a-top"><a href="#top">&uarr; Back to the three assessments</a></p>
+<div class="a-live" aria-live="polite">
+  <div class="a-wrap">
+    <div class="a-live-num" id="player-a-live-num">—<span>/100</span></div>
+    <div><div class="a-live-band" id="player-a-live-band">0 of 10 areas rated</div><div class="a-live-note" id="player-a-live-note">Tap a score for each area</div></div>
+  </div>
+</div>
+</section>
+<section class="u-sec a-assess" id="coach">
+  <div class="a-wrap a-sec-head">
+      <p class="u-eyebrow">For coaches &middot; about 3 minutes</p>
+      <h2>Team Assessment</h2>
+      <p class="a-sec-intro">Ten areas that shape how your group trains and plays. Best completed by the coach or management team.</p>
+    </div>
+    <div class="a-wrap">
+    <div class="a-card">
+      <div class="a-fields">
+        <div class="field"><label for="coach-a-f-team">Team / panel</label><input id="coach-a-f-team" type="text" placeholder="e.g. St. Mary's U16 Hurling"></div>
+        <div class="field"><label for="coach-a-f-by">Completed by (name & role)</label><input id="coach-a-f-by" type="text" autocomplete="name" placeholder="e.g. Aoife Byrne, head coach"></div>
+        <div class="field"><label for="coach-a-f-sport">Sport</label><input id="coach-a-f-sport" type="text" placeholder="e.g. Hurling"></div>
+        <div class="field"><label for="coach-a-f-players">Number of players</label><input id="coach-a-f-players" type="number" placeholder="e.g. 24"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">1. Rate the 10 areas</h2>
+      <p class="a-sec-sub">Tap one score for each area. &nbsp;1 = needs significant support &nbsp;|&nbsp; 5 = developing &nbsp;|&nbsp; 10 = a clear strength</p>
+      <div class="a-areas" id="coach-a-areas"></div>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">2. What are we doing well?</h2>
+      <p class="a-sec-sub">Your three highest-rated areas fill in automatically. Add a few words on each — optional.</p>
+      <table class="a-tbl">
+          <tr><th>Current strength</th><th>Why it helps the team</th></tr>
+          <tr><td id="coach-a-sarea0">—</td><td><input id="coach-a-snote0" type="text" aria-label="Why it helps the team 1"></td></tr>
+          <tr><td id="coach-a-sarea1">—</td><td><input id="coach-a-snote1" type="text" aria-label="Why it helps the team 2"></td></tr>
+          <tr><td id="coach-a-sarea2">—</td><td><input id="coach-a-snote2" type="text" aria-label="Why it helps the team 3"></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">3. Where can we build?</h2>
+      <p class="a-sec-sub">Your three lowest-rated areas fill in automatically. Add a few words on each — optional.</p>
+      <table class="a-tbl">
+          <tr><th>Area we can build</th><th>Why it matters / what could improve</th></tr>
+          <tr><td id="coach-a-barea0">—</td><td><input id="coach-a-bnote0" type="text" aria-label="Why it matters / what could improve 1"></td></tr>
+          <tr><td id="coach-a-barea1">—</td><td><input id="coach-a-bnote1" type="text" aria-label="Why it matters / what could improve 2"></td></tr>
+          <tr><td id="coach-a-barea2">—</td><td><input id="coach-a-bnote2" type="text" aria-label="Why it matters / what could improve 3"></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">4. Get your result</h2>
+      <p class="a-sec-sub">We'll show your score straight away and email you a copy.</p>
+      <div class="a-card">
+        <div class="a-fields">
+          <div class="field"><label for="coach-a-email">Email</label><input id="coach-a-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+          <div class="field"><label for="coach-a-phone">Phone (optional)</label><input id="coach-a-phone" type="tel" autocomplete="tel" placeholder="For a quick chat about your results"></div>
+        </div>
+        <p class="a-consent">By getting your result you agree that Gavin Coyne Coaching receives a copy and may contact you about it. Nothing else, no spam.</p>
+      </div>
+      <p class="a-err" id="coach-a-err"></p>
+      <div class="a-submit-row"><button type="button" class="btn btn-primary btn-large" id="coach-a-submit">Show my result</button></div>
+    </div>
+
+    <div id="coach-a-result" hidden style="margin-top:44px"></div>
+  </div>
+  <p class="a-wrap a-top"><a href="#top">&uarr; Back to the three assessments</a></p>
+<div class="a-live" aria-live="polite">
+  <div class="a-wrap">
+    <div class="a-live-num" id="coach-a-live-num">—<span>/100</span></div>
+    <div><div class="a-live-band" id="coach-a-live-band">0 of 10 areas rated</div><div class="a-live-note" id="coach-a-live-note">Tap a score for each area</div></div>
+  </div>
+</div>
+</section>
+<section class="u-sec a-assess" id="club">
+  <div class="a-wrap a-sec-head">
+      <p class="u-eyebrow">For clubs &middot; about 3 minutes</p>
+      <h2>Club Assessment</h2>
+      <p class="a-sec-intro">Ten areas across your panels. Best completed by a committee member, coaching officer or games development lead.</p>
+    </div>
+    <div class="a-wrap">
+    <div class="a-card">
+      <div class="a-fields">
+        <div class="field"><label for="club-a-f-club">Club</label><input id="club-a-f-club" type="text" placeholder="e.g. St. Mary's GAA"></div>
+        <div class="field"><label for="club-a-f-by">Completed by (name & role)</label><input id="club-a-f-by" type="text" autocomplete="name" placeholder="e.g. Seán Kelly, coaching officer"></div>
+        <div class="field"><label for="club-a-f-panels">Panels reviewed</label><input id="club-a-f-panels" type="text" placeholder="e.g. U12–U16 boys and girls"></div>
+        <div class="field"><label for="club-a-f-sport">Sport(s)</label><input id="club-a-f-sport" type="text" placeholder="e.g. GAA, camogie"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">1. Rate the 10 areas</h2>
+      <p class="a-sec-sub">Tap one score for each area. &nbsp;1 = needs significant support &nbsp;|&nbsp; 5 = developing &nbsp;|&nbsp; 10 = a clear strength</p>
+      <div class="a-areas" id="club-a-areas"></div>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">2. What are we seeing across panels?</h2>
+      <p class="a-sec-sub">Your three highest-rated areas fill in automatically. Add a few words on each — optional.</p>
+      <table class="a-tbl">
+          <tr><th>Recurring strength</th><th>Where we see it</th></tr>
+          <tr><td id="club-a-sarea0">—</td><td><input id="club-a-snote0" type="text" aria-label="Where we see it 1"></td></tr>
+          <tr><td id="club-a-sarea1">—</td><td><input id="club-a-snote1" type="text" aria-label="Where we see it 2"></td></tr>
+          <tr><td id="club-a-sarea2">—</td><td><input id="club-a-snote2" type="text" aria-label="Where we see it 3"></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">3. Where is support most needed?</h2>
+      <p class="a-sec-sub">Your three lowest-rated areas fill in automatically. Add a few words on each — optional.</p>
+      <table class="a-tbl">
+          <tr><th>Recurring need</th><th>Where it shows up</th></tr>
+          <tr><td id="club-a-barea0">—</td><td><input id="club-a-bnote0" type="text" aria-label="Where it shows up 1"></td></tr>
+          <tr><td id="club-a-barea1">—</td><td><input id="club-a-bnote1" type="text" aria-label="Where it shows up 2"></td></tr>
+          <tr><td id="club-a-barea2">—</td><td><input id="club-a-bnote2" type="text" aria-label="Where it shows up 3"></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top:44px">
+      <h2 class="a-sec-title">4. Get your result</h2>
+      <p class="a-sec-sub">We'll show your score straight away and email you a copy.</p>
+      <div class="a-card">
+        <div class="a-fields">
+          <div class="field"><label for="club-a-email">Email</label><input id="club-a-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+          <div class="field"><label for="club-a-phone">Phone (optional)</label><input id="club-a-phone" type="tel" autocomplete="tel" placeholder="For a quick chat about your results"></div>
+        </div>
+        <p class="a-consent">By getting your result you agree that Gavin Coyne Coaching receives a copy and may contact you about it. Nothing else, no spam.</p>
+      </div>
+      <p class="a-err" id="club-a-err"></p>
+      <div class="a-submit-row"><button type="button" class="btn btn-primary btn-large" id="club-a-submit">Show my result</button></div>
+    </div>
+
+    <div id="club-a-result" hidden style="margin-top:44px"></div>
+  </div>
+  <p class="a-wrap a-top"><a href="#top">&uarr; Back to the three assessments</a></p>
+<div class="a-live" aria-live="polite">
+  <div class="a-wrap">
+    <div class="a-live-num" id="club-a-live-num">—<span>/100</span></div>
+    <div><div class="a-live-band" id="club-a-live-band">0 of 10 areas rated</div><div class="a-live-note" id="club-a-live-note">Tap a score for each area</div></div>
+  </div>
+</div>
 </section>
 
 <div class="u-boundary">
@@ -80,5 +285,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>window.ASSESSMENTS = {"player": {"title": "Player Assessment", "short": "Your results", "scoreLabel": "My assessment score", "intro": "Ten areas that shape how you play. Rate yourself honestly — it's a starting point, not a test.", "fields": [{"id": "name", "label": "Your name", "ph": "e.g. Jack Murphy", "ac": "name"}, {"id": "age", "label": "Age", "ph": "e.g. 15", "type": "number"}, {"id": "sport", "label": "Sport & position", "ph": "e.g. Hurling, half-back"}, {"id": "club", "label": "Club / team", "ph": "e.g. St. Mary's U16"}], "emailNote": "Under 16? Please use a parent or guardian's email and fill this in with them.", "areas": [{"name": "Focus & Attention", "q": "How well do I keep or bring my attention back to what matters during training and matches?"}, {"name": "Communication", "q": "How consistently do I communicate clearly and usefully with teammates and coaches?"}, {"name": "Response to Mistakes", "q": "How quickly do I refocus and become useful again after I make a mistake?"}, {"name": "Accountability", "q": "How well do I take responsibility for my effort, actions and response instead of looking for excuses?"}, {"name": "Preparation & Habits", "q": "How consistently do my habits and preparation help me arrive ready to contribute?"}, {"name": "Discipline", "q": "How well do I do what needs to be done even when I do not particularly feel like doing it?"}, {"name": "Commitment", "q": "How consistently do I show up ready to learn, work and improve?"}, {"name": "Confidence & Composure", "q": "How well do I trust what I can do and stay useful when pressure increases?"}, {"name": "Leadership", "q": "How well do I positively influence the people around me through my actions and communication?"}, {"name": "Team Contribution", "q": "How consistently do I look for useful ways to help my team, whether or not I am getting the attention?"}], "bands": [{"min": 80, "range": "80-100", "name": "Strong Foundation", "text": "Useful behaviours are already working for you. Protect them and target the few areas that could help you contribute even more."}, {"min": 60, "range": "60-79", "name": "Building Well", "text": "You have a solid base. Make the stronger behaviours more consistent and strengthen a small number of gaps."}, {"min": 40, "range": "40-59", "name": "Clear Opportunities", "text": "There are strengths to build from, with several areas where focused practice could make a noticeable difference."}, {"min": 0, "range": "10-39", "name": "Priority Areas Identified", "text": "A number of areas are worth supporting first. Start small and build from the clearest need."}], "sec3": {"title": "What's working?", "c1": "Current strength", "c2": "How it helps me"}, "sec4": {"title": "Where can I build?", "c1": "Area to build", "c2": "Why it matters / what could change"}, "nextText": "Want help building the areas that matter most? Talk your results through with Gavin, or start with the 5-Day Trial — one practical tool a day.", "nextLink": {"href": "trial.html", "label": "See the 5-Day Trial"}}, "coach": {"title": "Team Assessment", "short": "Your team", "scoreLabel": "Our team score", "intro": "Ten areas that shape how your group trains and plays. Best completed by the coach or management team.", "fields": [{"id": "team", "label": "Team / panel", "ph": "e.g. St. Mary's U16 Hurling"}, {"id": "by", "label": "Completed by (name & role)", "ph": "e.g. Aoife Byrne, head coach", "ac": "name"}, {"id": "sport", "label": "Sport", "ph": "e.g. Hurling"}, {"id": "players", "label": "Number of players", "ph": "e.g. 24", "type": "number"}], "emailNote": "", "areas": [{"name": "Communication", "q": "How consistently do players communicate clearly and usefully with teammates and coaches?"}, {"name": "Focus & Attention", "q": "How well does the team maintain or regain attention during training, matches and difficult periods?"}, {"name": "Response to Mistakes", "q": "How quickly do players reset and become useful again after mistakes, setbacks or difficult decisions?"}, {"name": "Accountability", "q": "How consistently do players take responsibility for their effort, actions and response?"}, {"name": "Effort & Work Rate", "q": "How consistently does the group maintain useful effort, including when circumstances become difficult?"}, {"name": "Team Contribution", "q": "How consistently do players look for useful ways to help the team beyond their own role or recognition?"}, {"name": "Standards & Preparation", "q": "How consistently does the group meet expected standards in preparation, training and competition?"}, {"name": "Support & Trust", "q": "How well do players support, encourage and rely on one another?"}, {"name": "Leadership", "q": "How effectively do players take responsibility, communicate and positively influence others within the group?"}, {"name": "Coachability & Improvement", "q": "How receptive is the group to feedback, learning and making useful adjustments?"}], "bands": [{"min": 80, "range": "80-100", "name": "Strong Foundation", "text": "This group has a strong behavioural foundation. Protect what works and target the few gaps that could lift the panel further."}, {"min": 60, "range": "60-79", "name": "Building Well", "text": "A useful base is in place. Greater consistency in a small number of areas could make the team more reliable under pressure."}, {"min": 40, "range": "40-59", "name": "Clear Opportunities", "text": "There are clear strengths, but several development areas deserve deliberate attention over the next block."}, {"min": 0, "range": "10-39", "name": "Priority Areas Identified", "text": "Several areas would benefit from structured support to help the group become more focused, useful and consistent."}], "sec3": {"title": "What are we doing well?", "c1": "Current strength", "c2": "Why it helps the team"}, "sec4": {"title": "Where can we build?", "c1": "Area we can build", "c2": "Why it matters / what could improve"}, "nextText": "Talk your team's results through with Gavin — or test the approach properly with a 30-day pilot in your real training and matches.", "nextLink": {"href": "mailto:gavincoynecoaching@gmail.com?subject=Unbeatable%20%E2%80%94%20start%20a%2030-day%20pilot", "label": "Start a 30-day pilot"}}, "club": {"title": "Club Assessment", "short": "Your club", "scoreLabel": "Cross-panel score", "intro": "Ten areas across your panels. Best completed by a committee member, coaching officer or games development lead.", "fields": [{"id": "club", "label": "Club", "ph": "e.g. St. Mary's GAA"}, {"id": "by", "label": "Completed by (name & role)", "ph": "e.g. Seán Kelly, coaching officer", "ac": "name"}, {"id": "panels", "label": "Panels reviewed", "ph": "e.g. U12–U16 boys and girls"}, {"id": "sport", "label": "Sport(s)", "ph": "e.g. GAA, camogie"}], "emailNote": "", "areas": [{"name": "Communication Across Panels", "q": "Across our panels, how consistently do players communicate clearly and usefully?"}, {"name": "Focus & Attention", "q": "Across our panels, how consistently do players maintain or regain attention when it matters?"}, {"name": "Response to Mistakes", "q": "Across our panels, how well do players reset and become useful again after mistakes or setbacks?"}, {"name": "Accountability", "q": "Across our panels, how consistently do players take responsibility for effort, actions and response?"}, {"name": "Contribution", "q": "Across our panels, how consistently do players find useful ways to contribute beyond scoring, selection or recognition?"}, {"name": "Preparation & Standards", "q": "How consistently do our panels show useful habits, preparation and standards?"}, {"name": "Player Engagement", "q": "How consistently do players stay involved and connected when roles, results or circumstances become difficult?"}, {"name": "Coach Reinforcement", "q": "How consistently are coaches reinforcing useful behaviours around focus, response and contribution?"}, {"name": "Shared Language", "q": "How consistent is the player-development language being used across different panels and age groups?"}, {"name": "Development Follow-Through", "q": "How well are panels reviewing progress and identifying the players or groups that need more support?"}], "bands": [{"min": 80, "range": "80-100", "name": "Strong Foundation", "text": "Across the panels reviewed, there is a strong player-development foundation with a small number of targeted opportunities."}, {"min": 60, "range": "60-79", "name": "Building Well", "text": "The overall picture is positive, but some panels or recurring behaviours would benefit from more consistent support."}, {"min": 40, "range": "40-59", "name": "Clear Opportunities", "text": "Useful strengths sit alongside recurring areas where targeted panel support could make a meaningful difference."}, {"min": 0, "range": "10-39", "name": "Priority Areas Identified", "text": "Clear priority areas are visible. Use the panel detail to decide where player-development support should go first."}], "sec3": {"title": "What are we seeing across panels?", "c1": "Recurring strength", "c2": "Where we see it"}, "sec4": {"title": "Where is support most needed?", "c1": "Recurring need", "c2": "Where it shows up"}, "nextText": "Talk your club's results through with Gavin — or see the difference across your panels with a 30-day pilot.", "nextLink": {"href": "mailto:gavincoynecoaching@gmail.com?subject=Unbeatable%20%E2%80%94%20start%20a%2030-day%20pilot", "label": "Start a 30-day pilot"}}};</script>
+<script src="assess.js"></script>
 </body>
 </html>
