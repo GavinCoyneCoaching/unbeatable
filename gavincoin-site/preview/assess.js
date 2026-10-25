@@ -7,7 +7,7 @@
 */
 (function () {
   // Paste the Apps Script "Web app" URL here once it's deployed (see apps-script/README.md).
-  var APPS_SCRIPT_URL = "";
+  var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHgrZ6Uti-N48SkDNsXfDPqzdElBv7BVOcIoNkvcKLebFaBVTww_xmKW2t0UWmNM3H/exec";
   var FORMSUBMIT_URL = "https://formsubmit.co/ajax/gavincoynecoaching@gmail.com";
   var CHAT_URL = "https://wa.me/353858682933?text=";
 
