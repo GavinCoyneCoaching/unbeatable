@@ -38,57 +38,800 @@
   </div>
 </section>
 
-<!--
-  MEDIA GRID: the spec's placeholder cards are kept out of the live page so it
-  doesn't look unfinished. When articles / episodes are ready, drop cards in
-  using this pattern inside a <div class="u-mgrid">:
-
-  <a class="u-mcard" href="articles/....html">
-    <div class="thumb">Article</div>
-    <div class="body"><p class="kind">Article</p><h3>Title</h3><p>One-line description.</p><span class="lnk">Read &rarr;</span></div>
-  </a>
--->
 <section class="u-sec">
   <div class="wrap">
-    <div class="u-split">
-      <div>
-        <div class="u-head" style="margin-bottom:16px">
-          <p class="u-eyebrow">Coming soon</p>
-          <h2>The first articles and episodes land here soon</h2>
-          <p>Get them first &mdash; join the list and they'll come straight to your inbox. No spam, unsubscribe anytime.</p>
-        </div>
-      </div>
-      <div class="panel">
-        <h3>Get them first</h3>
-        <div class="gold-rule"><span class="diamond"></span></div>
-        <form method="post" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl">
-          <div style="display: none;">
-            <input type="hidden" name="meta_web_form_id" value="769902414">
-            <input type="hidden" name="meta_split_id" value="">
-            <input type="hidden" name="listname" value="awlist6281530">
-            <input type="hidden" name="redirect" value="https://docs.google.com/forms/d/e/1FAIpQLSdwUH6vLt5X4NFMd2jQKOoG9qWr3KC9mS3N-29lddrbDZjfyQ/viewform?usp=header">
-            <input type="hidden" name="meta_redirect_onlist" value="https://docs.google.com/forms/d/e/1FAIpQLSdwUH6vLt5X4NFMd2jQKOoG9qWr3KC9mS3N-29lddrbDZjfyQ/viewform?usp=header">
-            <input type="hidden" name="meta_adtracking" value="Media_Page">
-            <input type="hidden" name="meta_message" value="1">
-            <input type="hidden" name="meta_required" value="name,email">
-            <input type="hidden" name="meta_tooltip" value="">
-            <img src="https://forms.aweber.com/form/displays.htm?id=7GycnAxMLIws" alt="">
-          </div>
-          <div class="field">
-            <label for="name">First name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="field">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Send them to me</button>
-        </form>
-        <p class="fine">Free. Unsubscribe anytime.</p>
-      </div>
+    <div class="u-mfilter" role="group" aria-label="Show">
+      <button type="button" class="on" data-f="all">All <span>188</span></button>
+      <button type="button" data-f="art">Articles <span>123</span></button>
+      <button type="button" data-f="pod">Podcasts <span>65</span></button>
     </div>
+    <div class="u-mgrid" id="feed">
+      <a class="u-mcard" data-kind="art" href="articles/focus-11-it-was-focus-all-along.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 25 Oct 2026</p><h3>It Was Focus All Along</h3><p>Right back at the start of this series, I told you the short answer to</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/eYPbGO_RQag" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/eYPbGO_RQag/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 24 Oct 2026</p><h3>The One About the Can Drop</h3><p>Fifteen cents back per can doesn&#x27;t sound like much until it adds up. Small actions work the same way. I talk about rebuilding the business, taking on new swim&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-10-one-attention-every-lens.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 23 Oct 2026</p><h3>One Attention, Every Lens</h3><p>If you&#x27;ve read through this whole series — not just this one, but everything we&#x27;ve sent you over the past while — here&#x27;s something worth pausing on. Every&hellip;</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-09-the-window-never-closes.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 22 Oct 2026</p><h3>The Window Never Closes</h3><p>A lot of players are waiting for the day the distractions disappear. When the tough opponent, the loud sideline, the bad call, the nagging doubt all just… …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-08-you-re-not-going-to-wish-for-it.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 21 Oct 2026</p><h3>You&#x27;re Not Going to Wish For It</h3><p>For a long time, I lived a bit too much in the hypothetical. When I have this, then I&#x27;ll be able to that. When I get that promotion, that resource, that br…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-07-the-fastest-way-back.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 20 Oct 2026</p><h3>The Fastest Way Back</h3><p>If you&#x27;ve followed this series from the beginning, you&#x27;ll know something by now. Your attention will drift. Mine does. Yours will. Every player&#x27;s does&hellip;</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-06-getting-distracted-isn-t-the-problem.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 19 Oct 2026</p><h3>Getting Distracted Isn&#x27;t the Problem</h3><p>A lot of players think focus means never getting distracted. So the moment their mind wanders, they feel like they&#x27;ve failed — and then they beat themselve…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-05-one-bill-one-debt-one-conversation.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 18 Oct 2026</p><h3>One Bill, One Debt, One Conversation</h3><p>This one&#x27;s going to zoom out a bit further than usual — on the pitch and off it, because that&#x27;s what Focus, as the last idea in this series, lets us do. Th…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/1VgH_0LVIhQ" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/1VgH_0LVIhQ/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 17 Oct 2026</p><h3>The One About Finding the Right Card</h3><p>We&#x27;ve just had week one of our mindset training with an under-15 girls&#x27; team, and here&#x27;s a card trick I showed them. Failure isn&#x27;t the opposite of&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-04-a-glance-not-a-look.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 16 Oct 2026</p><h3>A Glance, Not a Look</h3><p>Here&#x27;s something that&#x27;s become genuinely rare: real, sustained attention on one single thing. Most of us — players, parents, coaches, all of us — have got …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-03-what-are-you-feeding.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 15 Oct 2026</p><h3>What Are You Feeding?</h3><p>Attention works a lot like feeding. Whatever you feed, grows.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-02-where-attention-goes.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 14 Oct 2026</p><h3>Where Attention Goes</h3><p>Watch a player having a hard game and you&#x27;ll often see the same thing — their attention is everywhere except where it needs to be. The referee. The scoreli…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/focus-01-in-layman-s-terms.html">
+        <div class="thumb">Focus</div>
+        <div class="body"><p class="kind">Article &middot; 13 Oct 2026</p><h3>In Layman&#x27;s Terms</h3><p>People ask me this a lot: what do you actually do? What is Unbeatable, really? There&#x27;s a long answer — nine philosophies, a journal, workshops, a whole cur…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-13-what-does-your-team-actually-sound-like.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 12 Oct 2026</p><h3>What Does Your Team Actually Sound Like?</h3><p>We&#x27;ve covered a lot of ground in this series — the four layers, the message versus the meaning, silence, energy, the words that become someone&#x27;s inner voic…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-12-the-voice-they-ll-hear-in-ten-years.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 11 Oct 2026</p><h3>The Voice They&#x27;ll Hear In Ten Years</h3><p>We tend to think of our words as one-off moments — said once, landed once, done. But that&#x27;s not how it actually works with young people. Say something ofte…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/tbpS2NDYEXE" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/tbpS2NDYEXE/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 10 Oct 2026</p><h3>The One About Not Needing a Bigger Jar</h3><p>This is the jar from the foundation phase of the Unbeatable programme, this time with sand. Most of us don&#x27;t need a bigger jar; we need to fill it in the right&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-11-the-run-nobody-called-for.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 9 Oct 2026</p><h3>The Run Nobody Called For</h3><p>A player makes a good run into space. No pass comes.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-10-silence-speaks-too.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 8 Oct 2026</p><h3>Silence Speaks Too</h3><p>When people hear</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-09-energy-is-contagious.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 7 Oct 2026</p><h3>Energy Is Contagious</h3><p>Have you ever walked into a room and felt the atmosphere before anyone said a word? Sport is one of the clearest places to see it. A team concedes early — …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-08-good-intentions-delivered-poorly.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 6 Oct 2026</p><h3>Good Intentions, Delivered Poorly</h3><p>A coach wants a player to improve. That&#x27;s the intent — good, genuine, nothing wrong with it. But the player walks away feeling criticised, deflated, under …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-07-the-message-and-the-meaning.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 5 Oct 2026</p><h3>The Message And The Meaning</h3><p>A coach says to a player,</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-06-her-words-said-fine-her-body-didn-t.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 4 Oct 2026</p><h3>Her Words Said Fine. Her Body Didn&#x27;t.</h3><p>I asked my daughter how she was getting on.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/HolvHioH1GM" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/HolvHioH1GM/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 3 Oct 2026</p><h3>The One About the 4am Drive</h3><p>Driving to the airport at 4 in the morning is easy: no traffic, no hassle. Some parts of life are like that, and others need you fully switched on. I talk about noticing&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-05-who-do-you-think-you-are.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 2 Oct 2026</p><h3>Who Do You Think You Are?</h3><p>Watch a teenage dressing room closely and you&#x27;ll see it: a player who should say something to a teammate — about effort, about a missed run, about anything…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-04-stop-shouting-start-coaching.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 1 Oct 2026</p><h3>Stop Shouting, Start Coaching</h3><p>If you&#x27;ve coached or parented for more than a few years, you&#x27;ll recognise this reflex: something goes wrong, and the volume goes up before you&#x27;ve even&hellip;</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-03-direct-doesn-t-mean-destructive.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 30 Sep 2026</p><h3>Direct Doesn&#x27;t Mean Destructive</h3><p>Picture a player jogging back after losing the ball. Every coach in that moment has the same instinct — and the responsibility — to address it. The questio…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-02-the-word-that-means-two-different-things.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 29 Sep 2026</p><h3>The Word That Means Two Different Things</h3><p>A few years ago, one of my daughters taught me something without either of us realising it at the time. She was doing something small she shouldn&#x27;t — I sai…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/comm-01-you-re-having-four-conversations-not-one.html">
+        <div class="thumb">Communication</div>
+        <div class="body"><p class="kind">Article &middot; 28 Sep 2026</p><h3>You&#x27;re Having Four Conversations, Not One</h3><p>Think about a normal session. You give the team talk. You pull a player aside mid-match and say something quick and sharp. Later, in the car, you ask your …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-22-the-window-never-closes.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 27 Sep 2026</p><h3>The Window Never Closes</h3><p>If you&#x27;ve followed this whole series, you&#x27;ve hit a lot of forks along the way — mistakes, hard decisions, bad calls, tough sessions, difficult self-talk. A…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/X3KakieiwN4" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/X3KakieiwN4/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 26 Sep 2026</p><h3>The One About Morning Playtime</h3><p>Things have been going really well between me and Mila lately, and it&#x27;s down to a simple decision: I changed my schedule so we get dedicated playtime before school&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-21-what-were-you-trying-to-do.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 25 Sep 2026</p><h3>What Were You Trying To Do?</h3><p>A few years ago, at a rugby session, a player tried something ambitious out of position. It didn&#x27;t come off — the pass went astray, play broke down. An obv…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-20-volume-isn-t-coaching.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 24 Sep 2026</p><h3>Volume Isn&#x27;t Coaching</h3><p>Watching my youngest&#x27;s football, I noticed the pitch was full of instructions — run there, pass now, shoot, turn. Every parent trying to help. Every one of…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-19-focus-is-a-skill-not-a-trait.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 23 Sep 2026</p><h3>Focus Is A Skill, Not A Trait</h3><p></p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-18-feed-the-dawg-you-want-to-grow.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 22 Sep 2026</p><h3>Feed The DAWG You Want To Grow</h3><p>Two people can go through the exact same setback and walk away with completely different outlooks. One sees a reason to quit. The other sees a reason to ke…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-17-lend-them-your-calm.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 21 Sep 2026</p><h3>Lend Them Your Calm</h3><p>Your player makes a mistake. They&#x27;re already gutted, already replaying it in their head. And then the sideline gets loud — a coach loses their temper, a pa…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-16-better-questions-better-levels.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 20 Sep 2026</p><h3>Better Questions, Better Levels</h3><p></p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/Mb1PhfUuums" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/Mb1PhfUuums/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 19 Sep 2026</p><h3>The One About Capacity</h3><p>On a walk past the new pitches near home, I got thinking: the club&#x27;s growth was limited by capacity, not talent. The same goes for us. I talk about working out&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-15-what-story-are-you-feeding.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 18 Sep 2026</p><h3>What Story Are You Feeding?</h3><p>Here&#x27;s a question worth sitting with: not what story are you telling — what story are you feeding? Because a story doesn&#x27;t get powerful the first time you …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-14-the-story-you-re-telling-yourself.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 17 Sep 2026</p><h3>The Story You&#x27;re Telling Yourself</h3><p>Two players. Same missed shot. Same scoreline. Completely different stories walking off the pitch. One says</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-13-don-t-hand-them-the-extra-man.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 16 Sep 2026</p><h3>Don&#x27;t Hand Them The Extra Man</h3><p>The referee calls something you don&#x27;t agree with. It&#x27;s tempting to spend the next five minutes arguing it, sulking about it, replaying it. Understandable. …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-12-don-t-give-it-oxygen.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 15 Sep 2026</p><h3>Don&#x27;t Give It Oxygen</h3><p>Someone says something on the sideline. A decision goes against you. A small, needling thing happens that isn&#x27;t really about the game at all. And it can si…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-11-expect-it-to-be-hard.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 14 Sep 2026</p><h3>Expect It To Be Hard</h3><p>There&#x27;s a particular kind of frustration that comes from being caught off guard — you walked into training, or the match, expecting it to be fine, and inst…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-10-choose-your-hard.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 13 Sep 2026</p><h3>Choose Your Hard</h3><p>We quietly tell ourselves that one day it gets easier. One day the setbacks stop, the pressure eases off, the hard work becomes optional. It doesn&#x27;t. The l…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/smPpxtNPcKA" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/smPpxtNPcKA/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 12 Sep 2026</p><h3>The One About Confidence</h3><p>Confidence and cockiness often get mixed up, but they&#x27;re not the same thing. Confidence is knowing you&#x27;ll be fine whatever comes your way. I talk about how&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-09-curiosity-beats-confidence.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 11 Sep 2026</p><h3>Curiosity Beats Confidence</h3><p></p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-08-turn-the-next-card.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 10 Sep 2026</p><h3>Turn The Next Card</h3><p>Picture a card trick. You pull a card, look at it, slide it back into the deck. I shuffle, split, shuffle again — then start turning cards over. First one …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-07-your-frustration-is-a-compass.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 9 Sep 2026</p><h3>Your Frustration Is A Compass</h3><p>Most people treat frustration as proof that something&#x27;s wrong. I&#x27;ve come to see it differently — I think it&#x27;s usually a sign that something needs&hellip;</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-06-success-leaves-clues-too.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 8 Sep 2026</p><h3>Success Leaves Clues Too</h3><p>There&#x27;s a player on the team, or maybe a step up, who&#x27;s already doing the thing your kid is chasing — reading the game earlier, striking the ball cleaner, …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-05-every-problem-leaves-clues.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 7 Sep 2026</p><h3>Every Problem Leaves Clues</h3><p></p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-04-frustrated-or-fascinated.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 6 Sep 2026</p><h3>Frustrated, Or Fascinated?</h3><p>Picture a player working on their weaker foot. The first attempts are awkward — the ball goes everywhere, nothing lands where it&#x27;s meant to. That&#x27;s not a f…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/cgUsk8XkLB0" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/cgUsk8XkLB0/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 5 Sep 2026</p><h3>The One About Getting Your Jar in Order</h3><p>This is part two of the jar demo. When you layer your days correctly, you fit so much more in and you&#x27;re productive, not just busy. Layer them wrong and you end up&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-03-every-moment-is-a-crossroads.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 4 Sep 2026</p><h3>Every Moment Is A Crossroads</h3><p>Stuck in traffic on the way to training. A teammate not trying their best. A kick or a pass you haven&#x27;t quite mastered yet. None of these are dramatic. Non…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-02-response-ability.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 3 Sep 2026</p><h3>Response-Ability</h3><p>The referee makes a call that goes against you. A teammate doesn&#x27;t put the effort in. The weather turns. None of it was your decision, and none of it is go…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/fvf-01-the-fork-in-the-road.html">
+        <div class="thumb">Frustration vs Fascination</div>
+        <div class="body"><p class="kind">Article &middot; 2 Sep 2026</p><h3>The Fork In The Road</h3><p>You lose the ball. You miss a shot. You get dropped for the game. You get overlooked for the captain&#x27;s armband. Small moments, most of them — the kind that…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-10-how-to-win-on-the-day-you-lose.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 1 Sep 2026</p><h3>How To Win On The Day You Lose</h3><p>This is the hardest one in the whole series. Because some days, a player does everything right — and still loses. They communicated. They competed. They bo…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-09-winning-matters-losing-hurts-neither-tells-the-whole-story.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 31 Aug 2026</p><h3>Winning Matters. Losing Hurts. Neither Tells The Whole Story.</h3><p>One of the biggest misconceptions about mindset coaching is that it&#x27;s all about positive thinking. Smile more, ignore the bad stuff, everything works out. …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-08-a-60-second-team-talk-that-could-change-your-weekend.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 30 Aug 2026</p><h3>A 60-Second Team Talk That Could Change Your Weekend</h3><p>We understand all of this perfectly on a Tuesday evening, reading an email like this one. Then Saturday arrives — the nerves, the pressure, the referee — a…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/wxQlL2oJR2U" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/wxQlL2oJR2U/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 29 Aug 2026</p><h3>The One About Filling the Jar</h3><p>It&#x27;s an old analogy with my own twist. A jar, ping-pong balls, marbles and beads: put the important things in first, and everything else fits around them. Get the&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-07-the-five-minute-player.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 28 Aug 2026</p><h3>The Five-Minute Player</h3><p>Picture two players walking off after a match. One played seventy minutes. The other played five. Who contributed more? Most people assume it&#x27;s obvious. It…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-06-the-question-that-changes-the-car-journey-home.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 27 Aug 2026</p><h3>The Question That Changes The Car Journey Home</h3><p>The boot of the car after a match is one of the most important classrooms in sport. It&#x27;s where kids learn what the adults they love actually value — not fr…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-05-this-isn-t-an-excuse-not-to-care-about-winning.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 26 Aug 2026</p><h3>This Isn&#x27;t An Excuse Not To Care About Winning</h3><p>Whenever I introduce the four scoreboards, there&#x27;s usually someone in the room who assumes we&#x27;re telling players winning doesn&#x27;t matter. We&#x27;re not. I&hellip;</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-04-the-four-scoreboards-behind-every-result.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 25 Aug 2026</p><h3>The Four Scoreboards Behind Every Result</h3><p>Most of us were taught there are only two outcomes to a match. Win, or lose. Good day, or bad day. Look a little closer and every result is actually one of…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-03-results-can-lie.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 24 Aug 2026</p><h3>Results Can Lie</h3><p>Here&#x27;s a phrase I say to players and parents more than almost any other: results can lie. Not because the scoreboard is wrong — the final score is always a…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-02-the-most-dangerous-teacher-in-sport.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 23 Aug 2026</p><h3>The Most Dangerous Teacher In Sport</h3><p>Over the years, as a coach and a parent, I&#x27;ve come to believe something that sounds strange the first time you hear it. Losing isn&#x27;t the most dangerous tea…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/trkHuH5qn38" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/trkHuH5qn38/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 22 Aug 2026</p><h3>The One About Keeping Score</h3><p>Why do we keep score? When you know you&#x27;re ahead, you keep doing what&#x27;s working. When you&#x27;re behind, you know something has to change. I explain the&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/bts-01-what-was-the-score.html">
+        <div class="thumb">Beyond the Scoreboard</div>
+        <div class="body"><p class="kind">Article &middot; 21 Aug 2026</p><h3>What Was The Score?</h3><p>There&#x27;s a question almost every young player hears before they&#x27;ve even got their boots off.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-12-stop-asking-how-good-am-i-start-asking-how-can-i-help.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 20 Aug 2026</p><h3>Stop Asking &quot;How Good Am I?&quot; Start Asking &quot;How Can I Help?&quot;</h3><p>If you&#x27;ve followed this series, you&#x27;ve seen the same moment come round a few times in different clothes. The team that collapses without its one star playe…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-11-not-five-percent-better-five-percent-more-useful.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 19 Aug 2026</p><h3>Not Five Percent Better. Five Percent More Useful.</h3><p>Across this series we&#x27;ve kept coming back to one question: how can I contribute more? On the surface it sounds like an individual challenge — something for…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-10-prioritise-me-so-i-can-contribute-to-we.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 18 Aug 2026</p><h3>Prioritise Me, So I Can Contribute to We</h3><p>There&#x27;s a guilt that creeps in around self-investment. Taking the rest. Saying no to one more thing. Spending time on your own development instead of every…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-09-you-can-t-pour-from-an-empty-cup.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 17 Aug 2026</p><h3>You Can&#x27;t Pour From an Empty Cup</h3><p>Picture the parent who&#x27;s running on empty — up early, working all day, straight to training, trying to find patience and encouragement for their kid that t…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-08-contribution-isn-t-always-visible.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 16 Aug 2026</p><h3>Contribution Isn&#x27;t Always Visible</h3><p>A kid comes off the bench for the last ten minutes. Or doesn&#x27;t get on at all. Walks off feeling like the day didn&#x27;t count — like sitting there for eighty m…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/dhTBvArU1r0" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/dhTBvArU1r0/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 15 Aug 2026</p><h3>The One About Expected Goals</h3><p>Football has &quot;expected goals&quot;, but the table is decided by actual results, not the data. I talk about the gap between expectations and reality, in sport and in&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-07-what-are-you-spreading.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 14 Aug 2026</p><h3>What Are You Spreading?</h3><p>One player gets a bad call and starts complaining. Ten minutes later, without anyone deciding it, half the team&#x27;s shoulders are down and the energy in the …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-06-the-best-teams-don-t-just-train-together.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 13 Aug 2026</p><h3>The Best Teams Don&#x27;t Just Train Together</h3><p>Think back to the best team you&#x27;ve ever been part of. Not necessarily the one that won the most — the one where people genuinely got better, where confiden…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-05-it-s-not-laziness-it-s-fear.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 12 Aug 2026</p><h3>It&#x27;s Not Laziness. It&#x27;s Fear.</h3><p>There&#x27;s a player on almost every team who never puts their hand up for the penalty, never tries the risky pass, never speaks first in the huddle. It&#x27;s temp…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-04-what-were-you-trying-to-do.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 11 Aug 2026</p><h3>&quot;What Were You Trying to Do?&quot;</h3><p>A young rugby player tries something in a match he&#x27;s never tried before. It doesn&#x27;t come off. One coach&#x27;s response:</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-03-more-ways-to-help-than-you-think.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 10 Aug 2026</p><h3>More Ways to Help Than You Think</h3><p>Ask most players what they contribute to the team and they&#x27;ll tell you their headline skill. The striker scores. The keeper saves. The big defender wins th…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-02-where-is-your-missing-5.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 9 Aug 2026</p><h3>Where Is Your Missing 5%?</h3><p>Every player has a part of their game they love, and a part they quietly avoid. The one who loves getting on the ball but disappears when it comes to track…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/OGbUseyB9nc" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/OGbUseyB9nc/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 8 Aug 2026</p><h3>The One About the Grey Days</h3><p>Some days it&#x27;s my mood that&#x27;s grey, not the weather. I talk about being irritable, hesitating on decisions and juggling everyone&#x27;s schedules, and why, as&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/555-01-championship-teams-don-t-have-a-hero-they-have-heroes.html">
+        <div class="thumb">5&middot;5&middot;5</div>
+        <div class="body"><p class="kind">Article &middot; 7 Aug 2026</p><h3>Championship Teams Don&#x27;t Have a Hero. They Have Heroes.</h3><p>You know the team that looks almost unbeatable — right up until one player is missing. Suddenly the passes aren&#x27;t as sharp, the talk on the pitch drops off…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-10-new-levels-new-devils.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 6 Aug 2026</p><h3>New Levels, New Devils</h3><p>Here&#x27;s a surprise that catches a lot of players out. Success doesn&#x27;t make life easier. It makes it harder.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-09-choose-your-hard.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 5 Aug 2026</p><h3>Choose Your Hard</h3><p>Last time: name what you&#x27;re avoiding, then lean into it. That leads to a bigger truth every player eventually meets. There is no easy option. There&#x27;s only …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-08-the-cost-of-comfort.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 4 Aug 2026</p><h3>The Cost Of Comfort</h3><p>Last time: focus is what turns ability into more ability. But there&#x27;s something that quietly gets in the way of a player ever applying that focus in the fi…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-07-focus-is-the-ultimate-skill.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 3 Aug 2026</p><h3>Focus Is The Ultimate Skill</h3><p>Last time: kind of effort gets kind of results — full attention is what actually fills the cup. So here&#x27;s the question underneath that: what decides whethe…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-06-there-is-no-such-thing-as-kind-of.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 2 Aug 2026</p><h3>There Is No Such Thing As &quot;Kind Of&quot;</h3><p>Last time: the reward for filling your cup is a bigger cup. But there&#x27;s a quiet phrase that stops a lot of players ever finding that out. I hear it from pl…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/GOjPrMoxo70" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/GOjPrMoxo70/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 1 Aug 2026</p><h3>The One About Forced Advice</h3><p>On Freya&#x27;s birthday I looked back at where I was at 25. Forced advice is often ignored advice, so I talk about being a sounding board instead, protecting your time&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-05-the-reward-for-using-your-cup-is-a-bigger-cup.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 31 Jul 2026</p><h3>The Reward For Using Your Cup Is A Bigger Cup</h3><p>Last time: the espresso cup that goes to the brim every trip catches up with the pint glass that only ever gets half-filled. That&#x27;s the first lesson. Here&#x27;…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-04-the-espresso-cup.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 30 Jul 2026</p><h3>The Espresso Cup</h3><p>Last time: the work has to come first, with no guarantee attached. Here&#x27;s what that work actually looks like, side by side. Two players go to fill a bucket…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-03-payment-up-front.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 29 Jul 2026</p><h3>Payment Up Front</h3><p>Last time: the bill always arrives — you only get to choose when. Here&#x27;s the piece that decides how ready you are when it does. There&#x27;s an old saying: succ…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-02-the-bill-always-arrives.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 28 Jul 2026</p><h3>The Bill Always Arrives</h3><p>Last time: every choice has a price or a cost. Here&#x27;s the part that&#x27;s easy to miss — you don&#x27;t get to skip the bill. You only get to choose when it lands.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/ptp-01-good-habits-have-a-price-bad-habits-have-a-cost.html">
+        <div class="thumb">Paying the Price</div>
+        <div class="body"><p class="kind">Article &middot; 27 Jul 2026</p><h3>Good Habits Have A Price. Bad Habits Have A Cost.</h3><p>One of the hardest lessons in sport — and in life — is that nothing worthwhile comes free. But here&#x27;s the part most people miss: you&#x27;re going to pay either…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-11-progress-over-problems.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 26 Jul 2026</p><h3>Progress Over Problems</h3><p>One of the easiest traps in sport, coaching and life is becoming an expert on your problems. You know every detail, every frustration, every reason things …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/UZ5GNjT3wIU" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/UZ5GNjT3wIU/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 25 Jul 2026</p><h3>The One About Repeating the Lesson</h3><p>Why have you not learned this yet? It&#x27;s easy to say to our kids, but as adults we&#x27;re still repeating our own lessons every day. I talk about what a fellow&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-10-the-top-of-one-staircase-is-the-bottom-of-the-next.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 24 Jul 2026</p><h3>The Top Of One Staircase Is The Bottom Of The Next</h3><p>Here&#x27;s something that surprises a lot of players. They chase a goal for months. They finally reach the top step. And after a day or two… the buzz fades, an…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-09-skill-set-gets-you-there-mindset-keeps-you-there.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 23 Jul 2026</p><h3>Skill Set Gets You There. Mindset Keeps You There.</h3><p>One of the biggest misconceptions in sport is that success happens the moment you reach the top — make the panel, become a starter, win the championship. T…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-08-build-a-ladder.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 22 Jul 2026</p><h3>Build A Ladder</h3><p>Sometimes you break a goal down into steps… and one of the steps is still too big. Too daunting. Too far. So the player freezes on it — and the whole climb…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-07-the-missing-stair.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 21 Jul 2026</p><h3>The Missing Stair</h3><p>Sometimes the staircase looks fine. The destination is clear, the effort is there, the motivation is there — and yet progress still feels slow. The player …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-06-more-steps-less-gaps.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 20 Jul 2026</p><h3>More Steps, Less Gaps</h3><p>When the gap between where a player is and where they want to be feels too large, most people do one of three things: quit, lower the goal, or decide it wa…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-05-sometimes-the-goal-isn-t-the-problem-the-gap-is.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 19 Jul 2026</p><h3>Sometimes The Goal Isn&#x27;t The Problem. The Gap Is.</h3><p>The most common thing I hear from players is</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/c0mkBbSELmQ" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/c0mkBbSELmQ/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 18 Jul 2026</p><h3>The One About Unbeatable Moments</h3><p>When I started using the word Unbeatable, it was about overcoming setbacks. It has grown into something more: the moments and milestones that fill us up. I talk about&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-04-climb-forwards-plan-backwards.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 17 Jul 2026</p><h3>Climb Forwards. Plan Backwards.</h3><p>Here&#x27;s a pattern I&#x27;ve seen for years. A player sets a big goal — then immediately starts guessing at what to do first. Train harder? Practise more? Do… som…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-03-stop-staring-at-the-top-step.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 16 Jul 2026</p><h3>Stop Staring At The Top Step</h3><p>Picture a staircase. Eight, ten, twelve steps up to a goal that really matters. Now picture a player standing at the bottom, staring all the way up at the …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-02-build-your-own-stairs.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 15 Jul 2026</p><h3>Build Your Own Stairs</h3><p>Once a player owns their goal, a fair question shows up from the sideline — usually from a coach, sometimes from a parent:</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/stair-01-are-these-even-your-stairs.html">
+        <div class="thumb">The Stairs</div>
+        <div class="body"><p class="kind">Article &middot; 14 Jul 2026</p><h3>Are These Even Your Stairs?</h3><p>Most goal-setting advice starts with the same instruction: aim high, picture the top, want it badly enough. But I think there&#x27;s a question that has to come…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-14-what-does-your-jar-need-right-now.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 13 Jul 2026</p><h3>What does your jar need right now?</h3><p>We&#x27;ve spent a good few weeks on The Jar now — the ping-pong balls, the busy-versus- productive lesson, the honest look at what actually fills your day, the…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-13-nobody-fills-your-jar-for-you.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 12 Jul 2026</p><h3>Nobody fills your jar for you</h3><p>I hear it constantly — from players, and honestly from adults too.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/TODVMs7lcCs" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/TODVMs7lcCs/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 11 Jul 2026</p><h3>The One About Being Seen</h3><p>After the match, the players took a split second to wave and say thanks to the fans, and it meant the world. It got me thinking: do we see the people in our own lives? I&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-12-every-yes-requires-a-no.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 10 Jul 2026</p><h3>Every yes requires a no</h3><p>Every decision comes with a cost. Not always financial — a priority cost, a time cost, an attention cost. In other words: every yes requires a no. When you…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-11-sometimes-the-problem-isn-t-effort-it-s-maths.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 9 Jul 2026</p><h3>Sometimes the problem isn&#x27;t effort. It&#x27;s maths.</h3><p>One of the hardest lessons I&#x27;ve learned is also one of the most obvious: you can&#x27;t fit ten gallons into a five-gallon bucket. And yet so many of us spend o…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-10-a-full-jar-isn-t-always-a-successful-jar.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 8 Jul 2026</p><h3>A full jar isn&#x27;t always a successful jar</h3><p>For years I believed every empty space needed filling. A free hour? Do something. Space in the diary? Book something. Room in the jar? Fill it. That&#x27;s what…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-09-not-every-jar-is-too-full.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 7 Jul 2026</p><h3>Not every jar is too full</h3><p>We spend a lot of time talking about overloaded jars — too many commitments, too much sand. But there&#x27;s an opposite problem that gets overlooked: the empty…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-08-the-three-words-we-use-to-reset.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 6 Jul 2026</p><h3>The three words we use to reset</h3><p>You&#x27;ve seen it. A player&#x27;s head goes after a bad decision or a rough five minutes. And it&#x27;s not just their game that suffers — the whole team&#x27;s focus&hellip;</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-07-the-size-of-the-worry-vs-the-size-of-the-response.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 5 Jul 2026</p><h3>The size of the worry vs. the size of the response</h3><p>A player misses a chance in the first five minutes of a game — and gives it the same energy, the same head-drop, the same distraction for the rest of the m…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/V9L_C-l6qSc" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/V9L_C-l6qSc/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 4 Jul 2026</p><h3>The One About Clearing Your Storage</h3><p>When your phone&#x27;s storage is full, you clear out the apps you don&#x27;t use. Your head works the same way. I talk about deciding what you hold on to and what you&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-06-the-question-that-decides-what-goes-in.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 3 Jul 2026</p><h3>The question that decides what goes in</h3><p>Something happens — a message, a rumour about the team, a comment from someone on the sideline, a bad mark in a test — and it swallows the whole evening. N…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-05-if-everything-is-a-priority-nothing-is.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 2 Jul 2026</p><h3>If everything is a priority, nothing is</h3><p>If sand is the problem, what are the rocks? It&#x27;s easy to point out the distractions getting in the way. The harder question is what actually deserves to go…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-04-it-s-never-the-rocks-that-ruin-the-jar.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 1 Jul 2026</p><h3>It&#x27;s never the rocks that ruin the jar</h3><p>The most dangerous thing about sand is that it doesn&#x27;t look dangerous. Hand someone a jar and ask what will cause the biggest problem, and they&#x27;ll point to…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-03-the-jar-was-never-too-small.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 30 Jun 2026</p><h3>The jar was never too small</h3><p>After I shared my own story, a few people replied with the same line:</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-02-my-jar-was-full-my-priorities-weren-t.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 29 Jun 2026</p><h3>My jar was full. My priorities weren&#x27;t.</h3><p>A confession: this isn&#x27;t my first attempt at building Unbeatable. Parts of it have sat in notebooks and folders for the best part of twenty years. And for …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/jar-01-the-same-jar-filled-in-a-different-order.html">
+        <div class="thumb">The Jar</div>
+        <div class="body"><p class="kind">Article &middot; 28 Jun 2026</p><h3>The same jar, filled in a different order</h3><p>Picture an empty jar on a table. Beside it, three piles — ping-pong balls, marbles, sand. The task: fit it all in. Most of us would tip the sand in first. …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/MRBUjMGQY5k" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/MRBUjMGQY5k/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 27 Jun 2026</p><h3>The One About Waiting for the Wave</h3><p>At the school gate, I&#x27;d rather wait a hundred times with no wave than miss the one time she turns around to check I&#x27;m still there. I talk about showing up for&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-20-one-question-that-can-change-every-performance.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 26 Jun 2026</p><h3>One Question That Can Change Every Performance</h3><p>If you&#x27;ve followed this series from the car-ride conversations that started it all, through the opposition and the teammate, the team falling apart and pul…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-19-a-simple-challenge-for-this-weekend.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 25 Jun 2026</p><h3>A Simple Challenge For This Weekend</h3><p>Understanding an idea is useful. Applying it is where the value lives. So here&#x27;s a simple challenge for this weekend — whether you&#x27;re a player, coach or pa…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-18-window-or-mirror-the-question-at-the-dinner-table.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 24 Jun 2026</p><h3>Window Or Mirror — The Question At The Dinner Table</h3><p>The car ride home, or the dinner table after — most of us fall into the same pattern of questions. How did it go? Did you win? What happened? All of it poi…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-17-step-away-from-the-window.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 23 Jun 2026</p><h3>Step Away From The Window</h3><p>We&#x27;ve spent a lot of this series on windows — the opposition, teammates, the referee, the score, past mistakes. So here&#x27;s the fair question: if not the win…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-16-don-t-stare-at-the-crack.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 22 Jun 2026</p><h3>Don&#x27;t Stare At The Crack</h3><p>One mistake, and a player decides they&#x27;re a poor player. One missed shot, and they stop asking for the ball. A crack changes part of the picture. It doesn&#x27;…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-15-a-glance-is-useful-a-stare-is-distracting.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 21 Jun 2026</p><h3>A Glance Is Useful. A Stare Is Distracting.</h3><p>I want to be clear about something, because it&#x27;s easy to misread this idea. I&#x27;m not saying never look out the window. The best players do — they scan the p…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/YLse1Uoy1sk" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/YLse1Uoy1sk/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 20 Jun 2026</p><h3>The One About Owning Your Mistakes</h3><p>A Black Friday order went wrong, and the mistake was mine. I could have chanced my arm and tried to get it sorted anyway, but I talk about why owning it matters&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-14-new-levels-new-devils.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 19 Jun 2026</p><h3>New Levels, New Devils</h3><p>Your player finally makes the starting team. Or the team wins the championship they&#x27;d been chasing all year. And then — the struggle gets worse, not better…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-13-the-wrong-question.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 18 Jun 2026</p><h3>The Wrong Question</h3><p>Frustration has a favourite set of questions. Why is this happening to me? Why am I so unlucky? Why am I not good enough? They feel productive — like we&#x27;re…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-12-your-brain-wants-to-be-right.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 17 Jun 2026</p><h3>Your Brain Wants To Be Right</h3><p>A player tells themselves,</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-11-mirror-mirror-mirror.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 16 Jun 2026</p><h3>Mirror, Mirror, Mirror</h3><p>Mid-match, chaos on, a coach shouting a full paragraph of instructions from the sideline rarely lands. There&#x27;s no time to process it.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-10-why-teams-collapse-under-pressure.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 15 Jun 2026</p><h3>Why Teams Collapse Under Pressure</h3><p>You&#x27;ve watched a team with real ability fall apart under pressure — arguing, blaming, panic after mistakes — despite having plenty of talent on the pitch. …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-09-the-moment-teams-start-falling-apart.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 14 Jun 2026</p><h3>The Moment Teams Start Falling Apart</h3><p>You&#x27;ve seen it. A bad call. A pass that doesn&#x27;t arrive. A shot that goes wide. Heads drop, fingers point, communication disappears — and the team isn&#x27;t&hellip;</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/pHqv8eBfok4" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/pHqv8eBfok4/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 13 Jun 2026</p><h3>The One About Using What You Have</h3><p>If I had this, or that, I could… Stop waiting for the perfect setup. Whether it&#x27;s one kettlebell or a basic podcast mic, use what you have better than you have&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-08-the-question-that-changes-everything.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 12 Jun 2026</p><h3>The Question That Changes Everything</h3><p>Your player is up against someone quicker, stronger, more experienced. It&#x27;s just not their day on that individual battle. So what happens next — do they di…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-07-the-window-you-didn-t-notice.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 11 Jun 2026</p><h3>The Window You Didn&#x27;t Notice</h3><p>Most players understand the danger of worrying about the opposition. Far fewer notice how often they compare themselves to their own teammate.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-06-the-first-window-the-opposition.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 10 Jun 2026</p><h3>The First Window: The Opposition</h3><p>Before the whistle&#x27;s even blown, most players have already played the game in their head.</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-05-the-cost-of-living-at-the-window.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 9 Jun 2026</p><h3>The Cost Of Living At The Window</h3><p>A decision goes against your player. A teammate slips. The opposition scores. They glance out the window — and never come back. Still on the pitch, but men…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-04-the-chain-nobody-sees.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 8 Jun 2026</p><h3>The Chain Nobody Sees</h3><p>Parents ask me this a lot: why does my child&#x27;s confidence swing so much, week to week, even when nothing dramatic has happened? Here&#x27;s what I&#x27;ve come to&hellip;</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-03-where-is-your-attention-right-now.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 7 Jun 2026</p><h3>Where Is Your Attention Right Now?</h3><p>Watch a player closely during a match and you&#x27;ll see how fast their attention moves. Locked in one moment. Thinking about the referee, the score, the playe…</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/ndYb7z57FKs" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/ndYb7z57FKs/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 6 Jun 2026</p><h3>The One About Taking Stock</h3><p>Young athletes go from session to session and season to season with no real downtime and no chance to stop and think. Most players who fall short don&#x27;t need new&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-02-modern-solutions-for-traditional-problems.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 5 Jun 2026</p><h3>Modern Solutions For Traditional Problems</h3><p>Picture your player after a match, head down over a phone, scrolling — comparing themselves to a highlight reel, a teammate&#x27;s post, someone else&#x27;s</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="art" href="articles/mw-01-where-unbeatable-actually-began.html">
+        <div class="thumb">Mirrors &amp; Windows</div>
+        <div class="body"><p class="kind">Article &middot; 4 Jun 2026</p><h3>Where Unbeatable Actually Began</h3><p>Unbeatable didn&#x27;t start as a business plan. It started in the car, on the way to training, with my two daughters. One of them would be nervous — a mistake …</p><span class="lnk">Read &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/dumOwRoLeCc" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/dumOwRoLeCc/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 3 Jun 2026</p><h3>The One About What You Need</h3><p>My mom always said we&#x27;d get what we need, and then, when possible, what we want. At a recent event I didn&#x27;t get to sit beside my mate, but the conversation I&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/PO9GS0FaArI" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/PO9GS0FaArI/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 27 May 2026</p><h3>The One About Other People&#x27;s Opinions</h3><p>Be kind, caring and considerate, but you don&#x27;t have to take on everyone&#x27;s opinion. Social media has given everyone a voice, and we&#x27;re not the centre of&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/pOPPb7L8OSg" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/pOPPb7L8OSg/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 20 May 2026</p><h3>The One About Being Too Future-Focused</h3><p>I need this night out. I need this trip away. When all your joy sits in the next big thing, you miss what&#x27;s in front of you. I talk about winning by accumulation&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/uEwMXj5P-C4" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/uEwMXj5P-C4/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 13 May 2026</p><h3>The One About Head, Heart and Gut</h3><p>Big decisions, like leaving financial security behind, deserve more than a quick pros-and-cons list. I talk about head, heart and gut messages, coming at change with an&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/TM06eUUAMAc" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/TM06eUUAMAc/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 6 May 2026</p><h3>The One About Same Plan, Different Steps</h3><p>The framework for any goal is the same, but the steps depend on where you&#x27;re starting from. My daughter&#x27;s a defender and her teammate plays all over the pitch&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/nIfS3i0kPlA" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/nIfS3i0kPlA/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 29 Apr 2026</p><h3>The One About Listening to Your Gut</h3><p>Without us, there&#x27;s no them, so making time as a couple matters. I talk about gut feelings and the difference between a knee-jerk reaction and a strong, undeniable&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/gReZ1T2oLJg" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/gReZ1T2oLJg/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 22 Apr 2026</p><h3>The One About the Tree Trunk</h3><p>The stronger and better nourished the trunk, the healthier the branches. Looking after yourself first isn&#x27;t selfish when it puts you in a better place to look after&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/ieKJBxA0o0U" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/ieKJBxA0o0U/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 15 Apr 2026</p><h3>The One About the Cake Recipe</h3><p>It&#x27;s birthday weekend and I&#x27;m baking. Even a simple recipe can go wrong, so imagine the complex stuff. I talk about why having a plan tailored to you matters&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/_ofewVtjDR4" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/_ofewVtjDR4/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 8 Apr 2026</p><h3>The One About Letting Them Help</h3><p>While I was baking the birthday cake, my daughter wanted to get stuck in. Kids only want to be this involved for a short window, so I talk about finding ways to include&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/zssqV3E9vWY" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/zssqV3E9vWY/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 1 Apr 2026</p><h3>The One About Outgrowing Things</h3><p>Filmed in early December, this is all about clear-outs, moving on and outgrowing things, from toys to whole interests. I talk about emotional maturity, and how the&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/PtPUSzm73ug" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/PtPUSzm73ug/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 25 Mar 2026</p><h3>The One About Going Into the Unknown</h3><p>My daughter Freya joins me for this one. We talk about growing up across two households, overthinking the &quot;what ifs&quot;, and how to handle big changes like moving&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/f_xtXvA1mdU" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/f_xtXvA1mdU/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 18 Mar 2026</p><h3>The One About Filtering the Noise</h3><p>The radio was on in the car, full of news that had nothing to do with my day. I talk about choosing what you let in, only keeping what serves a purpose, and delegating&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/eec6Bv9c1gc" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/eec6Bv9c1gc/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 11 Mar 2026</p><h3>The One About Planning for Hurdles</h3><p>Pro teams plan their off-season around best case, worst case and everything in between. I talk about doing the same with a busy family life: know your resources, fit in&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/0X7_WDf2qvU" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/0X7_WDf2qvU/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 4 Mar 2026</p><h3>The One About Effort Before Results</h3><p>When things get hard, it&#x27;s easy to ask, &quot;Why me?&quot; I talk about seeing tough moments as a chance to show what you&#x27;re made of, and why action&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/r4fkpjlDtcA" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/r4fkpjlDtcA/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 25 Feb 2026</p><h3>The One About Boiling the Kettle</h3><p>Out of habit, I always fill the kettle to the top, even when I only need one cup. It got me thinking about where else we put in more than a task needs. Boil just enough&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/sFThoZMHI5U" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/sFThoZMHI5U/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 18 Feb 2026</p><h3>The One About Birthday Party Season</h3><p>My youngest is the social one, and that means a lot of birthday party invites. I&#x27;m not one for crowds, but I&#x27;m also a dad. I talk about balancing busy family&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/pzZ3xihunME" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/pzZ3xihunME/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 11 Feb 2026</p><h3>The One About the Halfway Point</h3><p>It&#x27;s 1 July, exactly halfway through the year. I share a lesson from a keynote speaker: look at what you should stop doing as well as what you should start. Small&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/HG3xgHf6fb4" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/HG3xgHf6fb4/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 4 Feb 2026</p><h3>The One About Having Favourites</h3><p>Who&#x27;s your favourite? With kids of different ages, it&#x27;s never about favourites. I wouldn&#x27;t play Barbies with my 14-year-old, and some activities just suit&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/812ceZYVXRs" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/812ceZYVXRs/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 28 Jan 2026</p><h3>The One About the Super Bowl</h3><p>It&#x27;s the morning after the Super Bowl. Watching how finely balanced the game was, and the chances that were missed, got me thinking about the margins in our own&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/1WI5gQmnjJY" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/1WI5gQmnjJY/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 21 Jan 2026</p><h3>The One About No Perfect Seasons</h3><p>This is Season 2, Episode 3, filmed after Freya&#x27;s school match. Nobody gets an unbroken run without setbacks. I talk about being run down, balancing time between&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/Etn_zPRPpvg" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/Etn_zPRPpvg/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 14 Jan 2026</p><h3>The One About Hope</h3><p>A scene from Peaky Blinders got me thinking about hope when the odds don&#x27;t look great. I talk about keeping your emotions on a lead, picking your moments, why&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/8PVeqO6zNKM" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/8PVeqO6zNKM/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 7 Jan 2026</p><h3>The One About Being Versatile</h3><p>On a sunny Sunday walk, while putting together the Unbeatable pitch, I talk about versatile players: defenders who can attack and attackers who can defend. The more you&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/LFw_sHJr2ns" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/LFw_sHJr2ns/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 31 Dec 2025</p><h3>The One About Exam Season</h3><p>Exam season is here, and it&#x27;s been a long time since I sat mine. I talk about what we can do as parents to make the next few weeks easier, how to lessen the impact&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/PdxMdNC1zMM" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/PdxMdNC1zMM/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 24 Dec 2025</p><h3>The One About Big, Real and Minimum Plans</h3><p>Every plan needs three versions: the big one for when everything&#x27;s going great, the realistic one for normal weeks, and the minimum for when life gets in the way. I&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/SvCYY53ai2A" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/SvCYY53ai2A/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 17 Dec 2025</p><h3>The One About the Highs and Lows of Change</h3><p>Progress is never a straight line. When you&#x27;re trying to improve your habits or mindset, the ups and downs can wind you up. I explain why focusing on the tiny&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/cIDFYQdwsss" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/cIDFYQdwsss/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 10 Dec 2025</p><h3>The One About Learning by Doing</h3><p>Following on from the last episode, I look back at where I was at 25. The highest highs and the lowest lows can only be learned by doing. I talk about why life&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/psnZFRjak7g" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/psnZFRjak7g/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 3 Dec 2025</p><h3>The One About Chopping Wood</h3><p>On New Year&#x27;s Day I was out cutting wood for the fire instead of driving. There&#x27;s always more than one way to get the job done, like making a coffee. With&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/LAMtS1DB1gc" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/LAMtS1DB1gc/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 26 Nov 2025</p><h3>The One About Rinse and Repeat</h3><p>After the Christmas rush of squeezing too much into too little time, I talk about being realistic with big goals. Losing two or three stone takes time. Start with&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/kplanF2A5jk" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/kplanF2A5jk/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 19 Nov 2025</p><h3>The One About Presence, Not Presents</h3><p>Filmed on Stephen&#x27;s Day, this is about presence over presents. I talk about spreading your goals across the whole year instead of cramming them in, and not waiting&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/9u8i1gaLd4E" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/9u8i1gaLd4E/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 12 Nov 2025</p><h3>The One About Non-Negotiables</h3><p>A little, often, leads to a lot. I talk about the non-negotiables I do every day, or at worst every second day, why there&#x27;s no magic new trick, and how consistency&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/1paa9VpGNvI" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/1paa9VpGNvI/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 5 Nov 2025</p><h3>The One About More Than the Scales</h3><p>Filmed in mid-December, wearing a festive turtleneck. Progress isn&#x27;t just a number on the scales. I talk about looking at what&#x27;s actually changed, from how&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/zyYlghBEpSs" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/zyYlghBEpSs/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 29 Oct 2025</p><h3>The One About Getting Your Culture Right</h3><p>Listening to a football fan channel talk about culture at a club got me thinking about the culture in our own homes and heads. I talk about filtering what&#x27;s&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/U0L_SYrjwL4" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/U0L_SYrjwL4/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 22 Oct 2025</p><h3>The One About Filling the Tank</h3><p>I&#x27;m at the pumps nearly every day because I only ever put a little bit of diesel in. It&#x27;s the same with our energy and habits. I talk about deciding that now&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/1h_Eef1PJbk" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/1h_Eef1PJbk/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 15 Oct 2025</p><h3>The One About In-Season Evolution</h3><p>Young athletes go from squad to squad and season to season with no downtime and no chance to take stock. After 20 years of coaching, I don&#x27;t think most players who&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/2W9A7MZIyNw" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/2W9A7MZIyNw/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 8 Oct 2025</p><h3>The One About Things Running Their Course</h3><p>Twelve years ago today I opened the doors of my own gym. It ran for six good years, and I&#x27;ve stopped calling that a failure, because it just ran its course&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/DwMnM9sRX4s" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/DwMnM9sRX4s/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 1 Oct 2025</p><h3>The One About Scratching the Itch</h3><p>I&#x27;m so glad I ran my own gym when I did, because I&#x27;d still be wondering &quot;what if&quot; otherwise. If you set the same New Year&#x27;s resolution every&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/38rxtRF00nU" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/38rxtRF00nU/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 24 Sep 2025</p><h3>The One About What I&#x27;m Taking Into My 40s</h3><p>Here are the two things I&#x27;m taking into my 40s from my first 39 years. First, spend less time distracted and more time focused. Second, quit quitting: right before&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/oFvZ8wRj3R4" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/oFvZ8wRj3R4/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 17 Sep 2025</p><h3>The One About Being at Work When You&#x27;re at Work</h3><p>Looking back at running my own gym, the biggest problem wasn&#x27;t the coaching. I was distracted, bouncing between marketing and coaching and burying my head in the&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/RaatYRBscGE" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/RaatYRBscGE/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 10 Sep 2025</p><h3>The One About the Youth Coaching Summit</h3><p>Youth Coaching Summit 2026 is done and dusted, and my big takeaway is that there are so many easy wins for helping young players enjoy their sport and get more involved&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/9PN9etP9SPk" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/9PN9etP9SPk/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 3 Sep 2025</p><h3>The One About Hesitation on the Pitch</h3><p>A match is dynamic problem solving: they move, you react, they react to your reaction. The problem is hesitation, because while you pause, the game keeps moving without&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/x6-Upv56cr8" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/x6-Upv56cr8/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 27 Aug 2025</p><h3>The One About Hesitation in Everyday Life</h3><p>Hesitation loses matches, and it costs us in everyday life too. Small problems I put off when I ran my own gym piled up into big ones, like the Power Rangers combining&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/i9T6UGI319U" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/i9T6UGI319U/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 20 Aug 2025</p><h3>The One About the Jacket Meltdown</h3><p>We were ready for school, and within 60 seconds it all fell apart over a jacket. Once I stopped and asked what was going on, my six-year-old explained she&#x27;d heard&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/T89BEGec6Uo" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/T89BEGec6Uo/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 13 Aug 2025</p><h3>The One About the Five Question Protocol</h3><p>One night of rain and the scorched pitches are already turning green: a little of what&#x27;s needed turns things around fast. Our five question protocol asks: do you&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+      <a class="u-mcard" data-kind="pod" href="https://youtu.be/98_BRZHszL0" target="_blank" rel="noopener">
+        <div class="thumb thumb-yt"><img src="https://i.ytimg.com/vi/98_BRZHszL0/hqdefault.jpg" alt="" loading="lazy"><span class="play">&#9654;</span></div>
+        <div class="body"><p class="kind">Coach Gav Podcast &middot; 6 Aug 2025</p><h3>The One About Getting It Done Ugly</h3><p>Anything worth doing is worth doing right stops a lot of us doing anything at all. Doing it wrong still gets it done, and it teaches you how to do it better next time&hellip;</p><span class="lnk">Watch on YouTube &rarr;</span></div>
+      </a>
+    </div>
+    <div class="u-more"><button type="button" class="btn btn-navy" id="more">Show more</button></div>
   </div>
 </section>
+
+<section class="u-sec u-ground u-center u-final">
+  <div class="wrap">
+    <h2>Get new ones in your inbox</h2>
+    <p>Free, no commitment. Unsubscribe anytime.</p>
+    <div class="u-btns"><a class="btn btn-navy btn-large" href="join.html">Join the movement</a></div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var PAGE = 24, shown = PAGE, filter = "all";
+  var cards = [].slice.call(document.querySelectorAll("#feed .u-mcard"));
+  var more = document.getElementById("more");
+  function render() {
+    var list = cards.filter(function (c) { return filter === "all" || c.dataset.kind === filter; });
+    cards.forEach(function (c) { c.hidden = true; });
+    list.slice(0, shown).forEach(function (c) { c.hidden = false; });
+    more.parentNode.hidden = list.length <= shown;
+  }
+  document.querySelector(".u-mfilter").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    filter = b.dataset.f; shown = PAGE;
+    [].forEach.call(this.querySelectorAll("button"), function (x) { x.classList.toggle("on", x === b); });
+    render();
+  });
+  more.addEventListener("click", function () { shown += PAGE; render(); });
+  render();
+})();
+</script>
 
 <footer>
   <div class="wrap">
