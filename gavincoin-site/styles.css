@@ -1291,3 +1291,13 @@ body.has-sticky-cta { padding-bottom: 76px; }
 .tr-plan .btn { margin-top: auto; }
 .tr-plan-note { margin-bottom: 4px; }
 .tr-plan-list, .tr-plan-note { margin-bottom: 16px; }
+/* Do-the-Work Guarantee (27 Oct 2026) */
+.tr-guarantee { margin-top: 24px; border-left-color: var(--gold); }
+.tr-guarantee h3 { font-size: 24px; }
+.tr-guarantee b { color: var(--navy); }
+.tr-g-list { list-style: none; margin: 12px 0; padding: 0; }
+.tr-g-list li { position: relative; padding: 5px 0 5px 28px; font-size: 15.5px; color: var(--navy); font-weight: 600; }
+.tr-g-list li::before { content: "\2713"; position: absolute; left: 0; top: 5px; width: 20px; height: 20px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 11px; display: flex; align-items: center; justify-content: center; }
+.tr-guarantee p.tr-g-fine { font-size: 14px; color: var(--gray); margin-top: 6px; }
+.tr-g-badge { margin: 0 0 14px; font-size: 14px; color: #dbe5ef; }
+.tr-g-badge a { color: #fff; font-weight: 700; }
