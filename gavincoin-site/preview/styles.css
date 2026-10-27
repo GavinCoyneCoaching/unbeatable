@@ -1280,3 +1280,14 @@ body.has-sticky-cta { padding-bottom: 76px; }
 /* 3 pricing options (27 Oct 2026) */
 .tr-pop-soft { background: rgba(255,255,255,0.14); color: #fff; }
 .tr-plans .tr-plan { min-width: 170px; }
+/* 6-week line-up + trial credit (27 Oct 2026) */
+.tr-plan-list { list-style: none; margin: 10px 0 0; padding: 0; text-align: left; font-size: 13px; color: #dbe5ef; }
+.tr-plan-list li { padding: 3px 0 3px 18px; position: relative; }
+.tr-plan-list li::before { content: "\2713"; position: absolute; left: 0; color: var(--blue-lt); font-weight: 700; }
+.tr-credit { margin: 4px auto 16px; max-width: 520px; background: rgba(255,255,255,0.08); border: 1px dashed rgba(255,255,255,0.35); border-radius: 10px; padding: 10px 14px; font-size: 14px; color: #dbe5ef; }
+.tr-credit b { color: #fff; }
+.tr-plans { align-items: stretch; }
+.tr-plan { display: flex; flex-direction: column; }
+.tr-plan .btn { margin-top: auto; }
+.tr-plan-note { margin-bottom: 4px; }
+.tr-plan-list, .tr-plan-note { margin-bottom: 16px; }

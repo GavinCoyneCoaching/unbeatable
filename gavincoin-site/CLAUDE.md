@@ -96,7 +96,7 @@ styles were deliberately not used.
 - players.html: intro video + 2 testimonial videos, founder photo, second star testimonial quote, pricing/timeframe/age-range FAQ answers
 - Footer contact email / social link (every page)
 - WhatsApp for trial.html enquiries: +353 85 868 2933 (wa.me/353858682933) — done
-- trial.html: hero price line, how each day is delivered, what comes after day 5, age range, testimonials. Pricing updated 27 Oct 2026: 5-Day Trial €39, 28-Day Programme €89 ("Most popular"), 90-Day Programme €249 ("Best value"; Claude suggested €229–239 for a stronger saving vs 3×€89=€267). Guarantee box temporarily hidden (commented out in trial.html)
+- trial.html: hero price line, how each day is delivered, what comes after day 5, age range, testimonials. Pricing (27 Oct 2026, v2): 5-Day Trial €39 · 4-Week Programme €89 ("Most popular") · 6-Week Programme €149 ("Recommended": + halfway feedback check-in, before & after Player Assessment, end review). Trial credit: €39 off the 6-Week if upgraded within 7 days of finishing the trial (Stripe: use a €39 promo code on the 6-week link). Programmes run in 6-week cycles, eight a year. Guarantee box temporarily hidden (commented out in trial.html)
 - Taglines for 7 of 9 article categories (only "Mirrors & Windows" and "The Jar" are done)
 - New bio copy for the homepage bio section (Gavin said he'd supply this)
 
