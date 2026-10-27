@@ -1277,3 +1277,6 @@ body.has-sticky-cta { padding-bottom: 76px; }
   .nav-drop > a::after { content: ""; }
   .nav-drop-menu, .nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu { display: none; }
 }
+/* 3 pricing options (27 Oct 2026) */
+.tr-pop-soft { background: rgba(255,255,255,0.14); color: #fff; }
+.tr-plans .tr-plan { min-width: 170px; }
