@@ -83,7 +83,7 @@
       return;
     }
     var email = el("a-email").value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr("Please add a valid email address so we can send your results."); el("a-email").focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr("Please add your email in the details at the top so we can send your results."); el("a-email").focus(); return; }
     el("a-err").style.display = "none";
 
     var t = total(), band = bandFor(t);
