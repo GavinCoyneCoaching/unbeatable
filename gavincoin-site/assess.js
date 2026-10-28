@@ -111,6 +111,7 @@
       [["s", top], ["b", low]].forEach(function (pair) {
         for (var k = 0; k < 3; k++) {
           var cell = el("a-" + pair[0] + "area" + k);
+          if (!cell) continue;
           var item = pair[1][k];
           cell.textContent = item ? item.name + " (" + item.val + ")" : "—";
         }
@@ -121,8 +122,7 @@
       var n = answered(), t = total();
       el("a-live-num").innerHTML = (n === 10 ? t : t || "—") + "<span>/100</span>";
       el("a-live-band").textContent = n === 10 ? bandFor(t).name : n + " of 10 areas rated";
-      el("a-live-note").textContent = n === 10 ? "Scroll down to finish and see your result" : "Tap a score for each area";
-      fillTables();
+      el("a-live-note").textContent = n === 10 ? "Scroll down and tap \"Show my result\"" : "Tap a score for each area";
     }
     update();
 
@@ -149,8 +149,8 @@
       var r = ranked();
       var top = r.slice().sort(function (x, y) { return y.val - x.val; }).slice(0, 3);
       var low = r.slice().sort(function (x, y) { return x.val - y.val; }).slice(0, 3);
-      var strengths = top.map(function (x, k) { return { area: x.name, score: x.val, note: el("a-snote" + k).value.trim() }; });
-      var builds = low.map(function (x, k) { return { area: x.name, score: x.val, note: el("a-bnote" + k).value.trim() }; });
+      var strengths = top.map(function (x, k) { return { area: x.name, score: x.val, note: "" }; });
+      var builds = low.map(function (x, k) { return { area: x.name, score: x.val, note: "" }; });
 
       var who = {};
       A.fields.forEach(function (f) { who[f.label] = el("a-f-" + f.id).value.trim(); });
@@ -165,6 +165,13 @@
       var legend = A.bands.map(function (b) {
         return '<div class="a-band' + (b === band ? " on" : "") + '"><b>' + b.range + ": " + esc(b.name) + "</b><span>" + esc(b.text) + "</span></div>";
       }).join("");
+      function areaList(items, withTool) {
+        return '<ul class="a-arealist">' + items.map(function (x) {
+          var tool = withTool && AREA_TOOLS[x.area] ? AREA_TOOLS[x.area][0] : "";
+          return '<li><span class="a-al-name">' + esc(x.area) + '</span><span class="a-al-score">' + x.score + "/10</span>" +
+            (tool ? '<span class="a-al-tool">Tool: ' + esc(tool) + "</span>" : "") + "</li>";
+        }).join("") + "</ul>";
+      }
       function rows(items) {
         return items.map(function (x, k) { return "<tr><td>" + (k + 1) + ". " + esc(x.area) + " (" + x.score + ")</td><td>" + (esc(x.note) || "<span class='a-muted'>—</span>") + "</td></tr>"; }).join("");
       }
@@ -184,8 +191,8 @@
         '<div class="a-res-score"><div class="a-res-box"><span class="a-res-lbl">' + esc(A.scoreLabel) + '</span><span class="a-res-num">' + t + "<small>/100</small></span></div>" +
         '<div class="a-bands">' + legend + "</div></div>" +
         '<div class="a-res-sec"><h3>Your 10 areas</h3>' + bars + "</div>" +
-        '<div class="a-res-sec"><h3>' + esc(A.sec3.title) + '</h3><table class="a-tbl"><tr><th>' + esc(A.sec3.c1) + "</th><th>" + esc(A.sec3.c2) + "</th></tr>" + rows(strengths) + "</table></div>" +
-        '<div class="a-res-sec"><h3>' + esc(A.sec4.title) + '</h3><table class="a-tbl"><tr><th>' + esc(A.sec4.c1) + "</th><th>" + esc(A.sec4.c2) + "</th></tr>" + rows(builds) + "</table></div>" +
+        '<div class="a-res-sec"><h3>' + esc(A.sec3.title) + '</h3><p class="a-recs-intro">Your three highest-rated areas &mdash; the strengths to protect and build from.</p>' + areaList(strengths, false) + "</div>" +
+        '<div class="a-res-sec"><h3>' + esc(A.sec4.title) + '</h3><p class="a-recs-intro">Your three lowest-rated areas, and the Unbeatable tool that targets each one.</p>' + areaList(builds, true) + "</div>" +
         recHtml +
         '<div class="a-next"><h3>Your next step</h3><p>' + esc(A.nextText) + '</p><div class="a-next-btns">' +
         '<a class="btn btn-primary" href="' + chat + '" target="_blank" rel="noopener">Talk it through with Gavin</a>' +
@@ -193,6 +200,8 @@
         '</div><p class="a-sent" id="' + key + '-a-sent">Sending your results…</p></div>' +
         "</div>";
       el("a-result").hidden = false;
+      var liveBar = root && root.querySelector(".a-live");
+      if (liveBar) liveBar.style.display = "none";
       el("a-result").scrollIntoView({ behavior: "smooth", block: "start" });
 
       /* Send */

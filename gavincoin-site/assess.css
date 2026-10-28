@@ -121,3 +121,10 @@
 .a-rec-name { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 19px; color: var(--navy); }
 .a-rec p { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-text); }
 .a-rec p.a-rec-why { font-size: 13px; color: var(--blue); font-weight: 600; margin-top: 6px; }
+
+/* Strengths / build lists in the result (28 Oct 2026) */
+.a-arealist { list-style: none; margin: 0 0 6px; padding: 0; }
+.a-arealist li { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; background: #fff; }
+.a-al-name { font-weight: 700; color: var(--navy); font-size: 15.5px; flex: 1 1 auto; }
+.a-al-score { font-weight: 700; color: var(--quote); font-size: 14.5px; }
+.a-al-tool { flex-basis: 100%; font-size: 13.5px; font-weight: 600; color: var(--blue); }
