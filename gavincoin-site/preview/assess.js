@@ -84,6 +84,11 @@
     }
     var email = el("a-email").value.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr("Please add your email in the details at the top so we can send your results."); el("a-email").focus(); return; }
+      var phoneEl = el("a-phone");
+      if (phoneEl && phoneEl.hasAttribute("required") && phoneEl.value.replace(/[^0-9]/g, "").length < 7) {
+        showErr("Please add a mobile number in the details at the top so Gavin can follow up with you.");
+        phoneEl.focus(); return;
+      }
     el("a-err").style.display = "none";
 
     var t = total(), band = bandFor(t);
