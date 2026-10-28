@@ -44,6 +44,10 @@ Player snapshot (preview/player-snapshot.html, 24 Oct 2026): 10 sporting moments
 Assessments (preview, 24 Oct 2026): assessments.html hub + assess-player/team/club.html, text verbatim from Gavin's printed Set A V4 Draft 2 sheets. Shared engine preview/assess.js (+ assess.css). Sends to Google Apps Script when APPS_SCRIPT_URL in assess.js is set (logs to the 'Unbeatable Assessments' Google Sheet, emails Gavin + the respondent); until then falls back to FormSubmit (Gavin only). Script + setup steps: /apps-script (not published). 'Assessments' tab added to the preview menu.
 To go live: copy preview/* over the root files (except CLAUDE.md) and delete preview/.
 
+## Assessment tool recommendations (28 Oct 2026)
+
+Live assess.js maps every assessment area to kit-bag tools (AREA_TOOLS / TOOLS near the top). After the score, the lowest-rated areas (7/10 or below) recommend up to 3 tools with a plain 'for players who…' line and the areas that triggered them. Sent to the Apps Script as `recommendedTools` (Code.gs doesn't store it yet). Club assessment: mobile number required.
+
 ## Trial page payments (20 Oct 2026)
 
 The "Start the Trial" (€35) and "Choose the Month" (€79) buttons in the

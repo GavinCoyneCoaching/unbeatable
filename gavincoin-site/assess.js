@@ -12,6 +12,58 @@
   var FORMSUBMIT_URL = "https://formsubmit.co/ajax/gavincoynecoaching@gmail.com";
   var CHAT_URL = "https://wa.me/353858682933?text=";
 
+  /* ---- Kit bag: which Unbeatable tools help which areas ----
+     After the score, the lowest-rated areas point to 2-3 recommended tools.
+     First tool listed for an area is the main fit (full weight), second is supporting. */
+  var TOOLS = {
+    "Mirrors & Windows": "For players who worry about the opposition, complain to the referee or compare themselves to others. It brings attention back to what they can actually control.",
+    "The Jar": "For players who seem scattered or overloaded, or never quite where they're supposed to be. It decides what deserves their attention right now — and what doesn't.",
+    "Communication": "For a group that's never on the same page. Clearer calls, better listening and one shared language between players and coaches.",
+    "Frustration vs Fascination": "For heads that drop after one mistake. It turns the setback into curiosity and the next useful action, instead of the next mistake.",
+    "Beyond the Scoreboard": "For players who only feel good when they win. It measures the behaviours that create results — Communication, Attitude, Resilience, Effort.",
+    "The Stairs": "For players who feel they're not getting any better. It breaks big goals into the next small, doable step.",
+    "Paying the Price": "For when they want it, but the work isn't happening. Habits, effort and the choices that build them.",
+    "5·5·5": "For when everyone waits for someone else to make it happen. Every player finds another way to help — stop asking \"how good am I?\", start asking \"how can I help?\""
+  };
+  var AREA_TOOLS = {
+    "Focus & Attention": ["Mirrors & Windows", "The Jar"],
+    "Communication": ["Communication"],
+    "Communication Across Panels": ["Communication"],
+    "Response to Mistakes": ["Frustration vs Fascination"],
+    "Accountability": ["Mirrors & Windows", "Paying the Price"],
+    "Preparation & Habits": ["The Jar", "Paying the Price"],
+    "Preparation & Standards": ["The Jar", "Paying the Price"],
+    "Standards & Preparation": ["The Jar", "Paying the Price"],
+    "Discipline": ["Paying the Price", "The Jar"],
+    "Commitment": ["Paying the Price", "The Stairs"],
+    "Effort & Work Rate": ["Paying the Price", "Beyond the Scoreboard"],
+    "Confidence & Composure": ["Frustration vs Fascination", "Beyond the Scoreboard"],
+    "Leadership": ["Communication", "5·5·5"],
+    "Team Contribution": ["5·5·5"],
+    "Contribution": ["5·5·5"],
+    "Support & Trust": ["Communication", "5·5·5"],
+    "Coachability & Improvement": ["The Stairs", "Frustration vs Fascination"],
+    "Player Engagement": ["Beyond the Scoreboard", "5·5·5"],
+    "Coach Reinforcement": ["Communication"],
+    "Shared Language": ["Communication"],
+    "Development Follow-Through": ["The Stairs", "Beyond the Scoreboard"]
+  };
+  function recommendTools(scored) {
+    var score = {}, why = {};
+    scored.forEach(function (a) {
+      var need = 10 - a.val;              // lower rating = bigger need
+      if (need <= 2) return;               // 8+ is already a strength
+      (AREA_TOOLS[a.name] || []).forEach(function (tool, i) {
+        score[tool] = (score[tool] || 0) + need * (i === 0 ? 1 : 0.6);
+        (why[tool] = why[tool] || []).push(a);
+      });
+    });
+    return Object.keys(score).sort(function (x, y) { return score[y] - score[x]; }).slice(0, 3).map(function (tool) {
+      var areas = why[tool].sort(function (x, y) { return x.val - y.val; }).slice(0, 2);
+      return { tool: tool, text: TOOLS[tool], areas: areas };
+    });
+  }
+
   function run(key, A) {
     var root = document.getElementById(key);
     var vals = A.areas.map(function () { return 0; });
@@ -116,6 +168,13 @@
       function rows(items) {
         return items.map(function (x, k) { return "<tr><td>" + (k + 1) + ". " + esc(x.area) + " (" + x.score + ")</td><td>" + (esc(x.note) || "<span class='a-muted'>—</span>") + "</td></tr>"; }).join("");
       }
+      var recs = recommendTools(r);
+      var recHtml = recs.length ? '<div class="a-res-sec a-recs"><h3>' + (key === "player" ? "Tools that would help you most" : "Tools your players would benefit from most") + '</h3>' +
+        '<p class="a-recs-intro">Based on your lowest-rated areas, these parts of the Unbeatable programme are where we\'d start.</p>' +
+        recs.map(function (x) {
+          return '<div class="a-rec"><div class="a-rec-name">' + esc(x.tool) + '</div><p>' + esc(x.text) + '</p>' +
+            '<p class="a-rec-why">Because: ' + x.areas.map(function (a) { return esc(a.name) + " (" + a.val + "/10)"; }).join(", ") + '</p></div>';
+        }).join("") + '</div>' : "";
       var chat = CHAT_URL + encodeURIComponent("Hi Gavin, I just completed the " + A.title + " (" + t + "/100) and I'd like to talk it through.");
 
       el("a-result").innerHTML =
@@ -127,6 +186,7 @@
         '<div class="a-res-sec"><h3>Your 10 areas</h3>' + bars + "</div>" +
         '<div class="a-res-sec"><h3>' + esc(A.sec3.title) + '</h3><table class="a-tbl"><tr><th>' + esc(A.sec3.c1) + "</th><th>" + esc(A.sec3.c2) + "</th></tr>" + rows(strengths) + "</table></div>" +
         '<div class="a-res-sec"><h3>' + esc(A.sec4.title) + '</h3><table class="a-tbl"><tr><th>' + esc(A.sec4.c1) + "</th><th>" + esc(A.sec4.c2) + "</th></tr>" + rows(builds) + "</table></div>" +
+        recHtml +
         '<div class="a-next"><h3>Your next step</h3><p>' + esc(A.nextText) + '</p><div class="a-next-btns">' +
         '<a class="btn btn-primary" href="' + chat + '" target="_blank" rel="noopener">Talk it through with Gavin</a>' +
         (A.nextLink ? '<a class="btn btn-ghost-light" href="' + A.nextLink.href + '">' + esc(A.nextLink.label) + "</a>" : "") +
@@ -141,6 +201,7 @@
         respondent: who, scores: A.areas.map(function (a, i) { return { area: a.name, score: vals[i] }; }),
         strengths: strengths, builds: builds,
         sec3: A.sec3, sec4: A.sec4, scoreLabel: A.scoreLabel, bandText: band.text,
+        recommendedTools: recs.map(function (x) { return x.tool; }).join(", "),
         page: location.href
       };
       var sent = el("a-sent");

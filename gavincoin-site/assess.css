@@ -114,3 +114,10 @@
 .a-sec-intro { color: var(--quote); font-size: 17px; margin: 0 0 28px; }
 .a-top { margin-top: 28px; margin-bottom: 0; font-size: 14.5px; }
 .a-top a { color: var(--navy-soft); font-weight: 600; text-decoration: none; }
+
+/* Recommended kit-bag tools in the result (28 Oct 2026) */
+.a-recs-intro { color: var(--quote); font-size: 15px; margin: -4px 0 14px; }
+.a-rec { border: 1px solid var(--line); border-left: 4px solid var(--navy); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; background: #fff; }
+.a-rec-name { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 19px; color: var(--navy); }
+.a-rec p { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-text); }
+.a-rec p.a-rec-why { font-size: 13px; color: var(--blue); font-weight: 600; margin-top: 6px; }
