@@ -115,9 +115,10 @@ styles were deliberately not used.
 `masterclass.html` (email-only landing page, NOT in the menu, noindex) for the
 Revolution Fitness gym list that James Hanley sends. Copy is verbatim from the
 "Unbeatable_Distracted_vs_Focused_Email" PDF, plus a two-loop visual
-(Distraction vs Focus). Signup posts to the same AWeber form 769902414 / list
-`awlist6281530`, ad tracking `RevFit_Gym_Masterclass`, email required, first
-name optional. Redirects to `masterclass-thanks.html` (noindex): kitbag video
+(Distraction vs Focus). Signup posts to its own AWeber form "Masterclass - RevFit Gym"
+(ID 1344493197, a copy of 769902414) on list `awlist6281530`; that form applies
+tags `revfit_gym` + `masterclass`; ad tracking `RevFit_Masterclass`. Email
+required, first name optional. Redirects to `masterclass-thanks.html` (noindex): kitbag video
 embedded (youtube-nocookie, ID 2qNTB3oAXwg; swap for an unlisted copy when
 Gavin has one) + 90-second survey button.
 Live: https://gavincoynecoaching.github.io/unbeatable/masterclass
