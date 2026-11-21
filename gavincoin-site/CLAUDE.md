@@ -127,10 +127,10 @@ Live: https://gavincoynecoaching.github.io/unbeatable/masterclass
 
 `kitbag.html` (noindex; "Kit Bag" tab shows in its own menu only — add the tab to the
 other pages' menus once Gavin approves, then drop noindex). Tool What/How, title, subtitle
-and FOCUS line verbatim from "Unbeatable_KitBag_WhatHow_TopDown.pdf"; loops verbatim from the
-Distracted vs Focused email PDF; worksheet lines verbatim from "Unbeatable_TwoLoops_Worksheet.pdf"
-(the PDF itself is in `downloads/`). Signup: main AWeber form 769902414, ad tracking `Kit_Bag`,
-redirects to `kitbag-thanks.html` (masterclass video, Kit Bag Assessment picker, worksheet download).
+and FOCUS line verbatim from "Unbeatable_KitBag_WhatHow_StagDrop.pdf"; loops verbatim from the
+Distracted vs Focused email PDF
+. Signup: main AWeber form 769902414, ad tracking `Kit_Bag`,
+redirects to `kitbag-thanks.html` (Kit Bag Assessment picker; video and worksheet removed 21 Nov at Gavin's request).
 Kit Bag Assessment = the normal assessments opened with `?kitbag=1`: assess.js then titles the
 recommendations "Add to your kit bag for 2027", shows each tool's What/How (KIT map) and sends
 `source: "Kit Bag"`. Without the parameter, assessments behave as before.
