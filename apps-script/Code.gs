@@ -87,8 +87,26 @@ function resultsHtml_(d, forOwner) {
     '<h3 style="color:#14304A;margin:22px 0 6px">Your 10 areas</h3><table>' + bars + '</table>' +
     list(d.sec3 ? d.sec3.title : 'Strengths', '', d.strengths || []) +
     list(d.sec4 ? d.sec4.title : 'Where to build', '', d.builds || []) +
+    kitbagHtml_(d) +
     (forOwner ? '' : '<p style="margin-top:24px;color:#374b5e">' + REPLY_LINE + '</p><p style="color:#5c6b7a;font-size:12px">Unbeatable by Gavin Coyne Coaching &middot; a practical framework for sport and life. A coaching tool, not a test or diagnosis.</p>') +
     '</div>';
+}
+
+/* Kit Bag Assessment (21 Nov 2026): when the assessment was taken from the Kit Bag page
+   (d.source === 'Kit Bag'), add the two kit bag tools and the masterclass links. */
+function kitbagHtml_(d) {
+  if (d.source !== 'Kit Bag') return '';
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); };
+  var tools = (d.kitbagTools || []).map(function (t) {
+    return '<div style="border:1px solid #e2e7ee;border-left:4px solid #14304A;padding:12px 14px;margin:0 0 10px">' +
+      '<div style="font-weight:bold;text-transform:uppercase;color:#14304A;font-size:16px">' + esc(t.tool) + '</div>' +
+      '<div style="color:#374b5e;margin-top:4px"><b>What:</b> ' + esc(t.what) + '<br><b>How:</b> ' + esc(t.how) + '</div>' +
+      (t.videoUrl ? '<div style="margin-top:6px"><a href="' + t.videoUrl + '" style="color:#2E6BB0;font-weight:bold">&#9654; Watch this tool in the masterclass (from ' + esc(t.videoFrom) + ')</a></div>'
+                  : '<div style="margin-top:6px;color:#5c6b7a;font-style:italic">Not in the masterclass video &ndash; covered in the full programme.</div>') +
+      '</div>';
+  }).join('');
+  return '<h3 style="color:#14304A;margin:22px 0 6px">Your kit bag upgrade for 2027</h3>' + tools +
+    (d.videoUrl ? '<p style="margin-top:16px"><a href="' + d.videoUrl + '" style="background:#F2C200;color:#14304A;padding:12px 18px;text-decoration:none;font-weight:bold;display:inline-block">Watch the full Kit Bag masterclass</a></p>' : '');
 }
 
 function emailOwner_(d) {
@@ -107,7 +125,9 @@ function emailRespondent_(d) {
   MailApp.sendEmail({
     to: d.email,
     replyTo: OWNER_EMAIL,
-    subject: 'Your Unbeatable ' + d.assessment + ' results: ' + d.total + '/100',
+    subject: d.source === 'Kit Bag'
+      ? 'Your Kit Bag result: ' + d.total + '/100 + your free masterclass'
+      : 'Your Unbeatable ' + d.assessment + ' results: ' + d.total + '/100',
     htmlBody: resultsHtml_(d, false),
     name: FROM_NAME
   });

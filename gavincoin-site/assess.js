@@ -312,6 +312,11 @@
         sec3: A.sec3, sec4: A.sec4, scoreLabel: A.scoreLabel, bandText: band.text,
         recommendedTools: recs.map(function (x) { return x.tool; }).join(", "),
         source: KITBAG ? "Kit Bag" : "",
+        kitbagTools: KITBAG ? recs.map(function (x) {
+          return { tool: x.tool, what: KIT[x.tool] ? KIT[x.tool][0] : "", how: KIT[x.tool] ? KIT[x.tool][1] : "",
+                   videoUrl: VIDEO_AT[x.tool] !== undefined ? videoUrl(VIDEO_AT[x.tool]) : "", videoFrom: VIDEO_AT[x.tool] !== undefined ? mmss(VIDEO_AT[x.tool]) : "" };
+        }) : [],
+        videoUrl: KITBAG ? videoUrl(0) : "",
         page: location.href
       };
       var sent = el("a-sent");

@@ -125,13 +125,23 @@ Live: https://gavincoynecoaching.github.io/unbeatable/masterclass
 
 ## Kit Bag page (21 Nov 2026) — PREVIEW, awaiting Gavin's approval
 
-`kitbag.html` (noindex; "Kit Bag" tab shows in its own menu only — add the tab to the
-other pages' menus once Gavin approves, then drop noindex). Tool What/How, title, subtitle
-and FOCUS line verbatim from "Unbeatable_KitBag_WhatHow_StagDrop.pdf"; loops verbatim from the
-Distracted vs Focused email PDF
-. Signup: main AWeber form 769902414, ad tracking `Kit_Bag`,
-redirects to `kitbag-thanks.html` (Kit Bag Assessment picker; video and worksheet removed 21 Nov at Gavin's request).
-Kit Bag Assessment = the normal assessments opened with `?kitbag=1`: assess.js then titles the
-recommendations "Add to your kit bag for 2027", shows each tool's What/How (KIT map) and sends
-`source: "Kit Bag"`. Without the parameter, assessments behave as before.
+Flow (agreed with Gavin 21 Nov): James's email (with the Distraction & Focus PDF) links to
+`kitbag.html` → blurb (DRAFT by Claude, for Gavin to check) → pick Player/Team/Club →
+`assessments.html?kitbag=1#…` → rate 10 areas → email asked LAST ("Get my result") → results show
+score, "Your kit bag upgrade" = top 2 tools (always 2, even if all scores are high) with What/How
+and a link to that tool's part of the masterclass video, plus "Watch the full masterclass".
+- Tool What/How verbatim from "Unbeatable_KitBag_WhatHow_StagDrop.pdf" (kitbag.html + KIT map in assess.js).
+- Video: 2qNTB3oAXwg ("Workshop Special: The Unbeatable Kit Bag: 7 Tools"). Start times in VIDEO_AT
+  (assess.js), from the transcript: M&W 0:20, Jar 1:34, 5·5·5 3:07, Paying the Price 5:55,
+  FvF 9:42, Stairs 15:26, Communication 18:03. Beyond the Scoreboard isn't in the video.
+- Email capture: on "Get my result", assess.js posts to AWeber form 769902414 / awlist6281530 with
+  ad tracking `Kit_Bag` through a hidden iframe (no tag — the form applies none). Results also go to
+  the Apps Script with `source: "Kit Bag"`, `kitbagTools`, `videoUrl`.
+- apps-script/Code.gs: respondent email for Kit Bag submissions gets subject "Your Kit Bag result:
+  X/100 + your free masterclass" and a kit bag section with the video links. NEEDS Gavin to paste the
+  new Code.gs into the Apps Script editor and redeploy (Manage deployments → Edit → New version).
+- `kitbag-thanks.html` is now only the AWeber redirect target inside the hidden iframe (video and
+  worksheet removed at Gavin's request). The Two Loops worksheet is a separate lead magnet now.
+- Without ?kitbag=1 the assessments behave exactly as before.
+- Kit Bag tab is only in kitbag.html's own menu; add to all menus + drop noindex once approved.
 Live: https://gavincoynecoaching.github.io/unbeatable/kitbag
