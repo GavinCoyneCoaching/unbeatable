@@ -30,14 +30,14 @@
      What / How, verbatim from the Kit Bag PDF. Normal links are unchanged. */
   var KITBAG = /[?&]kitbag=1\b/.test(location.search);
   var KIT = {
-    "Mirrors & Windows": ["Attention on what you can't control.", "Turn to the mirror (you), not the window (them)."],
-    "The Jar": ["Overwhelm from no priorities.", "Big rocks first — protect what matters."],
-    "5·5·5": ["Going missing when you can't do your usual job.", "Find another way to help."],
-    "Communication": ["Unsaid things, taken personally.", "Say it well, hear it well."],
-    "Paying the Price": ["Wanting the result without the work.", "Pay with effort now — not the cost later."],
-    "The Stairs": ["Stuck — the goal feels too big.", "Break it into steps — take the next."],
-    "Frustration vs Fascination": ["The head going after a mistake.", "Swap frustration for curiosity."],
-    "Beyond the Scoreboard": ["Judging it all by the scoreline.", "Measure CARE — not just the score."]
+    "Mirrors & Windows": ["Attention leaking onto what you can't control.", "Turn to the mirror (you), not the window (them)."],
+    "The Jar": ["Overwhelm from no priorities — your own stuff never gets done.", "Big rocks first — decide what matters, protect it."],
+    "5·5·5": ["Going missing when you can't do your usual job.", "Find another way to help. \"How can I help?\""],
+    "Communication": ["Things unsaid, mixed signals, taken personally.", "Say it well — clear, in time. Hear it well."],
+    "Paying the Price": ["Wanting the result without doing the work.", "Pay with effort now — not the cost later."],
+    "The Stairs": ["Feeling stuck — frozen by a goal that feels too big.", "Break it into steps — take the next doable one."],
+    "Frustration vs Fascination": ["The head going after a mistake — \"why me?\"", "Swap frustration for curiosity — \"what's next?\""],
+    "Beyond the Scoreboard": ["Judging it all by the scoreline.", "Measure CARE — Communication, Attitude, Resilience, Effort."]
   };
   var AREA_TOOLS = {
     "Focus & Attention": ["Mirrors & Windows", "The Jar"],
