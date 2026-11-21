@@ -39,6 +39,58 @@
     "Frustration vs Fascination": ["The head going after a mistake — \"why me?\"", "Swap frustration for curiosity — \"what's next?\""],
     "Beyond the Scoreboard": ["Judging it all by the scoreline.", "Measure CARE — Communication, Attitude, Resilience, Effort."]
   };
+  /* Kit bag masterclass video (Coach Gav Podcast | Workshop Special: The Unbeatable Kit Bag: 7 Tools).
+     Start times (seconds) taken from the video's transcript, 21 Nov 2026. Beyond the Scoreboard
+     isn't covered in this video, so it has no time. To swap in an unlisted copy, change VIDEO_ID
+     (and the times, if the edit is different). */
+  var VIDEO_ID = "2qNTB3oAXwg";
+  var VIDEO_AT = {
+    "Mirrors & Windows": 20, "The Jar": 94, "5·5·5": 187, "Paying the Price": 355,
+    "Frustration vs Fascination": 582, "The Stairs": 926, "Communication": 1083
+  };
+  function videoUrl(sec) { return "https://www.youtube.com/watch?v=" + VIDEO_ID + (sec ? "&t=" + sec + "s" : ""); }
+  function mmss(sec) { return Math.floor(sec / 60) + ":" + String(sec % 60).padStart(2, "0"); }
+
+  /* AWeber sign-up for kit bag mode: main form 769902414, list awlist6281530, ad tracking Kit_Bag.
+     Posted through a hidden iframe so the person stays on their results. */
+  function aweberSignup(email, name) {
+    try {
+      var frame = document.getElementById("kb-aw-frame");
+      if (!frame) {
+        frame = document.createElement("iframe");
+        frame.name = frame.id = "kb-aw-frame"; frame.style.display = "none";
+        document.body.appendChild(frame);
+      }
+      var f = document.createElement("form");
+      f.method = "post"; f.action = "https://www.aweber.com/scripts/addlead.pl"; f.target = "kb-aw-frame";
+      f.acceptCharset = "UTF-8"; f.style.display = "none";
+      var fields = { meta_web_form_id: "769902414", meta_split_id: "", listname: "awlist6281530",
+        redirect: "https://gavincoynecoaching.github.io/unbeatable/kitbag-thanks",
+        meta_redirect_onlist: "https://gavincoynecoaching.github.io/unbeatable/kitbag-thanks",
+        meta_adtracking: "Kit_Bag", meta_message: "1", meta_required: "email", meta_tooltip: "",
+        email: email, name: name || "" };
+      Object.keys(fields).forEach(function (k) {
+        var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = fields[k]; f.appendChild(i);
+      });
+      document.body.appendChild(f); f.submit();
+      setTimeout(function () { f.remove(); }, 4000);
+    } catch (e) {}
+  }
+
+  /* Kit bag mode: reword the page hero and move each email box down to "Your result". */
+  if (KITBAG) {
+    document.documentElement.classList.add("kitbag-mode");
+    document.addEventListener("DOMContentLoaded", function () {
+      var hero = document.querySelector(".u-hero");
+      if (hero) {
+        var eb = hero.querySelector(".u-eyebrow"), h1 = hero.querySelector("h1"), sub = hero.querySelector(".u-sub");
+        if (eb) eb.textContent = "The Kit Bag Assessment";
+        if (h1) h1.innerHTML = 'What goes in your kit bag for <span class="accent">2027</span>?';
+        if (sub) sub.textContent = "Pick the one that fits you. Rate ten areas, then pop in your email to get your score, the two tools to add to your kit bag this off-season, and your free Kit Bag masterclass.";
+      }
+    });
+  }
+
   var AREA_TOOLS = {
     "Focus & Attention": ["Mirrors & Windows", "The Jar"],
     "Communication": ["Communication"],
@@ -62,17 +114,17 @@
     "Shared Language": ["Communication"],
     "Development Follow-Through": ["The Stairs", "Beyond the Scoreboard"]
   };
-  function recommendTools(scored) {
+  function recommendTools(scored, count, force) {
     var score = {}, why = {};
     scored.forEach(function (a) {
-      var need = 10 - a.val;              // lower rating = bigger need
-      if (need <= 2) return;               // 8+ is already a strength
+      var need = (force ? 11 : 10) - a.val; // lower rating = bigger need
+      if (!force && need <= 2) return;     // 8+ is already a strength (kit bag mode always gives a pick)
       (AREA_TOOLS[a.name] || []).forEach(function (tool, i) {
         score[tool] = (score[tool] || 0) + need * (i === 0 ? 1 : 0.6);
         (why[tool] = why[tool] || []).push(a);
       });
     });
-    return Object.keys(score).sort(function (x, y) { return score[y] - score[x]; }).slice(0, 3).map(function (tool) {
+    return Object.keys(score).sort(function (x, y) { return score[y] - score[x]; }).slice(0, count || 3).map(function (tool) {
       var areas = why[tool].sort(function (x, y) { return x.val - y.val; }).slice(0, 2);
       return { tool: tool, text: TOOLS[tool], areas: areas };
     });
@@ -87,6 +139,24 @@
     function bandFor(t) { for (var i = 0; i < A.bands.length; i++) { if (t >= A.bands[i].min) return A.bands[i]; } return A.bands[A.bands.length - 1]; }
     function answered() { return vals.filter(function (v) { return v > 0; }).length; }
     function total() { return vals.reduce(function (s, v) { return s + v; }, 0); }
+
+    /* ---- Kit bag mode: ask for the email after the ratings, not before ---- */
+    if (KITBAG) {
+      var emailIn = el("a-email"), btn = el("a-submit");
+      if (emailIn && btn) {
+        var fieldBox = emailIn.closest(".field");
+        var gate = document.createElement("div");
+        gate.className = "kb-gate";
+        gate.innerHTML = '<p class="kb-gate-h">Enter your email to get your score, your kit bag upgrade for 2027 and your free Kit Bag masterclass video.</p>';
+        gate.appendChild(fieldBox);
+        var lbl = fieldBox.querySelector("label"); if (lbl) lbl.textContent = "Your email";
+        var row = btn.closest(".a-submit-row");
+        row.parentNode.insertBefore(gate, el("a-err"));
+        btn.textContent = "Get my result";
+        var sub = row.parentNode.querySelector(".a-sec-sub");
+        if (sub) sub.textContent = "Last step. A copy of your result comes to your inbox too.";
+      }
+    }
 
     /* ---- Render the 10 areas ---- */
     var list = el("a-areas");
@@ -151,13 +221,18 @@
         return;
       }
       var email = el("a-email").value.trim();
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr("Please add your email in the details at the top so we can send your results."); el("a-email").focus(); return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr(KITBAG ? "Please add your email to get your result." : "Please add your email in the details at the top so we can send your results."); el("a-email").focus(); return; }
       var phoneEl = el("a-phone");
       if (phoneEl && phoneEl.hasAttribute("required") && phoneEl.value.replace(/[^0-9]/g, "").length < 7) {
         showErr("Please add a mobile number in the details at the top so Gavin can follow up with you.");
         phoneEl.focus(); return;
       }
       el("a-err").style.display = "none";
+      if (KITBAG) {
+        var nm = el("a-f-" + A.fields[0].id) ? el("a-f-" + A.fields[0].id).value.trim() : "";
+        if (key !== "player") nm = el("a-f-by") ? el("a-f-by").value.trim().split(",")[0] : nm;
+        aweberSignup(email, nm);
+      }
 
       var t = total(), band = bandFor(t);
       var r = ranked();
@@ -189,14 +264,19 @@
       function rows(items) {
         return items.map(function (x, k) { return "<tr><td>" + (k + 1) + ". " + esc(x.area) + " (" + x.score + ")</td><td>" + (esc(x.note) || "<span class='a-muted'>—</span>") + "</td></tr>"; }).join("");
       }
-      var recs = recommendTools(r);
+      var recs = KITBAG ? recommendTools(r, 2, true) : recommendTools(r);
       var recTitle = KITBAG
-        ? (key === "player" ? "Add to your kit bag for 2027" : "Add to your players' kit bag for 2027")
+        ? (key === "player" ? "Your kit bag upgrade: add these two for 2027" : "Your kit bag upgrade: add these two to your players' kit bag for 2027")
         : (key === "player" ? "Tools that would help you most" : "Tools your players would benefit from most");
       var recHtml = recs.length ? '<div class="a-res-sec a-recs' + (KITBAG ? " a-kitbag" : "") + '"><h3>' + recTitle + '</h3>' +
         '<p class="a-recs-intro">Based on your lowest-rated areas, these parts of the Unbeatable programme are where we\'d start.</p>' +
         recs.map(function (x) {
           var kit = KITBAG && KIT[x.tool] ? '<div class="a-kit"><p><b>What:</b> ' + esc(KIT[x.tool][0]) + '</p><p><b>How:</b> ' + esc(KIT[x.tool][1]) + '</p></div>' : "";
+          if (KITBAG) {
+            kit += VIDEO_AT[x.tool] !== undefined
+              ? '<a class="a-watch" href="' + videoUrl(VIDEO_AT[x.tool]) + '" target="_blank" rel="noopener">&#9654; Watch this tool in the masterclass (from ' + mmss(VIDEO_AT[x.tool]) + ')</a>'
+              : '<p class="a-watch-note">This one isn\'t in the masterclass video &mdash; it\'s covered in the full programme. Ask Gavin about it.</p>';
+          }
           return '<div class="a-rec"><div class="a-rec-name">' + esc(x.tool) + '</div>' + kit + '<p>' + esc(x.text) + '</p>' +
             '<p class="a-rec-why">Because: ' + x.areas.map(function (a) { return esc(a.name) + " (" + a.val + "/10)"; }).join(", ") + '</p></div>';
         }).join("") + '</div>' : "";
@@ -212,6 +292,8 @@
         '<div class="a-res-sec"><h3>' + esc(A.sec3.title) + '</h3><p class="a-recs-intro">Your three highest-rated areas &mdash; the strengths to protect and build from.</p>' + areaList(strengths, false) + "</div>" +
         '<div class="a-res-sec"><h3>' + esc(A.sec4.title) + '</h3><p class="a-recs-intro">Your three lowest-rated areas, and the Unbeatable tool that targets each one.</p>' + areaList(builds, true) + "</div>" +
         recHtml +
+        (KITBAG ? '<div class="a-res-sec a-mc"><h3>Your free Kit Bag masterclass</h3><p class="a-recs-intro">All seven tools from the masterclass, about 22 minutes. Your two tools above jump straight to their part of it.</p>' +
+          '<a class="btn btn-primary" href="' + videoUrl(0) + '" target="_blank" rel="noopener">Watch the full masterclass</a></div>' : "") +
         '<div class="a-next"><h3>Your next step</h3><p>' + esc(A.nextText) + '</p><div class="a-next-btns">' +
         '<a class="btn btn-primary" href="' + chat + '" target="_blank" rel="noopener">Talk it through with Gavin</a>' +
         (A.nextLink ? '<a class="btn btn-ghost-light" href="' + A.nextLink.href + '">' + esc(A.nextLink.label) + "</a>" : "") +

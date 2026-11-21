@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Kit Bag | Unbeatable by Gavin Coyne Coaching</title>
-<meta name="description" content="The Unbeatable Kit Bag: eight tools, one skill underneath. See what each tool tackles and how, then find out what to add to your kit bag for 2027.">
+<meta name="description" content="Take the free Kit Bag Assessment: your score, the two Unbeatable tools to add for 2027, and the free Kit Bag masterclass.">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="site.css">
 <!-- Kit Bag page (21 Nov 2026). PREVIEW: noindex and not in the other pages' menus
@@ -44,34 +44,27 @@
   .kb-loop.focus .kb-chain li + li::before { color: var(--blue-lt); }
   .kb-back { text-align: center; margin: 12px 0 0; font-size: 14.5px; color: var(--gray); }
   .kb-loop.focus .kb-back { color: #B9C6D6; }
-  .kb-sheet { margin: 34px auto 0; max-width: 760px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 26px 26px 22px; }
-  .kb-sheet h3 { margin: 0 0 6px; font-size: 26px; text-transform: uppercase; color: var(--navy); }
-  .kb-sheet > p { margin: 0 0 16px; color: var(--quote); }
-  .kb-sheet-eg { font-size: 14.5px; color: var(--gray); font-style: italic; margin: 0 0 16px; }
-  .kb-rows { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px 14px; align-items: center; }
-  .kb-rows .col { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 15px; text-align: center; padding: 6px; border-radius: 8px; }
-  .kb-rows .col.d { background: var(--ground); color: var(--gray); }
-  .kb-rows .col.f { background: var(--navy); color: #fff; }
-  .kb-rows .box { height: 34px; border: 1px dashed #c6d0db; border-radius: 8px; background: #fbfcfd; }
-  .kb-rows .q { font-size: 14px; color: var(--navy); font-weight: 600; text-align: center; max-width: 18ch; }
-  .kb-sheet-foot { margin: 18px 0 0; font-size: 15px; color: var(--quote); text-align: center; }
-  .kb-panel .btn { width: 100%; }
   .kb-gets { list-style: none; padding: 0; margin: 0 0 24px; text-align: left; font-size: 15.5px; color: var(--ink-text); }
   .kb-gets li { padding-left: 22px; position: relative; margin-bottom: 8px; }
   .kb-gets li::before { content: "\2713"; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
-  #signup { scroll-margin-top: 20px; }
+  #start { scroll-margin-top: 10px; }
+  .kb-hero .u-sub { max-width: 68ch; }
+  .kb-pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 960px; margin: 0 auto; }
+  .kb-pick a { display: flex; flex-direction: column; gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px; box-shadow: var(--shadow); text-decoration: none; color: var(--ink-text); }
+  .kb-pick a:hover { border-color: var(--blue); }
+  .kb-pick b { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 26px; color: var(--navy); }
+  .kb-pick span { font-size: 15px; color: var(--quote); flex: 1; }
+  .kb-pick em { font-style: normal; font-weight: 700; color: var(--blue); }
+  .kb-gets { max-width: 560px; margin: 28px auto 0; }
   @media (max-width: 960px) { .kb-tools { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 720px) {
+    .kb-pick { grid-template-columns: 1fr; }
     .kb-tools { grid-template-columns: 1fr; }
     .kb-loops { gap: 10px; }
     .kb-loop { padding: 18px 10px; }
     .kb-loop h3 { font-size: 17px; }
     .kb-chain li { font-size: 13px; padding: 8px 6px; letter-spacing: .03em; }
-    .kb-sheet { padding: 20px 14px; }
-    .kb-rows { gap: 6px 8px; }
-    .kb-rows .q { font-size: 12.5px; }
-    .panel.kb-panel { padding: 30px 22px; }
-  }
+        }
 </style>
 </head>
 <body>
@@ -98,14 +91,35 @@
 
 <section class="u-hero u-hero-small kb-hero">
   <div class="wrap">
-    <p class="u-eyebrow">The Kit Bag</p>
-    <h1>The Unbeatable Kit Bag &mdash; What We Tackle, and <span class="accent">How</span></h1>
-    <p class="u-sub">Each tool hangs off the programme &mdash; what it tackles, then how we tackle it. <b>It all comes back to focus.</b></p>
-    <a href="#signup" class="btn btn-primary">Get the free masterclass &amp; kit bag assessment</a>
+    <p class="u-eyebrow">The Kit Bag &middot; free 3-minute assessment</p>
+    <h1>What goes in your kit bag for <span class="accent">2027</span>?</h1>
+    <!-- DRAFT blurb written by Claude, 21 Nov 2026 - for Gavin to check/rewrite. -->
+    <p class="u-sub">Every player packs a kit bag &ndash; boots, gumshield, water bottle. But the things that decide how they actually play when it matters don't fit in a gear bag. Where their head goes after a mistake. Whether they're watching the player on the other side instead of their own job. Whether they put the work in now for a reward that's months away. <b>The Unbeatable Kit Bag is eight simple tools for exactly those moments &ndash; and the off-season is the time to pack it.</b> Take the free assessment, and you'll get your score, the two tools that would make the biggest difference in 2027, and the free Kit Bag masterclass where Gavin walks you through them.</p>
+    <a href="#start" class="btn btn-primary">Take the Kit Bag Assessment</a>
   </div>
 </section>
 
-<section class="u-sec">
+<section class="u-sec" id="start">
+  <div class="wrap">
+    <div class="u-center"><div class="u-head">
+      <p class="u-eyebrow">Step 1 &middot; pick the one that fits you</p>
+      <h2>The Kit Bag Assessment</h2>
+      <p>Rate ten areas, about three minutes. Then pop in your email to see your result.</p>
+    </div></div>
+    <div class="kb-pick">
+      <a href="assessments.html?kitbag=1#player"><b>Player</b><span>For a player rating themselves. Under 16? Fill it in with a parent.</span><em>Start &rarr;</em></a>
+      <a href="assessments.html?kitbag=1#coach"><b>Team</b><span>For a coach or management team rating their group.</span><em>Start &rarr;</em></a>
+      <a href="assessments.html?kitbag=1#club"><b>Club</b><span>For a committee member or coaching officer, across the panels.</span><em>Start &rarr;</em></a>
+    </div>
+    <ul class="kb-gets">
+      <li>Your score out of 100</li>
+      <li>Your kit bag upgrade &ndash; the two tools to add for 2027, and why</li>
+      <li>The free Kit Bag masterclass video, with the exact part for each of your tools</li>
+    </ul>
+  </div>
+</section>
+
+<section class="u-sec u-ground">
   <div class="wrap">
     <div class="u-head">
       <p class="u-eyebrow">What's in the bag</p>
@@ -134,7 +148,7 @@
   </div>
 </section>
 
-<section class="u-sec u-ground">
+<section class="u-sec">
   <div class="wrap">
     <div class="u-center"><div class="u-head">
       <p class="u-eyebrow">One moment. Two different loops.</p>
@@ -157,41 +171,13 @@
   </div>
 </section>
 
-<section class="u-sec" id="signup">
+<section class="u-sec u-ground u-center">
   <div class="wrap">
-    <div class="panel kb-panel">
-      <h3>What goes in your kit bag for 2027?</h3>
-      <div class="gold-rule"><span class="diamond"></span></div>
-      <ul class="kb-gets">
-        <li>The free Unbeatable masterclass video, straight away</li>
-        <li>The Kit Bag Assessment &ndash; for a player, a team or a club &ndash; showing which tools to add for 2027</li>
-      </ul>
-      <!-- Main AWeber form 769902414 (list awlist6281530), ad tracking "Kit_Bag" so these sign-ups
-           can be picked out in AWeber. After signing up, people land on kitbag-thanks. -->
-      <form method="post" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl">
-        <div style="display: none;">
-          <input type="hidden" name="meta_web_form_id" value="769902414">
-          <input type="hidden" name="meta_split_id" value="">
-          <input type="hidden" name="listname" value="awlist6281530">
-          <input type="hidden" name="redirect" value="https://gavincoynecoaching.github.io/unbeatable/kitbag-thanks">
-          <input type="hidden" name="meta_redirect_onlist" value="https://gavincoynecoaching.github.io/unbeatable/kitbag-thanks">
-          <input type="hidden" name="meta_adtracking" value="Kit_Bag">
-          <input type="hidden" name="meta_message" value="1">
-          <input type="hidden" name="meta_required" value="email">
-          <input type="hidden" name="meta_tooltip" value="">
-        </div>
-        <div class="field">
-          <label for="name">First name (optional)</label>
-          <input type="text" id="name" name="name" autocomplete="given-name">
-        </div>
-        <div class="field">
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Send me the masterclass &amp; assessment</button>
-      </form>
-      <p class="fine">You're joining Gavin Coyne Coaching's list. Unsubscribe anytime.</p>
+    <div class="u-head">
+      <h2>Which two tools do you need most?</h2>
+      <p>Three minutes to find out &ndash; plus your free Kit Bag masterclass.</p>
     </div>
+    <div class="u-btns"><a href="#start" class="btn btn-navy">Take the Kit Bag Assessment</a></div>
   </div>
 </section>
 

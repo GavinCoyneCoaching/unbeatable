@@ -133,3 +133,9 @@
 .a-kit { background: var(--ground); border-radius: 8px; padding: 8px 12px; margin: 8px 0 6px; }
 .a-kit p { margin: 2px 0; font-size: 14.5px; color: var(--navy); }
 .a-kit b { font-family: var(--display); text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--blue); }
+.kb-gate { background: var(--ground); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px 6px; margin: 0 0 16px; }
+.kb-gate-h { margin: 0 0 12px; font-weight: 600; color: var(--navy); font-size: 16.5px; }
+.a-watch { display: inline-block; margin-top: 8px; font-weight: 700; font-size: 14.5px; color: var(--blue); text-decoration: none; }
+.a-watch:hover { text-decoration: underline; }
+.a-watch-note { font-size: 13.5px !important; color: var(--gray) !important; font-style: italic; }
+.a-mc .btn { width: auto; }
