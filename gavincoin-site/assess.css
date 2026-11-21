@@ -128,3 +128,8 @@
 .a-al-name { font-weight: 700; color: var(--navy); font-size: 15.5px; flex: 1 1 auto; }
 .a-al-score { font-weight: 700; color: var(--quote); font-size: 14.5px; }
 .a-al-tool { flex-basis: 100%; font-size: 13.5px; font-weight: 600; color: var(--blue); }
+
+/* Kit bag mode (?kitbag=1): What / How lines from the Kit Bag PDF */
+.a-kit { background: var(--ground); border-radius: 8px; padding: 8px 12px; margin: 8px 0 6px; }
+.a-kit p { margin: 2px 0; font-size: 14.5px; color: var(--navy); }
+.a-kit b { font-family: var(--display); text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--blue); }

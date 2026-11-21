@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Kit Bag | Unbeatable by Gavin Coyne Coaching</title>
+<meta name="description" content="The Unbeatable Kit Bag: eight tools, one skill underneath. See what each tool tackles and how, then find out what to add to your kit bag for 2027.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
+<!-- Kit Bag page (21 Nov 2026). PREVIEW: noindex and not in the other pages' menus
+     until Gavin approves. Tool text, title, subtitle and the FOCUS line are verbatim from
+     "Unbeatable_KitBag_WhatHow_TopDown.pdf". Loop chains are verbatim from the
+     Distracted vs Focused email PDF (same as masterclass.html). Worksheet lines are verbatim
+     from "Unbeatable_TwoLoops_Worksheet.pdf". Page styles are prefixed kb-. -->
+<style>
+  .kb-hero .btn { width: auto; }
+  .kb-tools { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .kb-tool { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+  .kb-tool-top { background: var(--navy); color: #fff; padding: 16px 18px 14px; }
+  .kb-tool-top h3 { margin: 0; font-size: 23px; line-height: 1.05; text-transform: uppercase; color: #fff; }
+  .kb-tool-top span { display: block; margin-top: 6px; font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--blue-lt); }
+  .kb-tool-body { padding: 16px 18px 18px; display: grid; gap: 12px; flex: 1; }
+  .kb-lbl { display: block; font-family: var(--display); font-weight: 700; font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gray); margin-bottom: 3px; }
+  .kb-what p, .kb-how p { margin: 0; font-size: 15.5px; line-height: 1.4; }
+  .kb-what p { color: var(--quote); }
+  .kb-how { background: var(--ground); border-radius: 10px; padding: 11px 13px; }
+  .kb-how .kb-lbl { color: var(--blue); }
+  .kb-how p { color: var(--navy); font-weight: 600; }
+  .kb-thread { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  .kb-thread h2 { margin: 0; font-size: clamp(30px, 4vw, 44px); white-space: nowrap; }
+  .kb-thread p { margin: 0; flex: 1; min-width: 260px; font-size: 18px; color: #cdd8e4; }
+  .kb-thread p b { color: #fff; }
+  .kb-closer { margin: 26px 0 0; font-style: italic; color: #B9C6D6; font-size: 16.5px; }
+  .kb-loops { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .kb-loop { border-radius: 16px; padding: 24px 22px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+  .kb-loop.focus { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .kb-loop h3 { font-size: 26px; margin: 0 0 16px; text-transform: uppercase; text-align: center; }
+  .kb-loop.focus h3 { color: #fff; }
+  .kb-chain { list-style: none; margin: 0; padding: 0; }
+  .kb-chain li { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 16px; text-align: center; padding: 9px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--ground); color: var(--navy); }
+  .kb-loop.focus .kb-chain li { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.22); color: #fff; }
+  .kb-chain li + li { margin-top: 26px; position: relative; }
+  .kb-chain li + li::before { content: "\2193"; position: absolute; top: -24px; left: 0; right: 0; text-align: center; color: var(--gray); font-size: 16px; line-height: 20px; }
+  .kb-loop.focus .kb-chain li + li::before { color: var(--blue-lt); }
+  .kb-back { text-align: center; margin: 12px 0 0; font-size: 14.5px; color: var(--gray); }
+  .kb-loop.focus .kb-back { color: #B9C6D6; }
+  .kb-sheet { margin: 34px auto 0; max-width: 760px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 26px 26px 22px; }
+  .kb-sheet h3 { margin: 0 0 6px; font-size: 26px; text-transform: uppercase; color: var(--navy); }
+  .kb-sheet > p { margin: 0 0 16px; color: var(--quote); }
+  .kb-sheet-eg { font-size: 14.5px; color: var(--gray); font-style: italic; margin: 0 0 16px; }
+  .kb-rows { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px 14px; align-items: center; }
+  .kb-rows .col { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 15px; text-align: center; padding: 6px; border-radius: 8px; }
+  .kb-rows .col.d { background: var(--ground); color: var(--gray); }
+  .kb-rows .col.f { background: var(--navy); color: #fff; }
+  .kb-rows .box { height: 34px; border: 1px dashed #c6d0db; border-radius: 8px; background: #fbfcfd; }
+  .kb-rows .q { font-size: 14px; color: var(--navy); font-weight: 600; text-align: center; max-width: 18ch; }
+  .kb-sheet-foot { margin: 18px 0 0; font-size: 15px; color: var(--quote); text-align: center; }
+  .kb-panel .btn { width: 100%; }
+  .kb-gets { list-style: none; padding: 0; margin: 0 0 24px; text-align: left; font-size: 15.5px; color: var(--ink-text); }
+  .kb-gets li { padding-left: 22px; position: relative; margin-bottom: 8px; }
+  .kb-gets li::before { content: "\2713"; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+  #signup { scroll-margin-top: 20px; }
+  @media (max-width: 960px) { .kb-tools { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 720px) {
+    .kb-tools { grid-template-columns: 1fr; }
+    .kb-loops { gap: 10px; }
+    .kb-loop { padding: 18px 10px; }
+    .kb-loop h3 { font-size: 17px; }
+    .kb-chain li { font-size: 13px; padding: 8px 6px; letter-spacing: .03em; }
+    .kb-sheet { padding: 20px 14px; }
+    .kb-rows { gap: 6px 8px; }
+    .kb-rows .q { font-size: 12.5px; }
+    .panel.kb-panel { padding: 30px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="u-topbar">
+  <div class="wrap">
+    <span>Call or WhatsApp Gavin: <a href="tel:+353858682933">085 868 2933</a></span>
+    <a href="mailto:gavincoynecoaching@gmail.com">gavincoynecoaching@gmail.com</a>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/logo-navy.png" alt="Unbeatable by Gavin Coyne Coaching" class="brand-mark">Gavin Coyne Coaching</a>
+    <nav class="nav-links">
+      <a href="index.html">Coaching</a>
+      <a href="committees.html">For Clubs</a>
+      <a href="kitbag.html" aria-current="page">Kit Bag</a>
+      <span class="nav-drop"><a href="assessments.html">Assessments</a><span class="nav-drop-menu"><a href="assessments.html#player">Player</a><a href="assessments.html#coach">Coach</a><a href="assessments.html#club">Club</a></span></span>
+      <a href="trial.html">5-Day Trial</a>
+      <a href="index.html#signup">Join the list</a>
+    </nav>
+  </div>
+</header>
+
+<section class="u-hero u-hero-small kb-hero">
+  <div class="wrap">
+    <p class="u-eyebrow">The Kit Bag</p>
+    <h1>The Unbeatable Kit Bag &mdash; What We Tackle, and <span class="accent">How</span></h1>
+    <p class="u-sub">Each tool hangs off the programme &mdash; what it tackles, then how we tackle it. <b>It all comes back to focus.</b></p>
+    <a href="#signup" class="btn btn-primary">Get the free masterclass &amp; kit bag assessment</a>
+  </div>
+</section>
+
+<section class="u-sec">
+  <div class="wrap">
+    <div class="u-head">
+      <p class="u-eyebrow">What's in the bag</p>
+      <h2>Eight tools</h2>
+    </div>
+    <div class="kb-tools">
+      <div class="kb-tool"><div class="kb-tool-top"><h3>Mirrors &amp; Windows</h3><span>Comparison</span></div><div class="kb-tool-body"><div class="kb-what"><span class="kb-lbl">What</span><p>Attention on what you can't control.</p></div><div class="kb-how"><span class="kb-lbl">How</span><p>Turn to the mirror (you), not the window (them).</p></div></div></div>
+      <div class="kb-tool"><div class="kb-tool-top"><h3>The Jar</h3><span>Priorities</span></div><div class="kb-tool-body"><div class="kb-what"><span class="kb-lbl">What</span><p>Overwhelm from no priorities.</p></div><div class="kb-how"><span class="kb-lbl">How</span><p>Big rocks first &mdash; protect what matters.</p></div></div></div>
+      <div class="kb-tool"><div class="kb-tool-top"><h3>5&middot;5&middot;5</h3><span>Contribution</span></div><div class="kb-tool-body"><div class="kb-what"><span class="kb-lbl">What</span><p>Going missing when you can't do your usual job.</p></div><div class="kb-how"><span class="kb-lbl">How</span><p>Find another way to help.</p></div></div></div>
+      <div class="kb-tool"><div class="kb-tool-top"><h3>Communication</h3><span>Say &amp; Hear</span></div><div class="kb-tool-body"><div class="kb-what"><span class="kb-lbl">What</span><p>Unsaid things, taken personally.</p></div><div class="kb-how"><span class="kb-lbl">How</span><p>Say it well, hear it well.</p></div></div></div>
+      <div class="kb-tool"><div class="kb-tool-top"><h3>Paying the Price</h3><span>Effort</span></div><div class="kb-tool-body"><div class="kb-what"><span class="kb-lbl">What</span><p>Wanting the result without the work.</p></div><div class="kb-how"><span class="kb-lbl">How</span><p>Pay with effort now &mdash; not the cost later.</p></div></div></div>
+      <div class="kb-tool"><div class="kb-tool-top"><h3>The Stairs</h3><span>Progress</span></div><div class="kb-tool-body"><div class="kb-what"><span class="kb-lbl">What</span><p>Stuck &mdash; the goal feels too big.</p></div><div class="kb-how"><span class="kb-lbl">How</span><p>Break it into steps &mdash; take the next.</p></div></div></div>
+      <div class="kb-tool"><div class="kb-tool-top"><h3>Frustration vs Fascination</h3><span>Perspective</span></div><div class="kb-tool-body"><div class="kb-what"><span class="kb-lbl">What</span><p>The head going after a mistake.</p></div><div class="kb-how"><span class="kb-lbl">How</span><p>Swap frustration for curiosity.</p></div></div></div>
+      <div class="kb-tool"><div class="kb-tool-top"><h3>Beyond the Scoreboard</h3><span>Measure</span></div><div class="kb-tool-body"><div class="kb-what"><span class="kb-lbl">What</span><p>Judging it all by the scoreline.</p></div><div class="kb-how"><span class="kb-lbl">How</span><p>Measure CARE &mdash; not just the score.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="u-sec u-navy">
+  <div class="wrap">
+    <div class="kb-thread">
+      <h2>Focus &middot; the thread</h2>
+      <p>Every "how" is the same move aimed a little differently &mdash; <b>putting attention where it helps.</b> That's focus, and it runs under all eight.</p>
+    </div>
+    <p class="kb-closer">Eight tools, one skill underneath &mdash; reached for in the moment, combined for the bigger challenges.</p>
+  </div>
+</section>
+
+<section class="u-sec u-ground">
+  <div class="wrap">
+    <div class="u-center"><div class="u-head">
+      <p class="u-eyebrow">One moment. Two different loops.</p>
+      <h2>Same moment. Same young person.</h2>
+      <p><b>Two completely different chains</b> &ndash; and the only thing that decides which one runs is where their attention is when the moment reaches them.</p>
+    </div></div>
+    <div class="kb-loops">
+      <div class="kb-loop">
+        <h3>Distraction Loop</h3>
+        <ol class="kb-chain"><li>Distracted</li><li>Delayed</li><li>Hesitation</li><li>Poor reaction</li><li>Poor result</li><li>Feeling</li><li>Belief</li></ol>
+        <p class="kb-back">&#8635; and round it goes again</p>
+      </div>
+      <div class="kb-loop focus">
+        <h3>Focus Loop</h3>
+        <ol class="kb-chain"><li>Focused</li><li>Quicker read</li><li>Decisive</li><li>Good reaction</li><li>Better result</li><li>Feeling</li><li>Belief</li></ol>
+        <p class="kb-back">&#8635; and round it goes again</p>
+      </div>
+    </div>
+
+    <div class="kb-sheet">
+      <p class="u-eyebrow">Work it through with your own game</p>
+      <h3>Same Moment, Two Loops</h3>
+      <p>One moment on the pitch. Two ways it can go. Fill in your own and see the difference for yourself.</p>
+      <p class="kb-sheet-eg">e.g. going to take a shot &middot; a kick-out &middot; tracking back &middot; marking my player &middot; a big tackle</p>
+      <div class="kb-rows" aria-hidden="true">
+        <span class="col d">&#10005; If I'm distracted</span><span></span><span class="col f">&#10003; If I'm focused</span>
+        <span class="box"></span><span class="q">Going in, my attention is&hellip;</span><span class="box"></span>
+        <span class="box"></span><span class="q">So I react&hellip;</span><span class="box"></span>
+        <span class="box"></span><span class="q">On the pitch, that leads to&hellip;</span><span class="box"></span>
+        <span class="box"></span><span class="q">The likely result&hellip;</span><span class="box"></span>
+        <span class="box"></span><span class="q">How I feel &mdash; and what I expect next time&hellip;</span><span class="box"></span>
+      </div>
+      <p class="kb-sheet-foot">Same moment. Two loops. The more you catch the first one and choose the second, the more it becomes your default.</p>
+    </div>
+  </div>
+</section>
+
+<section class="u-sec" id="signup">
+  <div class="wrap">
+    <div class="panel kb-panel">
+      <h3>What goes in your kit bag for 2027?</h3>
+      <div class="gold-rule"><span class="diamond"></span></div>
+      <ul class="kb-gets">
+        <li>The free Unbeatable masterclass video, straight away</li>
+        <li>The Kit Bag Assessment &ndash; for a player, a team or a club &ndash; showing which tools to add for 2027</li>
+        <li>The "Same Moment, Two Loops" worksheet to print and fill in</li>
+      </ul>
+      <!-- Main AWeber form 769902414 (list awlist6281530), ad tracking "Kit_Bag" so these sign-ups
+           can be picked out in AWeber. After signing up, people land on kitbag-thanks. -->
+      <form method="post" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl">
+        <div style="display: none;">
+          <input type="hidden" name="meta_web_form_id" value="769902414">
+          <input type="hidden" name="meta_split_id" value="">
+          <input type="hidden" name="listname" value="awlist6281530">
+          <input type="hidden" name="redirect" value="https://gavincoynecoaching.github.io/unbeatable/kitbag-thanks">
+          <input type="hidden" name="meta_redirect_onlist" value="https://gavincoynecoaching.github.io/unbeatable/kitbag-thanks">
+          <input type="hidden" name="meta_adtracking" value="Kit_Bag">
+          <input type="hidden" name="meta_message" value="1">
+          <input type="hidden" name="meta_required" value="email">
+          <input type="hidden" name="meta_tooltip" value="">
+        </div>
+        <div class="field">
+          <label for="name">First name (optional)</label>
+          <input type="text" id="name" name="name" autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Send me the masterclass &amp; assessment</button>
+      </form>
+      <p class="fine">You're joining Gavin Coyne Coaching's list. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Unbeatable by Gavin Coyne Coaching</span>
+    <span class="u-foot-contact"><a href="mailto:gavincoynecoaching@gmail.com">gavincoynecoaching@gmail.com</a> &middot; <a href="tel:+353858682933">085 868 2933</a></span>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

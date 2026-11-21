@@ -122,3 +122,16 @@ required, first name optional. Redirects to `masterclass-thanks.html` (noindex):
 embedded (youtube-nocookie, ID 2qNTB3oAXwg; swap for an unlisted copy when
 Gavin has one) + 90-second survey button.
 Live: https://gavincoynecoaching.github.io/unbeatable/masterclass
+
+## Kit Bag page (21 Nov 2026) — PREVIEW, awaiting Gavin's approval
+
+`kitbag.html` (noindex; "Kit Bag" tab shows in its own menu only — add the tab to the
+other pages' menus once Gavin approves, then drop noindex). Tool What/How, title, subtitle
+and FOCUS line verbatim from "Unbeatable_KitBag_WhatHow_TopDown.pdf"; loops verbatim from the
+Distracted vs Focused email PDF; worksheet lines verbatim from "Unbeatable_TwoLoops_Worksheet.pdf"
+(the PDF itself is in `downloads/`). Signup: main AWeber form 769902414, ad tracking `Kit_Bag`,
+redirects to `kitbag-thanks.html` (masterclass video, Kit Bag Assessment picker, worksheet download).
+Kit Bag Assessment = the normal assessments opened with `?kitbag=1`: assess.js then titles the
+recommendations "Add to your kit bag for 2027", shows each tool's What/How (KIT map) and sends
+`source: "Kit Bag"`. Without the parameter, assessments behave as before.
+Live: https://gavincoynecoaching.github.io/unbeatable/kitbag

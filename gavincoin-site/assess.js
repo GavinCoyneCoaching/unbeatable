@@ -25,6 +25,20 @@
     "Paying the Price": "For when they want it, but the work isn't happening. Habits, effort and the choices that build them.",
     "5·5·5": "For when everyone waits for someone else to make it happen. Every player finds another way to help — stop asking \"how good am I?\", start asking \"how can I help?\""
   };
+  /* Kit bag mode (21 Nov 2026): links from kitbag-thanks.html add ?kitbag=1.
+     Results then frame the tools as "add to your kit bag for 2027" and show each tool's
+     What / How, verbatim from the Kit Bag PDF. Normal links are unchanged. */
+  var KITBAG = /[?&]kitbag=1\b/.test(location.search);
+  var KIT = {
+    "Mirrors & Windows": ["Attention on what you can't control.", "Turn to the mirror (you), not the window (them)."],
+    "The Jar": ["Overwhelm from no priorities.", "Big rocks first — protect what matters."],
+    "5·5·5": ["Going missing when you can't do your usual job.", "Find another way to help."],
+    "Communication": ["Unsaid things, taken personally.", "Say it well, hear it well."],
+    "Paying the Price": ["Wanting the result without the work.", "Pay with effort now — not the cost later."],
+    "The Stairs": ["Stuck — the goal feels too big.", "Break it into steps — take the next."],
+    "Frustration vs Fascination": ["The head going after a mistake.", "Swap frustration for curiosity."],
+    "Beyond the Scoreboard": ["Judging it all by the scoreline.", "Measure CARE — not just the score."]
+  };
   var AREA_TOOLS = {
     "Focus & Attention": ["Mirrors & Windows", "The Jar"],
     "Communication": ["Communication"],
@@ -176,10 +190,14 @@
         return items.map(function (x, k) { return "<tr><td>" + (k + 1) + ". " + esc(x.area) + " (" + x.score + ")</td><td>" + (esc(x.note) || "<span class='a-muted'>—</span>") + "</td></tr>"; }).join("");
       }
       var recs = recommendTools(r);
-      var recHtml = recs.length ? '<div class="a-res-sec a-recs"><h3>' + (key === "player" ? "Tools that would help you most" : "Tools your players would benefit from most") + '</h3>' +
+      var recTitle = KITBAG
+        ? (key === "player" ? "Add to your kit bag for 2027" : "Add to your players' kit bag for 2027")
+        : (key === "player" ? "Tools that would help you most" : "Tools your players would benefit from most");
+      var recHtml = recs.length ? '<div class="a-res-sec a-recs' + (KITBAG ? " a-kitbag" : "") + '"><h3>' + recTitle + '</h3>' +
         '<p class="a-recs-intro">Based on your lowest-rated areas, these parts of the Unbeatable programme are where we\'d start.</p>' +
         recs.map(function (x) {
-          return '<div class="a-rec"><div class="a-rec-name">' + esc(x.tool) + '</div><p>' + esc(x.text) + '</p>' +
+          var kit = KITBAG && KIT[x.tool] ? '<div class="a-kit"><p><b>What:</b> ' + esc(KIT[x.tool][0]) + '</p><p><b>How:</b> ' + esc(KIT[x.tool][1]) + '</p></div>' : "";
+          return '<div class="a-rec"><div class="a-rec-name">' + esc(x.tool) + '</div>' + kit + '<p>' + esc(x.text) + '</p>' +
             '<p class="a-rec-why">Because: ' + x.areas.map(function (a) { return esc(a.name) + " (" + a.val + "/10)"; }).join(", ") + '</p></div>';
         }).join("") + '</div>' : "";
       var chat = CHAT_URL + encodeURIComponent("Hi Gavin, I just completed the " + A.title + " (" + t + "/100) and I'd like to talk it through.");
@@ -211,6 +229,7 @@
         strengths: strengths, builds: builds,
         sec3: A.sec3, sec4: A.sec4, scoreLabel: A.scoreLabel, bandText: band.text,
         recommendedTools: recs.map(function (x) { return x.tool; }).join(", "),
+        source: KITBAG ? "Kit Bag" : "",
         page: location.href
       };
       var sent = el("a-sent");
