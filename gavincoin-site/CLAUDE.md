@@ -149,7 +149,7 @@ Live: https://gavincoynecoaching.github.io/unbeatable/kitbag
 ## Kit Bag Upgrade rename (22 Nov 2026)
 
 Gavin: the menu tab "Assessments" is now "Kit Bag Upgrade" on every live page (root + articles;
-preview/ untouched). assessments.html hero: no eyebrow; heading "What's missing from your kit bag?"
+preview/ untouched). assessments.html hero: no eyebrow; heading "The Essential Kit Bag Upgrade" (Gavin)
 plus a kit-bag-analogy paragraph (DRAFT by Claude — boots, gumshield, drink, gloves, tape → mental
 tools). Page title "Kit Bag Upgrade". In ?kitbag=1 mode only the paragraph changes (mentions the
 email step). kitbag.html no longer has its own "Kit Bag" menu item (avoids two kit bag tabs).
