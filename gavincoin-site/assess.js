@@ -84,7 +84,7 @@
       var hero = document.querySelector(".u-hero");
       if (hero) {
         var eb = hero.querySelector(".u-eyebrow"), h1 = hero.querySelector("h1"), sub = hero.querySelector(".u-sub");
-        if (sub) sub.textContent = "Boots, gumshield, drink, gloves, tape – you’d never head to a match without them. But the tools that help you perform at your best when it matters don’t fit in a gear bag. Rate ten areas in about three minutes, then add your email to get your score, the two tools to add to your kit bag this off-season, and your free Kit Bag masterclass.";
+        if (sub) sub.textContent = "Boots, Gumshield, Drink, Gloves, Tape – all essentials in the modern kitbag for training and gameday. But the stuff that really decides how you play? You can’t pack it. It’s what’s going on in your head – the mistake you can’t let go of, the player you can’t stop watching, the days you just don’t feel like it. Three minutes, ten quick questions. Pop your email in at the end and you’ll get your score, the two tools to throw in your bag first, and the free Kit Bag masterclass.";
       }
     });
   }
