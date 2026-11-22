@@ -142,3 +142,6 @@
 
 /* 22 Nov 2026 (Gavin): assessments hero heading runs the full width instead of wrapping early */
 .u-hero h1, .u-hero-small h1 { max-width: none; }
+.u-hero .u-sub.kb-intro { margin: 0 0 14px; max-width: 62ch; }
+.u-hero .u-sub.kb-intro:last-child { margin-bottom: 0; }
+.u-hero h1 + .u-sub.kb-intro { margin-top: 22px; }
