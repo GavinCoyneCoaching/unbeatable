@@ -153,3 +153,12 @@ preview/ untouched). assessments.html hero: no eyebrow; heading "The Essential K
 plus a kit-bag-analogy paragraph (DRAFT by Claude — boots, gumshield, drink, gloves, tape → mental
 tools). Page title "Kit Bag Upgrade". In ?kitbag=1 mode only the paragraph changes (mentions the
 email step). kitbag.html no longer has its own "Kit Bag" menu item (avoids two kit bag tabs).
+
+## Apps Script deployed (22 Nov 2026)
+
+apps-script/Code.gs pasted into the "Untitled project" Apps Script (bound to the Unbeatable
+Assessments sheet) and deployed as Version 2 of the SAME web app deployment (URL unchanged).
+Kit Bag results email: subject "Your Kit Bag result: X/100 + your free masterclass"; order
+Where can I build → What's working → 10 areas → kit bag upgrade (intro line, two tools with
+What/How + video links, full masterclass button) → "Your next steps" (watch, try one this week,
+talk to Gavin). Any future Code.gs change: paste + Manage deployments → Edit → New version.
