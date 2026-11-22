@@ -86,7 +86,7 @@
         var eb = hero.querySelector(".u-eyebrow"), h1 = hero.querySelector("h1"), sub = hero.querySelector(".u-sub");
         if (eb) eb.textContent = "The Kit Bag Assessment";
         if (h1) h1.innerHTML = 'What goes in your kit bag for <span class="accent">2027</span>?';
-        if (sub) sub.textContent = "Pick the one that fits you. Rate ten areas, then pop in your email to get your score, the two tools to add to your kit bag this off-season, and your free Kit Bag masterclass.";
+        if (sub) sub.textContent = "Three minutes, ten areas. Add your email at the end to get your score, the two tools to add to your kit bag this off-season, and your free Kit Bag masterclass.";
       }
     });
   }
@@ -288,9 +288,9 @@
         '<p class="a-res-date">' + new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }) + "</p></div>" +
         '<div class="a-res-score"><div class="a-res-box"><span class="a-res-lbl">' + esc(A.scoreLabel) + '</span><span class="a-res-num">' + t + "<small>/100</small></span></div>" +
         '<div class="a-bands">' + legend + "</div></div>" +
-        '<div class="a-res-sec"><h3>Your 10 areas</h3>' + bars + "</div>" +
-        '<div class="a-res-sec"><h3>' + esc(A.sec3.title) + '</h3><p class="a-recs-intro">Your three highest-rated areas &mdash; the strengths to protect and build from.</p>' + areaList(strengths, false) + "</div>" +
         '<div class="a-res-sec"><h3>' + esc(A.sec4.title) + '</h3><p class="a-recs-intro">Your three lowest-rated areas, and the Unbeatable tool that targets each one.</p>' + areaList(builds, true) + "</div>" +
+        '<div class="a-res-sec"><h3>' + esc(A.sec3.title) + '</h3><p class="a-recs-intro">Your three highest-rated areas &mdash; the strengths to protect and build from.</p>' + areaList(strengths, false) + "</div>" +
+        '<div class="a-res-sec"><h3>Your 10 areas</h3>' + bars + "</div>" +
         recHtml +
         (KITBAG ? '<div class="a-res-sec a-mc"><h3>Your free Kit Bag masterclass</h3><p class="a-recs-intro">All seven tools from the masterclass, about 22 minutes. Your two tools above jump straight to their part of it.</p>' +
           '<a class="btn btn-primary" href="' + videoUrl(0) + '" target="_blank" rel="noopener">Watch the full masterclass</a></div>' : "") +

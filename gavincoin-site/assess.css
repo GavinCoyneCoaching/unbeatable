@@ -139,3 +139,6 @@
 .a-watch:hover { text-decoration: underline; }
 .a-watch-note { font-size: 13.5px !important; color: var(--gray) !important; font-style: italic; }
 .a-mc .btn { width: auto; }
+
+/* 22 Nov 2026 (Gavin): assessments hero heading runs the full width instead of wrapping early */
+.u-hero h1, .u-hero-small h1 { max-width: none; }
