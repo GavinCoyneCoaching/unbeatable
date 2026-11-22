@@ -84,9 +84,7 @@
       var hero = document.querySelector(".u-hero");
       if (hero) {
         var eb = hero.querySelector(".u-eyebrow"), h1 = hero.querySelector("h1"), sub = hero.querySelector(".u-sub");
-        if (eb) eb.textContent = "The Kit Bag Assessment";
-        if (h1) h1.innerHTML = 'What goes in your kit bag for <span class="accent">2027</span>?';
-        if (sub) sub.textContent = "Three minutes, ten areas. Add your email at the end to get your score, the two tools to add to your kit bag this off-season, and your free Kit Bag masterclass.";
+        if (sub) sub.textContent = "Boots, gumshield, drink, gloves, tape – you’d never head to a match without them. But the tools that help you perform at your best when it matters don’t fit in a gear bag. Rate ten areas in about three minutes, then add your email to get your score, the two tools to add to your kit bag this off-season, and your free Kit Bag masterclass.";
       }
     });
   }
