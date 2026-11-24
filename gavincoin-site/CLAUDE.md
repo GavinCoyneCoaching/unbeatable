@@ -119,8 +119,7 @@ Revolution Fitness gym list that James Hanley sends. Copy is verbatim from the
 (ID 1344493197, a copy of 769902414) on list `awlist6281530`; that form applies
 tags `revfit_gym` + `masterclass`; ad tracking `RevFit_Masterclass`. Email
 required, first name optional. Redirects to `masterclass-thanks.html` (noindex): kitbag video
-embedded (youtube-nocookie, ID 2qNTB3oAXwg; swap for an unlisted copy when
-Gavin has one) + 90-second survey button.
+embedded (youtube-nocookie, ID WVpchO0v-BU, the unlisted Kit Bag Upgrade masterclass) + 90-second survey button.
 Live: https://gavincoynecoaching.github.io/unbeatable/masterclass
 
 ## Kit Bag page (21 Nov 2026) — PREVIEW, awaiting Gavin's approval
@@ -131,9 +130,12 @@ Flow (agreed with Gavin 21 Nov): James's email (with the Distraction & Focus PDF
 score, "Your kit bag upgrade" = top 2 tools (always 2, even if all scores are high) with What/How
 and a link to that tool's part of the masterclass video, plus "Watch the full masterclass".
 - Tool What/How verbatim from "Unbeatable_KitBag_WhatHow_StagDrop.pdf" (kitbag.html + KIT map in assess.js).
-- Video: 2qNTB3oAXwg ("Workshop Special: The Unbeatable Kit Bag: 7 Tools"). Start times in VIDEO_AT
-  (assess.js), from the transcript: M&W 0:20, Jar 1:34, 5·5·5 3:07, Paying the Price 5:55,
-  FvF 9:42, Stairs 15:26, Communication 18:03. Beyond the Scoreboard isn't in the video.
+- Video (24 Nov 2026): WVpchO0v-BU ("Coach Gav Podcast - Masterclass - The Kit Bag Upgrade", unlisted —
+  link only for people on the email list; replaces 2qNTB3oAXwg, which is being deleted). Start times in
+  VIDEO_AT (assess.js), from the transcript: M&W 5:02, Jar 6:49, 5·5·5 9:05, Communication 12:18,
+  Paying the Price 16:38, Stairs 22:46, FvF 29:47, Beyond the Scoreboard 33:58. Bonus bits (mistakes
+  in training 38:23, unfamiliar situations ~39:45) have no tool of their own.
+- Kit bag tools are LOCKED AT 8 (Gavin, 24 Nov 2026). Anywhere that says 7 tools must say 8.
 - Email capture: on "Get my result", assess.js posts to AWeber form 769902414 / awlist6281530 with
   ad tracking `Kit_Bag` through a hidden iframe (no tag — the form applies none). Results also go to
   the Apps Script with `source: "Kit Bag"`, `kitbagTools`, `videoUrl`.
