@@ -39,14 +39,14 @@
     "Frustration vs Fascination": ["The head going after a mistake — \"why me?\"", "Swap frustration for curiosity — \"what's next?\""],
     "Beyond the Scoreboard": ["Judging it all by the scoreline.", "Measure CARE — Communication, Attitude, Resilience, Effort."]
   };
-  /* Kit bag masterclass video (Coach Gav Podcast | Workshop Special: The Unbeatable Kit Bag: 7 Tools).
-     Start times (seconds) taken from the video's transcript, 21 Nov 2026. Beyond the Scoreboard
-     isn't covered in this video, so it has no time. To swap in an unlisted copy, change VIDEO_ID
-     (and the times, if the edit is different). */
-  var VIDEO_ID = "2qNTB3oAXwg";
+  /* Kit bag masterclass video (Coach Gav Podcast - Masterclass - The Kit Bag Upgrade, unlisted).
+     Start times (seconds) taken from the video's transcript, 24 Nov 2026. All eight tools are
+     covered, including Beyond the Scoreboard. */
+  var VIDEO_ID = "WVpchO0v-BU";
   var VIDEO_AT = {
-    "Mirrors & Windows": 20, "The Jar": 94, "5·5·5": 187, "Paying the Price": 355,
-    "Frustration vs Fascination": 582, "The Stairs": 926, "Communication": 1083
+    "Mirrors & Windows": 302, "The Jar": 409, "5·5·5": 545, "Communication": 738,
+    "Paying the Price": 998, "The Stairs": 1366, "Frustration vs Fascination": 1787,
+    "Beyond the Scoreboard": 2038
   };
   function videoUrl(sec) { return "https://www.youtube.com/watch?v=" + VIDEO_ID + (sec ? "&t=" + sec + "s" : ""); }
   function mmss(sec) { return Math.floor(sec / 60) + ":" + String(sec % 60).padStart(2, "0"); }
@@ -290,7 +290,7 @@
         '<div class="a-res-sec"><h3>' + esc(A.sec3.title) + '</h3><p class="a-recs-intro">Your three highest-rated areas &mdash; the strengths to protect and build from.</p>' + areaList(strengths, false) + "</div>" +
         '<div class="a-res-sec"><h3>Your 10 areas</h3>' + bars + "</div>" +
         recHtml +
-        (KITBAG ? '<div class="a-res-sec a-mc"><h3>Your free Kit Bag masterclass</h3><p class="a-recs-intro">All seven tools from the masterclass, about 22 minutes. Your two tools above jump straight to their part of it.</p>' +
+        (KITBAG ? '<div class="a-res-sec a-mc"><h3>Your free Kit Bag masterclass</h3><p class="a-recs-intro">All eight tools from the masterclass, about 42 minutes. Your two tools above jump straight to their part of it.</p>' +
           '<a class="btn btn-primary" href="' + videoUrl(0) + '" target="_blank" rel="noopener">Watch the full masterclass</a></div>' : "") +
         '<div class="a-next"><h3>Your next step</h3><p>' + esc(A.nextText) + '</p><div class="a-next-btns">' +
         '<a class="btn btn-primary" href="' + chat + '" target="_blank" rel="noopener">Talk it through with Gavin</a>' +
