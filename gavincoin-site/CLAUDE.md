@@ -63,6 +63,10 @@ menu on every page while Gavin updates them. The links are commented out with
 `<!-- hidden from menu for now: ... -->`; remove those comment wrappers to
 bring them back. The pages still exist at their direct URLs.
 
+26 Nov 2026: "Coaching" (index.html) and "Join the list" (index.html#signup)
+are hidden from the menu on every page the same way, while the Coaching page
+gets reworked (Kit Bag pages stay live). The logo still links to index.html.
+
 ## AWeber signup (done)
 
 All three signup boxes (index, committees, players) post to AWeber form
